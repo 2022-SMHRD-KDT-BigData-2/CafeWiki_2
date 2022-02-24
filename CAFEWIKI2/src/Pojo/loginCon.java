@@ -17,24 +17,22 @@ public class loginCon implements Command {
 		MemberVO vo = new MemberVO(id, pw);
 		MemberDAO dao = new MemberDAO();
 		MemberVO uservo = dao.login(vo);
-		
-		
+
 		if (uservo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", uservo);
 		} else {
 			System.out.println("로그인실패");
 		}
-		
+
 		System.out.println(uservo.getO_num());
-		
-		if (uservo.getO_num().equals("0")) {
+
+		if (uservo.getO_num()==null) {
 
 			return "redirect:main.jsp";
 		} else {
 			return "redirect:OwnerMain.jsp";
 		}
-	
 
 	}
 }

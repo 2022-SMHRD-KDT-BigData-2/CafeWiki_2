@@ -20,11 +20,7 @@ public class joinCon implements Command {
 		String birth = request.getParameter("birth");
 		String gender = request.getParameter("gender");
 
-		
-		if (o_num.equals("")) {
-			o_num = "0";
-			System.out.println("성공했습니다");
-		} 
+
 		MemberVO vo = new MemberVO(id, o_num, pw, name, tel, email, birth, gender);	
 		MemberDAO dao = new MemberDAO();
 		
