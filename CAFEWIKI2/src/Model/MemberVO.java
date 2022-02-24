@@ -68,6 +68,10 @@ public class MemberVO {
 		this.pw = pw;
 	}// ·Î±×ÀÎ
 
+	public MemberVO() {
+	
+	}
+
 	public String getId() {
 		return id;
 	}

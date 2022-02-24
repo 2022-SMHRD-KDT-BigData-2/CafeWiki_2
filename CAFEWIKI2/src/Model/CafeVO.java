@@ -31,6 +31,11 @@ public CafeVO(String o_num) {
 	this.o_num = o_num;
 }
 
+public CafeVO() {
+	
+}
+
+
 public String getO_num() {
 	return o_num;
 }

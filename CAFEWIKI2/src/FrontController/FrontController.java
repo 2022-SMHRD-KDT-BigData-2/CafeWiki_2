@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Pojo.CafeCon;
+import Pojo.cafeCon;
 import Pojo.Command;
 import Pojo.joinCon;
 import Pojo.loginCon;
@@ -25,19 +25,21 @@ public class FrontController extends HttpServlet {
 		String requsetURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String command = requsetURI.substring(contextPath.length());
-		
+
 		String nextPage = null;
 		Command com = null;
 
 		if (command.equals("/login.do")) {
 			com = new loginCon();
 
-		}else if (command.equals("/join.do")) {
+		} else if (command.equals("/join.do")) {
 			com = new joinCon();
-		}else if (command.equals("/CafeMain.do")) {
-			com = new CafeCon();
+		} else if (command.equals("/cafe.do")) {
+			com = new cafeCon();
+		} else if (command.equals("/CafeMain.do")) {
+			com = new cafeCon();
 		}
-			
+
 		if (com != null)
 			nextPage = com.execute(request, response);
 		// ========================================================================================

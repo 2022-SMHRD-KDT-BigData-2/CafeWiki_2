@@ -4,6 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import Model.CafeDAO;
+import Model.CafeVO;
 import Model.MemberDAO;
 import Model.MemberVO;
 
@@ -25,13 +27,10 @@ public class loginCon implements Command {
 			System.out.println("로그인실패");
 		}
 
-		System.out.println(uservo.getO_num());
-
 		if (uservo.getO_num()==null) {
-
 			return "redirect:UserMain.jsp";
 		} else {
-			return "redirect:OwnerMain.jsp";
+			return "redirect:cafe.do";
 		}
 
 	}

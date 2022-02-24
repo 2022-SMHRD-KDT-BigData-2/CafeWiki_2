@@ -6,35 +6,37 @@ import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import Model.BoardVO;
 import Model.CafeDAO;
 import Model.CafeVO;
+import Model.MemberVO;
 
-public class CafeCon implements Command {
+public class cafeCon implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+
+		HttpSession session = request.getSession();
+		MemberVO vo = new MemberVO();
+		MemberVO mvo = (MemberVO) session.getAttribute("vo");
+		CafeVO vo2 = new CafeVO();
 
 		try {
 			request.setCharacterEncoding("EUC-KR");
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		
-		String o_num = request.getParameter("o_num");
-		
-		// DAO 메서드 사용 -> 모든 게시글 가져오기
-		CafeDAO dao1 = new CafeDAO();
-		List<BoardVO> Blist = dao1.selectBoard();
 
-		CafeDAO dao2 = new CafeDAO();
-		CafeVO uvo = (CafeVO)dao2.selectCafe(o_num);
+		CafeDAO cdao = new CafeDAO();
+
+		List<CafeVO> cvo = (List<CafeVO>) cdao.selectCafe(mvo.getO_num());
 
 		// request scope에 list 담기
-		request.setAttribute("Blist", Blist);
-		request.setAttribute("uvo", uvo);
+		request.setAttribute("cvo", cvo);
 
-		return "UserMain.jsp";
+		return "OwnerMain.jsp";
 
 	}
 
