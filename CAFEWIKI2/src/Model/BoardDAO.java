@@ -31,7 +31,7 @@ public class BoardDAO {
 		
 		SqlSession session = sqlSessionFactory.openSession(true); 
 		
-		int cnt = session.insert("writerBoard", vo);
+		int cnt = session.insert("writeBoard", vo);
 
 		session.close();
 		

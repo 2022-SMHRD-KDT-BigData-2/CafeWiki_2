@@ -24,15 +24,18 @@
 
 
 	<select id="selectCafe" resultType="Model.CafeVO">
-		select * from CAFE_INFO
-		where o_num = #{o_num}
+		select u.o_num, c.location, c.picture, c.review, c.type, c.store, c.time, c.c_tel
+		from cafe_info c, user_info u
+		where c.o_num = u.o_num
+		and u.o_num = #{o_num};
 	</select>
-	
+
 	<select id="selectBoard" resultType="Model.BoardVO">
 		select * from BOARD
-		where o_num = #{o_num}
+		where
+		o_num = #{o_num}
 	</select>
-	
+
 	<insert id="writeBoard">
 		insert into board
 		values (board_num_seq.nextval,
@@ -41,12 +44,13 @@
 		#{b_cont},
 		#{b_file},
 		#{o_num}
-		)		
+		)
 	</insert>
-	
+
 	<select id="viewBoard" resultType="Model.BoardVO">
 		select * from BOARD
-		where b_num = #{b_num}
+		where b_num
+		= #{b_num}
 		and o_num = #{o_num}
 	</select>
 
