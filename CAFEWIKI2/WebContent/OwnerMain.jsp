@@ -14,7 +14,8 @@
 	<%
 		MemberVO vo = (MemberVO) session.getAttribute("vo");
 	List<CafeVO> clist = (List<CafeVO>) request.getAttribute("cvo");
-	//List<BoardVO> Blist = (List<BoardVO>)request.getAttribute("Blist");
+	List<BoardVO> blist = (List<BoardVO>) request.getAttribute("bvo");
+	// blist : 사업자번호가 ~인 리스트
 	%>
 
 
@@ -43,13 +44,29 @@
 		영업시간
 		<%=cvo.getTime()%></p>
 
+
 	<div id="board">
-	<a href="writerBoard.jsp">작성</a>
+
+
+		<h3>게시판</h3>
+		<a href="writerBoard.jsp">작성</a>
+
 		<table id="list">
 			<tr>
 				<td>번호</td>
 				<td>제목</td>
 				<td>시간</td>
+			</tr>
+			<tr>
+				<%
+					for (BoardVO bvo : blist) {
+				%>
+				<td><%=bvo.getB_num()%></td>
+				<td><%=bvo.getB_title()%></td>
+				<td><%=bvo.getB_date()%></td>
+				<%
+					}
+				%>
 			</tr>
 
 		</table>
@@ -85,6 +102,5 @@
 		<button type="button" onclick="location.href='#'">내 쿠폰 관리</button>
 
 		<button type="button" onclick="location.href='#'">정보 수정</button>
-
 </body>
 </html>

@@ -32,8 +32,7 @@
 
 	<select id="selectBoard" resultType="Model.BoardVO">
 		select * from BOARD
-		where
-		o_num = #{o_num}
+		where o_num = #{o_num}
 	</select>
 
 	<insert id="writeBoard">
@@ -49,8 +48,7 @@
 
 	<select id="viewBoard" resultType="Model.BoardVO">
 		select * from BOARD
-		where b_num
-		= #{b_num}
+		where b_num= #{b_num}
 		and o_num = #{o_num}
 	</select>
 

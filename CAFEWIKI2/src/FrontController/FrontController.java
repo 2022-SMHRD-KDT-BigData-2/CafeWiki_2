@@ -42,9 +42,9 @@ public class FrontController extends HttpServlet {
 			com = new cafeCon();
 		} else if(command.equals("/write.do")) {
 			com = new writeCon();
-		} else if(command.equals("/write.do")) {
-			com = new goBoardMainCon();
-		} 
+		} //else if(command.equals("/write.do")) {
+//			com = new goBoardMainCon();
+//		} 
 
 		if (com != null)
 			nextPage = com.execute(request, response);

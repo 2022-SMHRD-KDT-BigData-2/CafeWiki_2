@@ -15,7 +15,6 @@ public class writeCon implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-		System.out.println("writeCon");
 		String savePath = request.getServletContext().getRealPath("img");
 
 		int maxSize = 1024 * 1024 * 5; 

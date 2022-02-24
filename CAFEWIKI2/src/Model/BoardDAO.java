@@ -39,11 +39,11 @@ public class BoardDAO {
 		
 	}
 	
-	public List<BoardVO> selectBoard(){
+	public List<BoardVO> selectBoard(String o_num){
 		
 		SqlSession session = sqlSessionFactory.openSession();
 		
-		List<BoardVO> list = session.selectList("selectBoard");
+		List<BoardVO> list = session.selectList("selectBoard", o_num);
 		
 		session.close();
 		return list;

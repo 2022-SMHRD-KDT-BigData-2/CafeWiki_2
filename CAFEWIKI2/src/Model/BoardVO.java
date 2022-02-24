@@ -31,6 +31,12 @@ public class BoardVO {
 
 
 
+	public BoardVO() {
+		
+	}
+
+
+
 	public int getB_num() {
 		return b_num;
 	}
