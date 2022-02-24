@@ -58,6 +58,6 @@ public class BoardDAO {
 		session.close();
 		
 		return vo;
-	}
+	} 
 
 }

@@ -31,5 +31,21 @@
 		select * from CAFE_INFO
 		where o_num = #{o_num}
 	</select>
+	
+	<insert id="writerBoard" parameterType="Model.BoardVO">
+		insert into BOARD
+		values( board_num_seq.nextval,
+				#{B_TITLE},
+				#{B_CONT}, 
+				 #{B_FILE},
+				 #{O_NUM},
+				 sysdate)
+				
+	</insert>
+	
+	<select id="viewBoard" resultType="Model.BoardVO">
+		select * from BOARD
+		where num = #{num}
+	</select>
 
 </mapper>

@@ -23,6 +23,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
+						
 							<img alt="" src="img/<%=bvo.getB_FILE()%>">
 							
 						</td>

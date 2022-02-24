@@ -22,10 +22,6 @@
 						<td>제목</td>
 						<td>시간</td>
 					</tr>
-					<!--
-						for(int i = 0; i<list.size(); i++){
-							BoardVO vo = list.get(i);
-					  -->
 					
 					<%for(BoardVO vo : list){ %>
 					<tr>
