@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Pojo.CafeCon;
 import Pojo.Command;
 import Pojo.joinCon;
 import Pojo.loginCon;
@@ -33,8 +34,10 @@ public class FrontController extends HttpServlet {
 
 		}else if (command.equals("/join.do")) {
 			com = new joinCon();
+		}else if (command.equals("/CafeMain.do")) {
+			com = new CafeCon();
 		}
-		
+			
 		if (com != null)
 			nextPage = com.execute(request, response);
 		// ========================================================================================
