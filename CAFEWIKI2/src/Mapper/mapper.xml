@@ -4,33 +4,32 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Model.MemberDAO">
 	<insert id="joinService" parameterType="Model.MemberVO">
-		insert into user_info values(#{id},
-														#{o_num},
-														#{pw},
-														#{name},													
-														#{tel},
-														#{email},
-														#{birth},
-														#{gender},
-														u_num_seq.nextval)
+		insert into user_info
+		values(#{id},
+		#{o_num},
+		#{pw},
+		#{name},
+		#{tel},
+		#{email},
+		#{birth},
+		#{gender},
+		u_num_seq.nextval)
 	</insert>
 
-	<insert id="joinService2" parameterType="Model.MemberVO">
-		insert into user_info values(#{id},
-														#{o_num},
-														#{name},
-														#{pw},
-														#{tel})
-	</insert>
-	
+	<select id="loginService" parameterType="Model.MemberVO"
+		resultType="Model.MemberVO">
+		select * from user_info
+		where id =#{id} and pw =#{pw}
+	</select>
+
 	<select id="selectBoard" resultType="Model.BoardVO">
-  			select * from BOARD
-  			where o_num = #{o_num}
-  	</select>
-  	
-  	<select id="selectCafe" resultType="Model.CafeVO">
-  			select * from CAFE_INFO
-  			where o_num = #{o_num}
-  	</select>
+		select * from BOARD
+		where o_num = #{o_num}
+	</select>
+
+	<select id="selectCafe" resultType="Model.CafeVO">
+		select * from CAFE_INFO
+		where o_num = #{o_num}
+	</select>
 
 </mapper>

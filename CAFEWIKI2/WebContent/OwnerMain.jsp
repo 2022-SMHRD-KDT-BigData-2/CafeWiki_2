@@ -1,3 +1,6 @@
+<%@page import="Model.BoardVO"%>
+<%@page import="java.util.List"%>
+<%@page import="Model.CafeVO"%>
 <%@page import="Model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -8,11 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	MemberVO vo = (MemberVO)session.getAttribute("vo");
 
-	%>
-	
 		<h2>이이남 스튜디오</h2>
 	<table>
 		<tr>
