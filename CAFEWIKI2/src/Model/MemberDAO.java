@@ -26,13 +26,28 @@ public class MemberDAO {
 		session.close();
 		return cnt;
 	}// 회원가입
-	
+
 	public MemberVO login(MemberVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
 		MemberVO uservo = session.selectOne("loginService", vo);
 		session.close();
 
 		return uservo;
-	}//로그인
-	
+	}// 로그인
+
+	public MemberVO idCheck(String id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO vo = session.selectOne("idCheck", id);
+		session.close();
+
+		return vo;
+	}// 아이디 중복 확인
+
+	public MemberVO o_numCheck(String o_num) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO vo = session.selectOne("o_numCheck", o_num);
+		session.close();
+
+		return vo;
+	}// 아이디 중복 확인
 }
