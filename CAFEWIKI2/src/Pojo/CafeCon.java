@@ -27,9 +27,8 @@ public class CafeCon implements Command {
 		CafeDAO dao1 = new CafeDAO();
 		List<BoardVO> Blist = dao1.selectBoard();
 
-		CafeVO vo = new CafeVO(o_num);
 		CafeDAO dao2 = new CafeDAO();
-		CafeVO uvo = (CafeVO) dao2.selectCafe(vo);
+		CafeVO uvo = (CafeVO)dao2.selectCafe(o_num);
 
 		// request scope¿¡ list ´ã±â
 		request.setAttribute("Blist", Blist);

@@ -39,11 +39,11 @@ public class CafeDAO {
 
 	}
 
-	public CafeVO selectCafe(CafeVO vo) {
+	public CafeVO selectCafe(String o_num) {
 
 		SqlSession session = sqlSessionFactory.openSession();
 
-		CafeVO uvo = session.selectOne("selectCafe", vo);
+		CafeVO uvo = session.selectOne("selectCafe", o_num);
 
 		// 3. session ´Ý±â
 		session.close();
