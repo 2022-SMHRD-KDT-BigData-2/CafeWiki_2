@@ -1,3 +1,4 @@
+<%@page import="Model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -15,10 +16,7 @@
 						<td>제목</td>
 						<td><input type="text" name="b_title"> </td>
 					</tr>
-					<tr>
-						<td>작성자</td>
-						<td><input  type="text" name="o_num" > </td>
-					</tr>
+
 					<tr>
 						<td colspan="2">내용</td>
 					</tr>
