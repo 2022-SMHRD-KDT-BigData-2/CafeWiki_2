@@ -25,6 +25,11 @@ public class CafeVO {
 	this.c_tel = c_tel;
 }
 
+ 
+public CafeVO(String o_num) {
+	super();
+	this.o_num = o_num;
+}
 
 public String getO_num() {
 	return o_num;

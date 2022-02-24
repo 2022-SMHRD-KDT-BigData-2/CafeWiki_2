@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import Model.BoardVO;
+import Model.MemberVO;
 
 public class CafeDAO {
 
@@ -25,30 +26,30 @@ public class CafeDAO {
 		}
 
 	}
-	
-	public List<BoardVO> selectBoard(){
-		
+
+	public List<BoardVO> selectBoard() {
+
 		SqlSession session = sqlSessionFactory.openSession();
-		
+
 		List<BoardVO> list = session.selectList("selectBoard");
-		
+
 		session.close();
-		
+
 		return list;
-		
-	}
-	
-	public List<CafeVO> selectCafe(){
-		
-		SqlSession session = sqlSessionFactory.openSession();
-		
-		List<CafeVO> list = session.selectList("selectCafe");
-		
-		session.close();
-		
-		return list;
-		
+
 	}
 
-	
+	public CafeVO selectCafe(String o_num) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		CafeVO uvo = session.selectOne("selectCafe", o_num);
+
+		// 3. session ´Ý±â
+		session.close();
+
+		return uvo;
+
+	}
+
 }
