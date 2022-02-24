@@ -1,65 +1,108 @@
 package Model;
 
-import java.security.Timestamp;
-
 public class BoardVO {
-	private int B_NUM;
-	private String B_TITLE; 
-	private String B_DATE; 
-	private String B_CONT; 
-	private String B_FILE;
-	private int O_NUM;
-	public BoardVO(int b_NUM, String b_TITLE, String b_DATE, String b_CONT, String b_FILE, int o_NUM) {
+	private int b_num;
+	private String b_title; 
+	private String b_date; 
+	private String b_cont; 
+	private String b_file;
+	private String o_num;
+
+	
+	public BoardVO(String b_title, String b_cont, String b_file, String o_num) {
 		super();
-		B_NUM = b_NUM;
-		B_TITLE = b_TITLE;
-		B_DATE = b_DATE;
-		B_CONT = b_CONT;
-		B_FILE = b_FILE;
-		O_NUM = o_NUM;
+		this.b_title = b_title;
+		this.b_cont = b_cont;
+		this.b_file = b_file;
+		this.o_num = o_num;
 	}
-	public BoardVO() {
-		// TODO Auto-generated constructor stub
-	}
-	public int getB_NUM() {
-		return B_NUM;
-	}
-	public void setB_NUM(int b_NUM) {
-		B_NUM = b_NUM;
-	}
-	public String getB_TITLE() {
-		return B_TITLE;
-	}
-	public void setB_TITLE(String b_TITLE) {
-		B_TITLE = b_TITLE;
-	}
-	public String getB_DATE() {
-		return B_DATE;
-	}
-	public void setB_DATE(String b_DATE) {
-		B_DATE = b_DATE;
-	}
-	public String getB_CONT() {
-		return B_CONT;
-	}
-	public void setB_CONT(String b_CONT) {
-		B_CONT = b_CONT;
-	}
-	public String getB_FILE() {
-		return B_FILE;
-	}
-	public void setB_FILE(String b_FILE) {
-		B_FILE = b_FILE;
-	}
-	public int getO_NUM() {
-		return O_NUM;
-	}
-	public void setO_NUM(int o_NUM) {
-		O_NUM = o_NUM;
-	}
-	
-	
-	} 
 	
 	
 
+	public BoardVO(int b_num, String b_title, String b_date, String b_cont, String b_file, String o_num) {
+		super();
+		this.b_num = b_num;
+		this.b_title = b_title;
+		this.b_date = b_date;
+		this.b_cont = b_cont;
+		this.b_file = b_file;
+		this.o_num = o_num;
+	}
+
+
+
+	public int getB_num() {
+		return b_num;
+	}
+
+
+
+	public void setB_num(int b_num) {
+		this.b_num = b_num;
+	}
+
+
+
+	public String getB_title() {
+		return b_title;
+	}
+
+
+
+	public void setB_title(String b_title) {
+		this.b_title = b_title;
+	}
+
+
+
+	public String getB_date() {
+		return b_date;
+	}
+
+
+
+	public void setB_date(String b_date) {
+		this.b_date = b_date;
+	}
+
+
+
+	public String getB_cont() {
+		return b_cont;
+	}
+
+
+
+	public void setB_cont(String b_cont) {
+		this.b_cont = b_cont;
+	}
+
+
+
+	public String getB_file() {
+		return b_file;
+	}
+
+
+
+	public void setB_file(String b_file) {
+		this.b_file = b_file;
+	}
+
+
+
+	public String getO_num() {
+		return o_num;
+	}
+
+
+
+	public void setO_num(String o_num) {
+		this.o_num = o_num;
+	}
+	
+
+
+	
+	
+}

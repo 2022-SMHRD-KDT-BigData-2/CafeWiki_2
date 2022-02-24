@@ -26,11 +26,6 @@ public class CafeVO {
 }
 
  
-public CafeVO(String o_num) {
-	super();
-	this.o_num = o_num;
-}
-
 public CafeVO() {
 	
 }

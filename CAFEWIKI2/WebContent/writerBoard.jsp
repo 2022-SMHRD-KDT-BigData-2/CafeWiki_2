@@ -9,15 +9,15 @@
 <body>
 
 			<div id = "board">
-				<form action="writeService" method="post" enctype="multipart/form-data">
+				<form action="write.do" method="post" enctype="multipart/form-data">
 				<table id="list">
 					<tr>
 						<td>제목</td>
-						<td><input type="text" name="title"> </td>
+						<td><input type="text" name="b_title"> </td>
 					</tr>
 					<tr>
 						<td>작성자</td>
-						<td><input  type="text" name="writer" > </td>
+						<td><input  type="text" name="o_num" > </td>
 					</tr>
 					<tr>
 						<td colspan="2">내용</td>

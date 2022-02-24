@@ -12,8 +12,7 @@
 	
 		<%
 			List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
-		
-		
+
 		%>
 			<div id="board">
 				<table id = "list">
@@ -25,15 +24,15 @@
 					
 					<%for(BoardVO vo : list){ %>
 					<tr>
-						<td><%=vo.getB_NUM() %></td>
+						<td><%=vo.getB_num()%></td>
 						<!--쿼리스트링: url?name=value  -->
-						<td><a href="goViewBoard?num=<%=vo.getB_NUM()%>"><%=vo.getB_TITLE() %></a></td>
-						<td><%=vo.getB_DATE() %></td>
+						<td><a href="goViewBoard?b_num=<%=vo.getB_num()%>"><%=vo.getB_title() %></a></td>
+						<td><%=vo.getB_date() %></td>
 					</tr>
 					<%} %>
 				</table>
 				
-				<a href="main.jsp"><button id="writer">돌아가기</button></a>
+				<a href="Ownermain.jsp"><button id="writer">돌아가기</button></a>
 				<a href="boardWrite.jsp"><button id="writer">작성하러가기</button></a>
 			</div>
 

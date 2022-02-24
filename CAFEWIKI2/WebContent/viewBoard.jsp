@@ -10,26 +10,27 @@
 <body>
 	<%
 		BoardVO bvo = (BoardVO)request.getAttribute("bvo"); 
+		out.print(bvo.getO_num());
 	%>
 				
 			<div id = "board">
 				<table id="list">
 					<tr>
-						<td><%=bvo.getB_TITLE() %></td>
+						<td><%=bvo.getB_title() %></td>
 					</tr>
 
 					<tr>
-						<td colspan="2"><%=bvo.getB_CONT() %></td>
+						<td colspan="2"><%=bvo.getB_cont() %></td>
 					</tr>
 					<tr>
 						<td colspan="2">
 						
-							<img alt="" src="img/<%=bvo.getB_FILE()%>">
+							<img alt="" src="img/<%=bvo.getB_file()%>">
 							
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><a href="goBoardMain"><button>뒤로가기</button></a></td>
+						<td colspan="2"><a href="goBoardMain.do"><button>뒤로가기</button></a></td>
 					</tr>
 				</table>
 			</div>

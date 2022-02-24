@@ -22,6 +22,6 @@
 		</table>
 		<input type="submit" value="로그인"> 
 		</form>
-		<button><a href="join.jsp">회원가입</a></button>
+		 <button type="button" onclick="location.href='join.jsp'">회원가입</button>
 </body>
 </html>

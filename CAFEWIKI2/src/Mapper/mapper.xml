@@ -22,30 +22,32 @@
 		where id =#{id} and pw =#{pw}
 	</select>
 
-	<select id="selectBoard" resultType="Model.BoardVO">
-		select * from BOARD
-		where o_num = #{o_num}
-	</select>
 
 	<select id="selectCafe" resultType="Model.CafeVO">
 		select * from CAFE_INFO
 		where o_num = #{o_num}
 	</select>
 	
-	<insert id="writerBoard" parameterType="Model.BoardVO">
-		insert into BOARD
-		values( board_num_seq.nextval,
-				#{B_TITLE},
-				#{B_CONT}, 
-				 #{B_FILE},
-				 #{O_NUM},
-				 sysdate)
-				
+	<select id="selectBoard" resultType="Model.BoardVO">
+		select * from BOARD
+		where o_num = #{o_num}
+	</select>
+	
+	<insert id="writeBoard">
+		insert into board
+		values (board_num_seq.nextval,
+		#{b_title},
+		sysdate,
+		#{b_cont},
+		#{b_file},
+		#{o_num}
+		)		
 	</insert>
 	
 	<select id="viewBoard" resultType="Model.BoardVO">
 		select * from BOARD
-		where num = #{num}
+		where b_num = #{b_num}
+		and o_num = #{o_num}
 	</select>
 
 </mapper>
