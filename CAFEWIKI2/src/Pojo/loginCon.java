@@ -29,7 +29,7 @@ public class loginCon implements Command {
 
 		if (uservo.getO_num()==null) {
 
-			return "redirect:main.jsp";
+			return "redirect:UserMain.jsp";
 		} else {
 			return "redirect:OwnerMain.jsp";
 		}
