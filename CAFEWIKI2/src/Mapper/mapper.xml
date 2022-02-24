@@ -24,25 +24,12 @@
 
 	<select id="selectBoard" resultType="Model.BoardVO">
 		select * from BOARD
-		where
-		o_num = #{o_num}
+		where o_num = #{o_num}
 	</select>
 
 	<select id="selectCafe" resultType="Model.CafeVO">
 		select * from CAFE_INFO
-		where
-		o_num = #{o_num}
-	</select>
-	<select id="idCheck" resultType="Model.MemberVO">
-		select*from user_info
-		where id =
-		#{id}
-	</select>
-
-	<select id="o_numCheck" resultType="Model.MemberVO">
-		select*from user_info
-		where
-		o_num = #{o_num}
+		where o_num = #{o_num}
 	</select>
 
 </mapper>
