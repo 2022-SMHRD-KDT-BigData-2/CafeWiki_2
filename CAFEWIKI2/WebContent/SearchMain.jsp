@@ -19,7 +19,7 @@
 
 	<form action="searchname.do" method="post">
 		<input type="text" name="store"> 
-		<input type="submit" value="검색">
+		<button type="submit">검색</button>
 	</form>
 	
 	<form action="searchtype.do" method="post">
