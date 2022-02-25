@@ -51,7 +51,7 @@ public class BoardDAO {
 	
 	public BoardVO viewBoard(int b_num) { 
 		
-		SqlSession session = sqlSessionFactory.openSession();
+		SqlSession session = sqlSessionFactory.openSession(true);
 		
 		BoardVO vo = session.selectOne("viewBoard", b_num);
 		
