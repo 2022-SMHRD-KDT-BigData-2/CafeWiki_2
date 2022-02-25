@@ -50,10 +50,10 @@ div#picture {
 
 			<%for(BoardVO bvo : Blist){ %>
 			<tr>
-				<td><%=bvo.getB_NUM() %></td>
+				<td><%=bvo.getB_num() %></td>
 				<%-- Äõ¸®½ºÆ®¸µ: url?name=value --%>
-				<td><a href="#?num=<%=bvo.getB_NUM()%>"><%=bvo.getB_TITLE()%></a></td>
-				<td><%=bvo.getB_DATE()%></td>
+				<td><a href="#?num=<%=bvo.getB_num()%>"><%=bvo.getB_title()%></a></td>
+				<td><%=bvo.getB_date()%></td>
 			</tr>
 			<% } %>
 			
