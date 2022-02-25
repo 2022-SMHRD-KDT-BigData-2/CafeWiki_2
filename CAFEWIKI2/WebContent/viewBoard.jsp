@@ -1,3 +1,4 @@
+<%@page import="Model.CafeVO"%>
 <%@page import="Model.MemberVO"%>
 <%@page import="Model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -12,11 +13,12 @@
 
 	<%
 		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
+		CafeVO cvo = (CafeVO)request.getAttribute("cvo");
 	
 	%>
 				
 			<div id = "board">
-			<h1><%=bvo.getO_num() %></h1>
+			<h1><%=cvo.getStore() %></h1>
 				<table id="list">
 					<tr>
 						<td><%=bvo.getB_title() %></td>
