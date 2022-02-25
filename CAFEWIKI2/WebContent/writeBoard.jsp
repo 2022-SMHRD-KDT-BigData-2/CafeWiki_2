@@ -1,5 +1,4 @@
-<%@page import="Model.BoardVO"%>
-<%@page import="java.util.List"%>
+<%@page import="Model.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -9,34 +8,34 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-		<%
-			List<BoardVO> list = (List<BoardVO>)request.getAttribute("list");
+<%MemberVO vo = (MemberVO) session.getAttribute("vo"); %>
 
-		%>
-			<div id="board">
-				<table id = "list">
+			<div id = "board">
+				<form action="write.do?o_num=<%=vo.getO_num() %>" method="post" enctype="multipart/form-data">
+				<table id="list">
 					<tr>
-						<td>번호</td>
 						<td>제목</td>
-						<td>시간</td>
+						<td><input type="text" name="b_title"> </td>
 					</tr>
-					
-					<%for(BoardVO vo : list){ %>
+
 					<tr>
-						<td><%=vo.getB_num()%></td>
-						<!--쿼리스트링: url?name=value  -->
-						<td><a href="goViewBoard?b_num=<%=vo.getB_num()%>"><%=vo.getB_title() %></a></td>
-						<td><%=vo.getB_date() %></td>
+						<td colspan="2">내용</td>
 					</tr>
-					<%} %>
+					<tr>
+						<td colspan="2">
+							<input name="b_file" type="file" style="float: right;">
+							<textarea name="b_cont" rows="10" style="resize: none;"></textarea>			
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="reset" value="다시작성">
+							<input type="submit" value="작성">
+						</td>
+					</tr>
 				</table>
-				
-				<a href="Ownermain.jsp"><button id="writer">돌아가기</button></a>
-				<a href="boardWrite.jsp"><button id="writer">작성하러가기</button></a>
+				</form>
 			</div>
-
-
 			<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

@@ -14,6 +14,7 @@ import Pojo.goBoardMainCon;
 import Pojo.Command;
 import Pojo.joinCon;
 import Pojo.loginCon;
+import Pojo.viewBoardCon;
 import Pojo.writeCon;
 
 @WebServlet("*.do")
@@ -42,9 +43,9 @@ public class FrontController extends HttpServlet {
 			com = new cafeCon();
 		} else if(command.equals("/write.do")) {
 			com = new writeCon();
-		} //else if(command.equals("/write.do")) {
-//			com = new goBoardMainCon();
-//		} 
+		} else if(command.equals("/viewBoard.do")) {
+			com = new viewBoardCon();
+		} 
 
 		if (com != null)
 			nextPage = com.execute(request, response);

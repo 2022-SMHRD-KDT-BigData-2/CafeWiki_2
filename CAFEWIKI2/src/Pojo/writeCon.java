@@ -27,9 +27,14 @@ public class writeCon implements Command {
 			multi = new MultipartRequest(request, savePath, maxSize, encoding);
 			new DefaultFileRenamePolicy();
 			String b_title = multi.getParameter("b_title");
+			
+			System.out.println(b_title);
 			String o_num = multi.getParameter("o_num");
+			System.out.println(o_num);
 			String b_cont = multi.getParameter("b_cont");
+			System.out.println(b_cont);
 			String b_file = multi.getFilesystemName("b_file");
+			System.out.println(b_file);
 			if (b_file == null) {
 				b_file = "";
 			}
@@ -50,7 +55,7 @@ public class writeCon implements Command {
 			e.printStackTrace();
 		}
 		
-		return "redirect:OwnerMain.jsp";
+		return "redirect:cafe.do";
 
 	}
 
