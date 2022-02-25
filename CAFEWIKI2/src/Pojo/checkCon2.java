@@ -1,4 +1,4 @@
-package Controller;
+package Pojo;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import Model.MemberDAO;
 import Model.MemberVO;
 
-@WebServlet("/checkService2")
-public class checkService2 extends HttpServlet {
+@WebServlet("/checkCon2")
+public class checkCon2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

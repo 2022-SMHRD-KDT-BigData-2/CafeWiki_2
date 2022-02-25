@@ -10,10 +10,9 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-div#picture {
-	width: 100px;
-	height: 100px;
-	background-color: blue;
+@font-face {
+	font-family: '3OF9_NEW';
+	src: url("./font/3OF9_NEW.TTF");
 }
 </style>
 </head>
@@ -32,7 +31,6 @@ div#picture {
 		}
 	%>
 
-
-
+	<h1 style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></h1>
 </body>
 </html>

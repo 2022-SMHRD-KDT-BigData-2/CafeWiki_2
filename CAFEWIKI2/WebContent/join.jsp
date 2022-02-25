@@ -11,46 +11,46 @@
 		<form action="join.do" method="post">
 			<table>
 				<tr>
-					<td id="title">아이디</td>
-					<input id="check" name="id" type="text" placeholder="아이디를 입력하세요">
-					<p id="result"></p>
-					<button type="button" onclick="idCheck()">중복확인</button>
+					<td id="title">아이디<input id="check" name="id" type="text"
+						placeholder="아이디를 입력하세요"></td>
+					<td><button type="button" onclick="idCheck()">중복확인</button>
+						<span id="result"></span></td>
 				</tr>
 
 				<tr>
-					<td id="title">사업자번호</td>
-					<td><input type="text" name="o_num" maxlength="50" id="check2"
-						placeholder="사업자번호를 입력하세요">
-						<p id="result2"></p>
-						<button type="button" onclick="o_numCheck()">중복확인</button>
+					<td id="title">사업자번호<input type="text" name="o_num"
+						maxlength="50" id="check2" placeholder="사업자번호를 입력하세요"></td>
+					<td><button type="button" onclick="o_numCheck()">
+							중복확인</button><span id="result2"></span></td>
+						
 				</tr>
 				<tr>
-					<td id="title">이름</td>
-					<td><input type="text" name="name" maxlength="50"
+					<td id="title">이름<input type="text" name="name" maxlength="50"
 						placeholder="이름을 입력하세요"></td>
+					
 				</tr>
 				<tr>
-					<td id="title">비밀번호</td>
-					<td><input type="password" name="pw" maxlength="50"
+					<td id="title">비밀번호<input type="password" name="pw" maxlength="50"
 						placeholder="비밀번호를 입력하세요"></td>
+					
 				</tr>
 				<tr>
-					<td id="title">전화번호</td>
-					<td><input type="text" name="tel" placeholder="전화번호를 입력하세요"></td>
+					<td id="title">전화번호<input type="text" name="tel" placeholder="전화번호를 입력하세요"></td>
+					
 				</tr>
 				<tr>
-					<td id="title">이메일</td>
-					<td><input type="text" name="email" maxlength="50"
+					<td id="title">이메일<input type="text" name="email" maxlength="50"
 						placeholder="Email을 입력하세요"></td>
+					
 				</tr>
 				<tr>
-					<td id="title">생년월일</td>
-					<td><input type="text" name="birth" maxlength="50"></td>
+					<td id="title">생년월일<input type="text" name="birth" maxlength="50"></td>
+					
 				</tr>
 				<tr>
-					<td id="title">성별</td>
-					<td><input type="radio" name="gender" value="남자">남 <input
+					<td id="title">성별<input type="radio" name="gender" value="남자">남 <input
 						type="radio" name="gender" value="여자">여</td>
+					
 				</tr>
 			</table>
 			<br> <input type="submit" value="가입">
@@ -62,7 +62,7 @@
 			let id = $('#check').val()
 
 			$.ajax({
-				url : "checkService",
+				url : "checkCon",
 				type : "post",
 				data : {
 					'id' : id
@@ -84,7 +84,7 @@
 			let o_num = $('#check2').val()
 
 			$.ajax({
-				url : "checkService2",
+				url : "checkCon2",
 				type : "post",
 				data : {
 					'o_num' : o_num
