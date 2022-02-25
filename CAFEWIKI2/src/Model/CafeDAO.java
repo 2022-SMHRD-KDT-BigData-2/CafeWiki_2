@@ -39,14 +39,38 @@ public class CafeDAO {
 
 	}
 
-	public List<CafeVO> selectCafe(String o_num){
-		
+	public List<CafeVO> selectCafe(String o_num) {
+
 		SqlSession session = sqlSessionFactory.openSession();
-		
+
 		List<CafeVO> list = session.selectList("selectCafe", o_num);
-		
+
 		session.close();
-		
+
+		return list;
+
+	}
+
+	public List<CafeVO> searchCafeName(String store) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		List<CafeVO> list = session.selectList("searchCafeName", store);
+
+		session.close();
+
+		return list;
+
+	}
+	
+	public List<CafeVO> searchCafeType(String type) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		List<CafeVO> list = session.selectList("searchCafeType", type);
+
+		session.close();
+
 		return list;
 
 	}

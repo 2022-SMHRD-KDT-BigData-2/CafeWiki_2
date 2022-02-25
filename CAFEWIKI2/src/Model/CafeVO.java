@@ -31,6 +31,13 @@ public CafeVO() {
 }
 
 
+
+public CafeVO(String store) {
+	super();
+	this.store = store;
+}
+
+
 public String getO_num() {
 	return o_num;
 }

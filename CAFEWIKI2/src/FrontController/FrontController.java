@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import Pojo.cafeCon;
 import Pojo.goBoardMainCon;
 import Pojo.Command;
+import Pojo.Search2Con;
+import Pojo.SearchCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
 import Pojo.viewBoardCon;
@@ -43,9 +45,20 @@ public class FrontController extends HttpServlet {
 			com = new cafeCon();
 		} else if(command.equals("/write.do")) {
 			com = new writeCon();
+<<<<<<< HEAD
 		} else if(command.equals("/viewBoard.do")) {
 			com = new viewBoardCon();
 		} 
+=======
+		} //else if(command.equals("/write.do")) {
+//			com = new goBoardMainCon();
+//		} 
+		else if(command.equals("/searchname.do")) {
+			com = new SearchCon();
+		}else if(command.equals("/searchtype.do")) {
+			com = new Search2Con();
+		}
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-2/CafeWiki_2.git
 
 		if (com != null)
 			nextPage = com.execute(request, response);
