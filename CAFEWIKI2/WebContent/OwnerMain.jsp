@@ -17,6 +17,8 @@
 	List<BoardVO> blist = (List<BoardVO>) request.getAttribute("bvo");
 	// blist : 사업자번호가 ~인 리스트
 	%>
+<h1>Cafe Wiki</h1>
+<button type="button" onclick="location.href='logoutCon'">로그아웃</button>
 
 
 	<%
@@ -49,25 +51,25 @@
 
 
 		<h3>게시판</h3>
-		<a href="writerBoard.jsp">작성</a>
+		<a href="writeBoard.jsp?o_num=<%=vo.getO_num()%>">작성</a>
 
 		<table id="list">
 			<tr>
-				<td>번호</td>
 				<td>제목</td>
-				<td>시간</td>
+				<td>날짜</td>
 			</tr>
-			<tr>
+
 				<%
 					for (BoardVO bvo : blist) {
 				%>
-				<td><%=bvo.getB_num()%></td>
-				<td><%=bvo.getB_title()%></td>
-				<td><%=bvo.getB_date()%></td>
+				<tr>
+				<td><a href="viewBoard.do?b_num=<%=bvo.getB_num() %>"><%=bvo.getB_title()%></a></td>
+				<td><%=bvo.getB_date().split(" ")[0]%></td>	
+				</tr>
 				<%
 					}
 				%>
-			</tr>
+		
 
 		</table>
 
@@ -80,7 +82,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td>지금까지 이런맛은 없었다!</td>
+				<td><%=cvo.getReview().split(",")[0] %></td>
 			</tr>
 			<tr>
 				<td rowspan="2">img</td>
@@ -95,12 +97,12 @@
 		<%
 			}
 		%>
-		<button type="button" onclick="location.href='#'">My Page</button>
+		<button type="button" onclick="location.href='cafe.do'">My Page</button>
 
-		<button type="button" onclick="location.href='#'">주변 카페</button>
+		<button type="button" onclick="location.href='couponManage.do'">쿠폰 관리</button>
 
-		<button type="button" onclick="location.href='#'">내 쿠폰 관리</button>
+		<button type="button" onclick="location.href='customerManager.do'">내 회원 관리</button>
 
-		<button type="button" onclick="location.href='#'">정보 수정</button>
+		<button type="button" onclick="location.href='update.do'">정보 수정</button>
 </body>
 </html>

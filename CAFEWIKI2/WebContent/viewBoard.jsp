@@ -30,7 +30,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><a href="goBoardMain.do"><button>뒤로가기</button></a></td>
+						<td colspan="2"><button type="button" onclick="location.href='cafe.do'">뒤로가기</button>
+</td>
 					</tr>
 				</table>
 			</div>

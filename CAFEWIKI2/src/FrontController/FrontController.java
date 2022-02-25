@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import Pojo.cafeCon;
-import Pojo.goBoardMainCon;
 import Pojo.Command;
 import Pojo.SearchCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
+import Pojo.viewBoardCon;
 import Pojo.writeCon;
 
 @WebServlet("*.do")
@@ -43,6 +43,11 @@ public class FrontController extends HttpServlet {
 			com = new cafeCon();
 		} else if(command.equals("/write.do")) {
 			com = new writeCon();
+
+		} else if(command.equals("/viewBoard.do")) {
+			com = new viewBoardCon();
+		} 
+
 		} //else if(command.equals("/write.do")) {
 //			com = new goBoardMainCon();
 //		} 
