@@ -38,6 +38,8 @@ public class CafeDAO {
 		return list;
 
 	}
+	
+
 
 	public List<CafeVO> selectCafe(String o_num) {
 

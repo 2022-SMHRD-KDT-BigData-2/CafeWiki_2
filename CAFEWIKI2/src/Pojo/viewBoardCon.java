@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import Model.BoardDAO;
 import Model.BoardVO;
+import Model.CafeVO;
 
 public class viewBoardCon implements Command {
 
@@ -17,8 +18,13 @@ public class viewBoardCon implements Command {
 
 		BoardDAO dao = new BoardDAO();
 		BoardVO bvo = dao.viewBoard(b_num);
-
+		CafeVO cvo = dao.viewBoard2(b_num);
 		request.setAttribute("bvo", bvo);
+		request.setAttribute("cvo", cvo);
+		System.out.println(bvo.getB_num());
+		System.out.println(bvo.getB_cont());
+		System.out.println(cvo.getStore());
+		
 		return "viewBoard.jsp";
 
 	}

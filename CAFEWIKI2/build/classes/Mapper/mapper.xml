@@ -36,13 +36,15 @@
 		select b.b_num, b.b_title,
 		b.b_date, b.b_cont, b.b_file, u.o_num
 		from board b, user_info u
-		where b.o_num = u.o_num
+		where
+		b.o_num = u.o_num
 		and b.o_num = #{o_num}
 	</select>
 
 	<insert id="writeBoard" parameterType="Model.BoardVO">
 		insert into board
-		values (board_num_seq.nextval,
+		values
+		(board_num_seq.nextval,
 		#{b_title},
 		sysdate,
 		#{b_cont},
@@ -52,24 +54,40 @@
 	</insert>
 
 	<select id="viewBoard" resultType="Model.BoardVO">
-		select * from BOARD
-		where b_num= #{b_num}
+		select c.store, c.o_num,
+		b.b_num, b.b_title, b.b_cont, b.b_file, b.b_date
+		from board b,
+		cafe_info c
+		where b.o_num = c.o_num
+		and b.b_num = #{b_num}
+
 	</select>
-	
+
+	<select id="viewBoard2" resultType="Model.CafeVO">
+		select c.store, c.o_num,
+		b.b_num
+		from board b, cafe_info c
+		where b.o_num = c.o_num
+		and b.b_num =
+		#{b_num}
+
+	</select>
+
 	<select id="searchCafeName" resultType="Model.CafeVO">
 		select * from cafe_info
 		where store like '%'||#{store}||'%'
 	</select>
-	
+
 	<select id="searchCafeType" resultType="Model.CafeVO">
 		select * from cafe_info
 		where type = #{type}
 	</select>
 
 	<select id="idCheck" resultType="Model.MemberVO">
-      select*from user_info
-      where id=#{id}
-   </select>
+		select*from user_info
+		where
+		id=#{id}
+	</select>
 
    <select id="o_numCheck" resultType="Model.MemberVO">
       select*from user_info
@@ -81,4 +99,10 @@
       where id = #{id}
    </select>
    
+	<select id="o_numCheck" resultType="Model.MemberVO">
+		select*from user_info
+		where
+		o_num = #{o_num}
+	</select>
+
 </mapper>
