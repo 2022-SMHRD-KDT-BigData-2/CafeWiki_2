@@ -39,18 +39,14 @@ public class FrontController extends HttpServlet {
 			com = new joinCon();
 		} else if (command.equals("/cafe.do")) {
 			com = new cafeCon();
-		} else if (command.equals("/CafeMain.do")) {
-			com = new cafeCon();
+		//} else if (command.equals("/CafeMain.do")) {
+			//com = new cafeCon();
 		} else if(command.equals("/write.do")) {
 			com = new writeCon();
 
 		} else if(command.equals("/viewBoard.do")) {
 			com = new viewBoardCon();
 		} 
-
-		} //else if(command.equals("/write.do")) {
-//			com = new goBoardMainCon();
-//		} 
 		else if(command.equals("/searchname.do")) {
 			com = new SearchCon();
 		}else if(command.equals("/searchtype.do")) {
