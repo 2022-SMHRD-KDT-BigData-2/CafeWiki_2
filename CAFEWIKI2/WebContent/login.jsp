@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
-</head>
 <link rel="stylesheet" href="./css/style.css">
 <script src="./js/jquery-3.6.0.js"></script>
 <title>로그인</title>
+</head>
+
 <body>
 	<section class="login-form">
 		<form method="post" action="login.do">
@@ -35,8 +35,8 @@
 			</ul>
 		</form>
 		<div class="caption">
-			<a href="join.html" onclick="location.href='join.jsp'">회원가입</a> <a
-				href="">비밀번호 찾기</a>
+			<a  onclick="location.href='join.jsp'">회원가입</a> 
+			<a href="">비밀번호 찾기</a>
 		</div>
 		
 	</section>
