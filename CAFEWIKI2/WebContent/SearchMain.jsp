@@ -12,48 +12,51 @@
 <body>
 
 	<%
-		List<CafeVO> clist = (List<CafeVO>)request.getAttribute("cvo");
+	
+		List<CafeVO> clist = (List<CafeVO>)request.getAttribute("clist");
+
 	%>
 
 	<form action="searchname.do" method="post">
 		<input type="text" name="store"> 
 		<input type="submit" value="검색">
 	</form>
+	
+	<form action="searchtype.do" method="post">
+		<p>
+			<button type="button" onclick="location.href='searchtype.do?type=<%=1%>'">공부하기 좋은</button>
+			<button type="button" onclick="location.href='searchtype.do?type=<%=2%>'">커피가 특별한</button>
+			<button type="button" onclick="location.href='searchtype.do?type=<%=3%>'">풍경이 좋은</button>
+		</p>
+		<p>
+			<button type="button" onclick="location.href='searchtype.do?type=<%=4%>'">수다떨기 좋은</button>
+			<button type="button" onclick="location.href='searchtype.do?type=<%=5%>'">디저트가 다양한</button>
+		</p>
+	</form>
 
-	<%if(clist!=null){for(CafeVO cvo : clist){ %>
-		<h1><%=cvo.getStore()%></h1>
-	<h1>이이남 스튜디오</h1>
+	<% if(clist != null){for(CafeVO vo : clist){ %>
+		<h1>가게 이름:<%=vo.getStore()%></h1>
 
 	<div id="picture">
-		<img src="<%=cvo.getPicture()%>">
+		<img src="<%=vo.getPicture()%>">
 	</div>
 
-	<div id="location">주소</div>
+	<div id="location"></div>
 	<p>
-		광주 남구 제중로 47번길 10 이이남 스튜디오
-		<%=cvo.getLocation()%></p>
+		주소:
+		<%=vo.getLocation()%></p>
 
 	<p>
-		전화번호
-		<%=cvo.getC_tel()%></p>
+		전화번호:
+		<%=vo.getC_tel()%></p>
 
 	<!-- split(영업시간) -->
 	<p>
-		영업시간
-		<%=cvo.getTime()%></p>
+		영업시간:
+		<%=vo.getTime()%></p>
 	<%}} %>
 
-	<form action="searchtype.do" method="post">
-		<p>
-			<button type="button" name="study">공부하기 좋은</button>
-			<button type="button" name="special">커피가 특별한</button>
-			<button type="button" name="sight">풍경이 좋은</button>
-		</p>
-		<p>
-			<button type="button" name="talk">수다떨기 좋은</button>
-			<button type="button" name="dessert">디저트가 다양한</button>
-		</p>
-	</form>
+	
 
 </body>
 </html>

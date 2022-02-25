@@ -52,9 +52,14 @@
 		and o_num = #{o_num}
 	</select>
 	
-	<select id="searchCafe" resultType="Model.CafeVO">
+	<select id="searchCafeName" resultType="Model.CafeVO">
 		select * from cafe_info
 		where store like '%'||#{store}||'%'
+	</select>
+	
+	<select id="searchCafeType" resultType="Model.CafeVO">
+		select * from cafe_info
+		where type = #{type}
 	</select>
 
 </mapper>
