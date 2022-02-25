@@ -1,3 +1,4 @@
+<%@page import="Model.MemberVO"%>
 <%@page import="Model.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -8,12 +9,14 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<%
-		BoardVO bvo = (BoardVO)request.getAttribute("bvo"); 
-		out.print(bvo.getO_num());
+		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
+	
 	%>
 				
 			<div id = "board">
+			<h1><%=bvo.getO_num() %></h1>
 				<table id="list">
 					<tr>
 						<td><%=bvo.getB_title() %></td>

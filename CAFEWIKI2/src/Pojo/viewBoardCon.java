@@ -19,8 +19,7 @@ public class viewBoardCon implements Command {
 		BoardVO bvo = dao.viewBoard(b_num);
 
 		request.setAttribute("bvo", bvo);
-
-		return "redirect:viewBoard.do";
+		return "viewBoard.jsp";
 
 	}
 }
