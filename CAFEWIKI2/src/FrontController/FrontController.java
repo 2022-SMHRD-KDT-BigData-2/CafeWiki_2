@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import Pojo.cafeCon;
 import Pojo.goBoardMainCon;
 import Pojo.Command;
+import Pojo.SearchCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
 import Pojo.writeCon;
@@ -45,6 +46,9 @@ public class FrontController extends HttpServlet {
 		} //else if(command.equals("/write.do")) {
 //			com = new goBoardMainCon();
 //		} 
+		else if(command.equals("searchname.do")) {
+			com = new SearchCon();
+		}
 
 		if (com != null)
 			nextPage = com.execute(request, response);

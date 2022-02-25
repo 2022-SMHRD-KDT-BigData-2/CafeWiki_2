@@ -51,5 +51,10 @@
 		where b_num= #{b_num}
 		and o_num = #{o_num}
 	</select>
+	
+	<select id="searchCafe" resultType="Model.CafeVO">
+		select * from cafe_info
+		where store like '%'||#{store}||'%'
+	</select>
 
 </mapper>
