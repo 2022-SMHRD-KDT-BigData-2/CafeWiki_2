@@ -1,3 +1,4 @@
+<%@page import="Model.CouponVO"%>
 <%@page import="Model.MemberVO"%>
 <%@page import="java.util.List"%>
 <%@page import="Model.BoardVO"%>
@@ -21,7 +22,10 @@
 	<%
 		MemberVO vo = (MemberVO) session.getAttribute("vo");
 		List<CafeVO> clist = (List<CafeVO>)request.getAttribute("clist");
+		List<CouponVO> slist = (List<CouponVO>)request.getAttribute("slist");
+		System.out.println(slist);
 	%>
+	
 	<h1>회원main입니다.</h1>
 	<%
 		if (vo != null) {
@@ -35,6 +39,14 @@
 	<h1 style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></h1>
 	<h3><%=vo.getU_num()%></h3>
 	
+	<%	int sum=0;
+		if(slist != null){for(CouponVO cvo : slist){ 
+		sum += cvo.getStamp(); %>
+	
+	<h4><%=cvo.getO_num() %></h4>
+	
+	
+	<%}} %>
 	
 </body>
 </html>

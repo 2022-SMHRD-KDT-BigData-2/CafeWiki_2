@@ -75,4 +75,10 @@
       select*from user_info
       where o_num = #{o_num}
    </select>
+   
+   <select id="selectCoupon" resultType="Model.CouponVO">
+      select*from coupon
+      where id = #{id}
+   </select>
+   
 </mapper>

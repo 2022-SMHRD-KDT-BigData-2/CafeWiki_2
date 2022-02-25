@@ -14,6 +14,15 @@ public class CouponVO {
 		this.o_num = o_num;
 	}
 	
+	
+	
+	public CouponVO(String id) {
+		super();
+		this.id = id;
+	}
+
+
+
 	public int getStamp() {
 		return stamp;
 	}

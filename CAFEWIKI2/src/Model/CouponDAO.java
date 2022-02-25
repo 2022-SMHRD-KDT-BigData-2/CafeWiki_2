@@ -1,8 +1,10 @@
 package Model;
 
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
@@ -23,6 +25,16 @@ public class CouponDAO {
 
 	}
 	
-	
+	public List<CouponVO> selectCoupon(String id) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		List<CouponVO> list = session.selectList("selectCoupon", id);
+
+		session.close();
+
+		return list;
+
+	}
 	
 }
