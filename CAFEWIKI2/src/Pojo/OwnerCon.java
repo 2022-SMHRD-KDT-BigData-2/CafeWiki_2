@@ -15,7 +15,7 @@ import Model.CafeDAO;
 import Model.CafeVO;
 import Model.MemberVO;
 
-public class cafeCon implements Command {
+public class OwnerCon implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 

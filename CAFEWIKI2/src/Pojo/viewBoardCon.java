@@ -21,9 +21,6 @@ public class viewBoardCon implements Command {
 		CafeVO cvo = dao.viewBoard2(b_num);
 		request.setAttribute("bvo", bvo);
 		request.setAttribute("cvo", cvo);
-		System.out.println(bvo.getB_num());
-		System.out.println(bvo.getB_cont());
-		System.out.println(cvo.getStore());
 		
 		return "viewBoard.jsp";
 

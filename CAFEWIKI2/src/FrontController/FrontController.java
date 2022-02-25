@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Pojo.cafeCon;
+import Pojo.OwnerCon;
 import Pojo.Command;
 import Pojo.SearchCon;
 import Pojo.joinCon;
@@ -38,7 +38,7 @@ public class FrontController extends HttpServlet {
 		} else if (command.equals("/join.do")) {
 			com = new joinCon();
 		} else if (command.equals("/cafe.do")) {
-			com = new cafeCon();
+			com = new OwnerCon();
 		//} else if (command.equals("/CafeMain.do")) {
 			//com = new cafeCon();
 		} else if(command.equals("/write.do")) {

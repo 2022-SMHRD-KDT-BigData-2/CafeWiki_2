@@ -22,11 +22,13 @@
 				<table id="list">
 					<tr>
 						<td><%=bvo.getB_title() %></td>
+						<td><%=bvo.getB_date() %>
 					</tr>
 
 					<tr>
 						<td colspan="2"><%=bvo.getB_cont() %></td>
 					</tr>
+					
 					<tr>
 						<td colspan="2">
 						
