@@ -6,22 +6,39 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
+<link rel="stylesheet" href="./css/style.css">
+<script src="./js/jquery-3.6.0.js"></script>
+<title>로그인</title>
 <body>
-	<form method="post" action="login.do">
-		<table>
-			<tr>
-				<td id="title">아이디</td>
-				<td><input type="text" name="id" maxlength="50"
-					placeholder="아이디를 입력하세요">
-			</tr>
-			<tr>
-				<td id="title">비밀번호</td>
-				<td><input type="text" name="pw" maxlength="50"
-					placeholder="비밀번호를 입력하세요">
-			</tr>
-		</table>
-		<input type="submit" value="로그인"> 
+	<section class="login-form">
+		<form method="post" action="login.do">
+			<h1>Cafe Wiki</h1>
+			<ul>
+				<div class="int-area">
+					<input type="text" name="id" id="id" autocomplete="off" required>
+					<label for="id">USER ID</label>
+				</div>
+
+				<div class="int-area">
+					<input type="password" name="pw" id="pw" autocomplete="off"
+						required> <label for="pw">PASSWORD</label>
+				</div>
+
+				<div class="check">
+					<input type="checkbox" id="chk_id"> <label for="chk_id">아이디
+						저장</label>
+				</div>
+
+				<div class="btn-area">
+					<button type="submit">LOGIN</button>
+				</div>
+			</ul>
 		</form>
-		 <button type="button" onclick="location.href='join.jsp'">회원가입</button>
+		<div class="caption">
+			<a href="join.html" onclick="location.href='join.jsp'">회원가입</a> <a
+				href="">비밀번호 찾기</a>
+		</div>
+		
+	</section>
 </body>
 </html>
