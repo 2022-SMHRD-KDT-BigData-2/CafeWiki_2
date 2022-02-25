@@ -20,6 +20,7 @@
 
 	<%
 		MemberVO vo = (MemberVO) session.getAttribute("vo");
+		List<CafeVO> clist = (List<CafeVO>)request.getAttribute("clist");
 	%>
 	<h1>회원main입니다.</h1>
 	<%
@@ -32,5 +33,8 @@
 	%>
 
 	<h1 style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></h1>
+	<h3><%=vo.getU_num()%></h3>
+	
+	
 </body>
 </html>
