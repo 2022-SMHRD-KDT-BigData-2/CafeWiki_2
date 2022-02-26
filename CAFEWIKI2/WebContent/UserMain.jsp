@@ -25,7 +25,7 @@
 		List<CouponVO> slist = (List<CouponVO>)session.getAttribute("slist");
 
 	%>
-	
+	<a onclick="location.href='logout.do'">로그아웃</a>
 	<h1>회원main입니다.</h1>
 	<%
 		if (vo != null) {
@@ -47,6 +47,6 @@
 	
 	<%}} %>
 	<h4><%=sum %></h4>
-	
+	<a href="update.jsp">정보수정</a>
 </body>
 </html>
