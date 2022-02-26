@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import Pojo.OwnerCon;
 import Pojo.Command;
+import Pojo.CouponManageCon;
+import Pojo.CustomerManageCon;
 import Pojo.SearchCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
@@ -51,6 +53,10 @@ public class FrontController extends HttpServlet {
 			com = new SearchCon();
 		}else if(command.equals("/searchtype.do")) {
 			com = new SearchCon();
+		}else if(command.equals("/couponManage.do")) {
+			com = new CouponManageCon();
+		}else if(command.equals("/customerManage.do")) {
+			com = new CustomerManageCon();
 		}
 
 		if (com != null)
