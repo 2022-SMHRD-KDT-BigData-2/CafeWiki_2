@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="Model.CouponVO"%>
 <%@page import="Model.MemberVO"%>
 <%@page import="java.util.List"%>
@@ -39,14 +40,22 @@
 	<h1 style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></h1>
 	<h3><%=vo.getU_num()%></h3>
 	
-	<%	int sum=0;
-		if(slist != null){for(CouponVO cvo : slist){ 
-		sum += cvo.getStamp(); %>
+	<% 
+	List<String> CafeName = new ArrayList<String>();
+	for(CafeVO cvo : clist){
+		if(!CafeName.contains(cvo.getStore())){
+			CafeName.add(cvo.getStore());
+		}
+	}%>
 	
-	<h4><%=cvo.getO_num() %></h4>
+	<% 
+	for(int i=0; i<CafeName.size();i++){
+		%>	
+		<h4><%=CafeName.get(i) %></h4>		
+	<%}%>
 	
-	<%}} %>
-	<h4><%=sum %></h4>
+	
+	
 	<a href="update.jsp">정보수정</a>
 </body>
 </html>

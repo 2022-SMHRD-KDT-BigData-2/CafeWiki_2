@@ -1,5 +1,6 @@
 package Pojo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,14 +26,21 @@ public class loginCon implements Command {
 		MemberVO uservo = dao.login(vo);
 
 		CouponDAO dao2 = new CouponDAO();
-		List<CouponVO> slist = dao2.selectCoupon(id);		
-		System.out.println(uservo);
+		List<CouponVO> slist = dao2.selectCoupon(id);	
+		List<CafeVO> clist = new ArrayList<CafeVO>();
+		
+		System.out.println(slist.size());
+		for(int i=0;i<slist.size();i++) {
+			String o_num = slist.get(i).getO_num();
+			clist.add(dao2.selectcouponname(o_num));
+		}
 		
 		if (uservo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", uservo);
 			session.setAttribute("slist", slist);
-
+			session.setAttribute("clist", clist);
+			
 
 		} else {
 			System.out.println("로그인실패");

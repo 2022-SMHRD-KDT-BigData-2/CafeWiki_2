@@ -135,5 +135,11 @@
 		s.o_num = #{o_num}
 		group by u.id, s.o_num
 	</select>
+	
+	<select id="selectcouponname" resultType="Model.CafeVO">
+		select *
+		from cafe_info
+		where o_num=#{o_num}
+	</select>
 
 </mapper>

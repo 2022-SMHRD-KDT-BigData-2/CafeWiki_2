@@ -48,5 +48,15 @@ public class CouponDAO {
 		
 	}
 
+	public CafeVO selectcouponname(String o_num) {
+		SqlSession session = sqlSessionFactory.openSession();
+
+		CafeVO vo = session.selectOne("selectcouponname", o_num);
+
+		session.close();
+
+		return vo;
+		
+	}
 	
 }
