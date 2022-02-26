@@ -16,6 +16,7 @@ import Pojo.CustomerManageCon;
 import Pojo.SearchCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
+import Pojo.logoutCon;
 import Pojo.viewBoardCon;
 import Pojo.writeCon;
 
@@ -57,6 +58,8 @@ public class FrontController extends HttpServlet {
 			com = new CouponManageCon();
 		}else if(command.equals("/customerManage.do")) {
 			com = new CustomerManageCon();
+		}else if(command.equals("/logout.do")) {
+			com = new logoutCon();
 		}
 
 		if (com != null)

@@ -18,7 +18,7 @@
 	// blist : 사업자번호가 ~인 리스트
 	%>
 <h1>Cafe Wiki</h1>
-<button type="button" onclick="location.href='logoutCon'">로그아웃</button>
+<button type="button" onclick="location.href='logout.do'">로그아웃</button>
 
 
 	<%
