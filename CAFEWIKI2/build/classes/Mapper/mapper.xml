@@ -98,5 +98,14 @@
       where id = #{id}
    </select>
 
+	<update id="updateService" parameterType="Model.MemberVO">
+		update user_info set pw=#{pw}, tel=#{tel}, email=#{email}  
+		where id =#{id}
+	</update>
+	
+	<delete id="deleteService">
+		delete from user_info
+		where id = #{id}
+	</delete>
 
 </mapper>
