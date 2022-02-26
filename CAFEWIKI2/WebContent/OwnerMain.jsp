@@ -103,6 +103,6 @@
 
 		<button type="button" onclick="location.href='customerManager.do'">내 회원 관리</button>
 
-		<button type="button" onclick="location.href='update.do'">정보 수정</button>
+		<button type="button" onclick="location.href='Update.jsp'">정보 수정</button>
 </body>
 </html>

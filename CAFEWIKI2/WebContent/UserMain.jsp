@@ -54,8 +54,7 @@
 		<h4><%=CafeName.get(i) %></h4>		
 	<%}%>
 	
-	
-	
-	<a href="update.jsp">정보수정</a>
+	<a href="Update.jsp">정보수정</a>
+
 </body>
 </html>

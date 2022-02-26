@@ -25,6 +25,14 @@ public class MemberVO {
 		this.u_num = u_num;
 	}
 
+	public MemberVO(String id, String pw, String tel, String email) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.tel = tel;
+		this.email = email;
+	} // 회원정보수정
+
 	public MemberVO(String id, String pw, String name, String tel, String email, String birth, String gender,
 			int u_num) {
 		super();
@@ -69,12 +77,12 @@ public class MemberVO {
 	}// 로그인
 
 	public MemberVO() {
-	
+
 	}
-	
+
 	public MemberVO(int u_num) {
 		this.u_num = u_num;
-	}//쿠폰 적립할 대상 찾기
+	}// 쿠폰 적립할 대상 찾기
 
 	public String getId() {
 		return id;
@@ -147,6 +155,5 @@ public class MemberVO {
 	public void setU_num(int u_num) {
 		this.u_num = u_num;
 	}
-
 
 }

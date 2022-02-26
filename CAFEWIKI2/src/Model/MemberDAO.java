@@ -60,7 +60,24 @@ public class MemberDAO {
 		session.close();
 
 		return vo;
-		
+
 	}// 바코드 스캔 할 회원번호 찾기
-	
+
+	public int update(MemberVO vo) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.update("updateService", vo);
+		session.commit();
+		session.close();
+
+		return cnt;
+	}//회원정보수정
+
+	public int delete(String id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.delete("deleteService",id);
+		session.commit();
+		session.close();
+		return cnt;
+	}//회원삭제
 }
