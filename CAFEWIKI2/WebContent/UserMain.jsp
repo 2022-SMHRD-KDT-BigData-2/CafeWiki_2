@@ -21,9 +21,9 @@
 
 	<%
 		MemberVO vo = (MemberVO) session.getAttribute("vo");
-		List<CafeVO> clist = (List<CafeVO>)request.getAttribute("clist");
-		List<CouponVO> slist = (List<CouponVO>)request.getAttribute("slist");
-		System.out.println(slist);
+		List<CafeVO> clist = (List<CafeVO>)session.getAttribute("clist");
+		List<CouponVO> slist = (List<CouponVO>)session.getAttribute("slist");
+
 	%>
 	
 	<h1>회원main입니다.</h1>
@@ -45,8 +45,8 @@
 	
 	<h4><%=cvo.getO_num() %></h4>
 	
-	
 	<%}} %>
+	<h4><%=sum %></h4>
 	
 </body>
 </html>

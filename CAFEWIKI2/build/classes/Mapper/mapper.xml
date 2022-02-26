@@ -16,8 +16,7 @@
 		u_num_seq.nextval)
 	</insert>
 
-	<select id="loginService" parameterType="Model.MemberVO"
-		resultType="Model.MemberVO">
+	<select id="loginService" parameterType="Model.MemberVO" resultType="Model.MemberVO">
 		select * from user_info
 		where id =#{id} and pw =#{pw}
 	</select>
@@ -98,11 +97,6 @@
       select*from coupon
       where id = #{id}
    </select>
-   
-	<select id="o_numCheck" resultType="Model.MemberVO">
-		select*from user_info
-		where
-		o_num = #{o_num}
-	</select>
+
 
 </mapper>

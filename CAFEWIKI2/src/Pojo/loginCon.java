@@ -26,12 +26,14 @@ public class loginCon implements Command {
 
 		CouponDAO dao2 = new CouponDAO();
 		List<CouponVO> slist = dao2.selectCoupon(id);		
-
+		System.out.println(uservo);
+		
 		if (uservo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", uservo);
 			session.setAttribute("slist", slist);
-			System.out.println(slist);
+
+
 		} else {
 			System.out.println("로그인실패");
 		}
