@@ -16,7 +16,8 @@
 		u_num_seq.nextval)
 	</insert>
 
-	<select id="loginService" parameterType="Model.MemberVO" resultType="Model.MemberVO">
+	<select id="loginService" parameterType="Model.MemberVO"
+		resultType="Model.MemberVO">
 		select * from user_info
 		where id =#{id} and pw =#{pw}
 	</select>
@@ -88,24 +89,51 @@
 		id=#{id}
 	</select>
 
-   <select id="o_numCheck" resultType="Model.MemberVO">
-      select*from user_info
-      where o_num = #{o_num}
-   </select>
-   
-   <select id="selectCoupon" resultType="Model.CouponVO">
-      select*from coupon
-      where id = #{id}
-   </select>
+	<select id="o_numCheck" resultType="Model.MemberVO">
+		select*from user_info
+		where o_num = #{o_num}
+	</select>
+
+	<select id="selectCoupon" resultType="Model.CouponVO">
+		select*from coupon
+		where id = #{id}
+	</select>
 
 	<update id="updateService" parameterType="Model.MemberVO">
-		update user_info set pw=#{pw}, tel=#{tel}, email=#{email}  
+		update user_info set
+		pw=#{pw}, tel=#{tel}, email=#{email}
 		where id =#{id}
 	</update>
-	
+
 	<delete id="deleteService">
 		delete from user_info
 		where id = #{id}
 	</delete>
+
+	<select id="customerList" resultType="Model.CouponVO">
+		select s.id, s.s_date,
+		s.stamp, s.o_num
+		from user_info u, coupon s
+		where u.id=s.id
+		and u.u_num=
+		#{u_num}
+		and s.o_num= #{o_num}
+	</select>
+
+	<select id="barcodeScan" resultType="Model.MemberVO">
+		select * from user_info
+		where u_num = #{u_num}
+	</select>
+
+	<select id="barcodeScan2" resultType="Model.CouponVO">
+		select u.id, sum(s.stamp),
+		s.o_num
+		from user_info u, coupon s
+		where u.id = #{id}
+		and u.id = s.id
+		and
+		s.o_num = #{o_num}
+		group by u.id, s.o_num
+	</select>
 
 </mapper>

@@ -50,5 +50,17 @@ public class MemberDAO {
 		session.close();
 
 		return vo;
-	}// 아이디 중복 확인
+	}// 사업자번호 중복 확인
+
+	public MemberVO scan(int u_num) {
+		SqlSession session = sqlSessionFactory.openSession();
+
+		MemberVO vo = session.selectOne("barcodeScan", u_num);
+
+		session.close();
+
+		return vo;
+		
+	}// 바코드 스캔 할 회원번호 찾기
+	
 }

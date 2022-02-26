@@ -37,4 +37,16 @@ public class CouponDAO {
 
 	}
 	
+	public CouponVO scan(CouponVO svo) {
+		SqlSession session = sqlSessionFactory.openSession();
+
+		CouponVO vo = session.selectOne("barcodeScan2", svo);
+
+		session.close();
+
+		return vo;
+		
+	}
+
+	
 }

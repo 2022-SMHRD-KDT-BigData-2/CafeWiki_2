@@ -1,19 +1,19 @@
 package Model;
 
 public class CouponVO {
-	private int stamp;
+
 	private String id;
 	private String date;
+	private int stamp;
 	private String o_num;
 	
-	public CouponVO(int stamp, String id, String date, String o_num) {
+	public CouponVO(String id, int stamp, String date, String o_num) {
 		super();
-		this.stamp = stamp;
 		this.id = id;
+		this.stamp = stamp;
 		this.date = date;
 		this.o_num = o_num;
 	}
-	
 	
 	
 	public CouponVO(String id) {
@@ -21,6 +21,28 @@ public class CouponVO {
 		this.id = id;
 	}
 
+
+
+	public CouponVO() {
+		
+	}
+
+	
+
+	public CouponVO(String id, String o_num) {
+		super();
+		this.id = id;
+		this.o_num = o_num;
+	}
+
+
+	public CouponVO(String id, int stamp, String o_num) {
+		super();
+		this.id = id;	
+		this.stamp = stamp;
+		this.o_num = o_num;
+	
+	}
 
 
 	public int getStamp() {

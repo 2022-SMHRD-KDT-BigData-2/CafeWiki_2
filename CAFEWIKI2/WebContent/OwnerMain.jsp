@@ -18,7 +18,7 @@
 	// blist : 사업자번호가 ~인 리스트
 	%>
 <h1>Cafe Wiki</h1>
-<button type="button" onclick="location.href='logout.do'">로그아웃</button>
+<button type="button" onclick="location.href='logoutCon'">로그아웃</button>
 
 
 	<%
@@ -99,7 +99,7 @@
 		%>
 		<button type="button" onclick="location.href='cafe.do'">My Page</button>
 
-		<button type="button" onclick="location.href='couponManage.do'">쿠폰 관리</button>
+		<button type="button" onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">쿠폰 관리</button>
 
 		<button type="button" onclick="location.href='customerManager.do'">내 회원 관리</button>
 
