@@ -18,6 +18,7 @@ import Pojo.SearchCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
 import Pojo.logoutCon;
+import Pojo.updateCon;
 import Pojo.viewBoardCon;
 import Pojo.writeCon;
 
@@ -63,6 +64,8 @@ public class FrontController extends HttpServlet {
 			com = new CouponUpdateCon();
 		}else if(command.equals("/logout.do")) {
 			com = new logoutCon();
+		}else if(command.equals("/update.do")) {
+			com = new updateCon();
 		}
 
 		if (com != null)
