@@ -73,4 +73,11 @@ public class MemberDAO {
 		return cnt;
 	}//회원정보수정
 
+	public int delete(String id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.delete("deleteService",id);
+		session.commit();
+		session.close();
+		return cnt;
+	}//회원삭제
 }
