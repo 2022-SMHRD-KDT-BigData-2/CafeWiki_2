@@ -101,8 +101,8 @@
 
 		<button type="button" onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">쿠폰 관리</button>
 
-		<button type="button" onclick="location.href='customerManager.do'">내 회원 관리</button>
+		<button type="button" onclick="location.href='customerManage.do'">내 회원 관리</button>
 
-		<button type="button" onclick="location.href='Update.jsp'">정보 수정</button>
+		<button type="button" onclick="location.href='update.do'">정보 수정</button>
 </body>
 </html>

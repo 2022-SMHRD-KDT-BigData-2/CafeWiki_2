@@ -58,5 +58,23 @@ public class CouponDAO {
 		return vo;
 		
 	}
+
+	public int update(CouponVO vo) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt = session.insert("updateCoupon", vo);
+		session.close();
+		return cnt;
+	}// 쿠폰 적립 or 사용
+
 	
+	public List<CouponVO> customerList(String o_num) {
+		SqlSession session = sqlSessionFactory.openSession();
+
+		List<CouponVO> list = session.selectList("customerList", o_num);
+
+		session.close();
+
+		return list;
+		
+	}
 }

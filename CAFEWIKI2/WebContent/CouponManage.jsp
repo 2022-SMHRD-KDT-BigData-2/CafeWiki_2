@@ -11,10 +11,10 @@
 <% CouponVO svo = (CouponVO)request.getAttribute("svo"); %>
 <h1>Cafe Wiki</h1>
 <p><%=svo.getId() %>님</p>
-<form action="couponUpdate.do" method="post">
-<input type="radio" name="update" value="적립"> 적립
-<input type="radio" name="update" value="사용"> 사용
-<input type="text" name="count">
+<form action="couponUpdate.do?id=<%=svo.getId()%>" method="post">
+<input type="radio" name="update" value="plus"> 적립
+<input type="radio" name="update" value="minus"> 사용<br>
+<input type="text" name="stamp">
 <input type="submit" value="적용">
 </form>
 

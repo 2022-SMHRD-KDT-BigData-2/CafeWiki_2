@@ -91,12 +91,14 @@
 
 	<select id="o_numCheck" resultType="Model.MemberVO">
 		select*from user_info
-		where o_num = #{o_num}
+		where
+		o_num = #{o_num}
 	</select>
 
 	<select id="selectCoupon" resultType="Model.CouponVO">
 		select*from coupon
-		where id = #{id}
+		where id
+		= #{id}
 	</select>
 
 	<update id="updateService" parameterType="Model.MemberVO">
@@ -111,13 +113,13 @@
 	</delete>
 
 	<select id="customerList" resultType="Model.CouponVO">
-		select s.id, s.s_date,
-		s.stamp, s.o_num
+		select u.id, s.s_date,
+		s.stamp,s.o_num
 		from user_info u, coupon s
-		where u.id=s.id
-		and u.u_num=
-		#{u_num}
-		and s.o_num= #{o_num}
+		where u.id = s.id
+		and s.o_num
+		= #{o_num}
+		order by s.s_date desc, u.id
 	</select>
 
 	<select id="barcodeScan" resultType="Model.MemberVO">
@@ -135,16 +137,22 @@
 		s.o_num = #{o_num}
 		group by u.id, s.o_num
 	</select>
-	
+
+	<insert id="updateCoupon" parameterType="Model.CouponVO">
+		insert into coupon
+		values (#{id}, sysdate, #{stamp}, #{o_num})
+	</insert>
+
 	<select id="selectcouponname" resultType="Model.CafeVO">
 		select *
 		from cafe_info
 		where o_num=#{o_num}
 	</select>
-
-	<select id="pwsearch" parameterType="Model.MemberVO" resultType="Model.MemberVO">
+	<select id="pwsearch" parameterType="Model.MemberVO"
+		resultType="Model.MemberVO">
 		select * from user_info
-		where id =#{id} and email =#{email} and tel=#{tel}
+		where id =#{id} and email =#{email}
+		and tel=#{tel}
 	</select>
 
 	<update id="pwresetService" parameterType="Model.MemberVO">
