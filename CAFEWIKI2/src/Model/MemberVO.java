@@ -86,6 +86,12 @@ public class MemberVO {
 	public MemberVO(int u_num) {
 		this.u_num = u_num;
 	}// 쿠폰 적립할 대상 찾기
+	
+	
+
+	public MemberVO() {
+		super();
+	}
 
 	public String getId() {
 		return id;
