@@ -142,4 +142,14 @@
 		where o_num=#{o_num}
 	</select>
 
+	<select id="pwsearch" parameterType="Model.MemberVO" resultType="Model.MemberVO">
+		select * from user_info
+		where id =#{id} and email =#{email} and tel=#{tel}
+	</select>
+
+	<update id="pwresetService" parameterType="Model.MemberVO">
+		update user_info set
+		pw=#{pw}
+		where id =#{id}
+	</update>
 </mapper>

@@ -76,9 +76,12 @@ public class MemberVO {
 		this.pw = pw;
 	}// 로그인
 
-	public MemberVO() {
-
-	}
+	public MemberVO(String id, String tel, String email) {
+		super();
+		this.id = id;
+		this.tel = tel;
+		this.email = email;
+	}//비밀번호 찾기
 
 	public MemberVO(int u_num) {
 		this.u_num = u_num;

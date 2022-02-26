@@ -36,7 +36,7 @@
 		</form>
 		<div class="caption">
 			<a  onclick="location.href='join.jsp'">회원가입</a> 
-			<a href="">비밀번호 찾기</a>
+			<a onclick="location.href='pwSearch.jsp'">비밀번호 찾기</a>
 		</div>
 		
 	</section>

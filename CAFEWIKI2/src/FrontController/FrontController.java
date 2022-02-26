@@ -19,6 +19,8 @@ import Pojo.deletCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
 import Pojo.logoutCon;
+import Pojo.pwResetCon;
+import Pojo.pwsearchCon;
 import Pojo.updateCon;
 import Pojo.viewBoardCon;
 import Pojo.writeCon;
@@ -69,6 +71,10 @@ public class FrontController extends HttpServlet {
 			com = new updateCon();
 		}else if(command.equals("/delet.do")) {
 			com = new deletCon();
+		}else if(command.equals("/pwReset.do")) {
+			com = new pwResetCon();
+		}else if(command.equals("/pwsearch.do")) {
+			com = new pwsearchCon();
 		}
 
 		if (com != null)

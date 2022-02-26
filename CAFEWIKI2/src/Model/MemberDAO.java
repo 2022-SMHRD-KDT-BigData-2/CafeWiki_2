@@ -80,4 +80,22 @@ public class MemberDAO {
 		session.close();
 		return cnt;
 	}//회원삭제
+	
+	public MemberVO pwsearch(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO uservo = session.selectOne("pwsearch", vo);
+		session.close();
+
+		return uservo;
+	}//비밀번호 찾기
+	
+	public int pwreset(MemberVO vo) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+		int cnt = session.update("pwresetService", vo);
+		session.commit();
+		session.close();
+
+		return cnt;
+	}//비밀번호 재설정
 }
