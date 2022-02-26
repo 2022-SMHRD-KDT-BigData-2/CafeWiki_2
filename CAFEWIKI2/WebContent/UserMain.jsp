@@ -41,20 +41,31 @@
 	<h3><%=vo.getU_num()%></h3>
 	
 	<% 
-	List<String> CafeName = new ArrayList<String>();
+	List<String> CafeName = new ArrayList<String>(); 
 	for(CafeVO cvo : clist){
 		if(!CafeName.contains(cvo.getStore())){
 			CafeName.add(cvo.getStore());
 		}
-	}%>
+	}
 	
-	<% 
+	int[] CouponSum = new int[CafeName.size()];
+	for(int i=0;i<CafeName.size();i++){
+		for(int j=0;j<clist.size();j++){
+			if(CafeName.get(i).equals(clist.get(j).getStore())){
+				CouponSum[i] += slist.get(j).getStamp();
+			}
+		}
+		
+	}
+
 	for(int i=0; i<CafeName.size();i++){
 		%>	
-		<h4><%=CafeName.get(i) %></h4>		
+		<h4><%=CafeName.get(i) %>=<%=CouponSum[i] %></h4>
+	
 	<%}%>
 	
 	<a href="Update.jsp">정보수정</a>
+	<a href="mycoupon.do?id=<%=vo.getId()%>">내 쿠폰 관리</a>
 
 </body>
 </html>

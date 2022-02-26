@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import Pojo.OwnerCon;
 import Pojo.Command;
+import Pojo.CouponCon;
 import Pojo.CouponManageCon;
 import Pojo.CouponUpdateCon;
 import Pojo.CustomerManageCon;
@@ -75,6 +76,8 @@ public class FrontController extends HttpServlet {
 			com = new pwResetCon();
 		}else if(command.equals("/pwsearch.do")) {
 			com = new pwsearchCon();
+		}else if(command.equals("/mycoupon.do")) {
+			com = new CouponCon();
 		}
 
 		if (com != null)
