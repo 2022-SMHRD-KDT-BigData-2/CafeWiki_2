@@ -57,6 +57,11 @@
 	<h3><%=CafeName.get(i)%></h3>
 	<h4>적립된 쿠폰 수 = <%=CouponSum[i]%></h4>
 	<%}%>
+	
+	<a href="UserMain.jsp">My Page</a>
+	<a href="SearchMain.jsp">카페 검색</a>
+	<a href="MyCoupon.jsp">내 쿠폰 관리</a>
+	<a href="Update.jsp">정보수정</a>
 
 
 </body>

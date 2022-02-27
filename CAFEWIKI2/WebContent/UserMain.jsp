@@ -94,7 +94,7 @@
 	}
 	%>
 
-	<a href="mycoupon.do?id=<%=vo.getId()%>">My Page</a>
+	<a href="UserMain.jsp">My Page</a>
 	<a href="SearchMain.jsp">카페 검색</a>
 	<a href="mycoupon.do?id=<%=vo.getId()%>">내 쿠폰 관리</a>
 	<a href="Update.jsp">정보수정</a>
