@@ -14,7 +14,7 @@
 <style type="text/css">
 @font-face {
 	font-family: '3OF9_NEW';
-	src: url("./font/3OF9_NEW.TTF");
+	src: url("./font2/3OF9_NEW.TTF");
 }
 </style>
 </head>
