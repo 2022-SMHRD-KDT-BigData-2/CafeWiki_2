@@ -11,7 +11,7 @@
 
 <body>
 	<section class="login-form">
-		<form method="post" action="login.do">
+		<form method="post" action="login.do" id="login">
 			<h1>Cafe Wiki</h1>
 			<ul>
 				<div class="int-area">
@@ -30,7 +30,7 @@
 				</div>
 
 				<div class="btn-area">
-					<button type="submit">LOGIN</button>
+					<button type="submit" onclick="fnSubmit(); return false;">LOGIN</button>
 				</div>
 			</ul>
 		</form>
@@ -38,7 +38,12 @@
 			<a  onclick="location.href='join.jsp'">회원가입</a> 
 			<a onclick="location.href='pwSearch.jsp'">비밀번호 찾기</a>
 		</div>
-		
 	</section>
+	<script src="js/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+	
+	
+	
+	</script>
 </body>
 </html>
