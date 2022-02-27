@@ -22,6 +22,11 @@
 		}
 	}
 
+	String[] CafeName2 = new String[CafeName.size()];
+	for (int i = 0; i < CafeName.size(); i++) {
+		CafeName2[i] = CafeName.get(i);
+	}
+	
 	int[] CouponSum = new int[CafeName.size()];
 	for (int i = 0; i < CafeName.size(); i++) {
 		for (int j = 0; j < clist.size(); j++) {
@@ -31,6 +36,22 @@
 		}
 
 	}
+	
+	int temp;
+	String stemp;
+	for (int i = 0; i < CafeName.size(); i++) {
+		for (int j = i + 1; j < CafeName.size(); j++) {
+			if (CouponSum[j] > CouponSum[i]) {
+		temp = CouponSum[i];
+		CouponSum[i] = CouponSum[j];
+		CouponSum[j] = temp;
+		stemp = CafeName2[i];
+		CafeName2[i] = CafeName2[j];
+		CafeName2[j] = stemp;
+			}
+		}
+	}
+	
 	for (int i = 0; i < CafeName.size(); i++) {
 	%>
 	<h3><%=CafeName.get(i)%></h3>
