@@ -21,7 +21,7 @@
 
 				<div class="int-area">
 					<input type="password" name="pw" id="pw" autocomplete="off"
-						required> <label for="pw">PASSWORD</label>
+						required> <label for="pw">PASSWORD
 				</div>
 
 				<div class="check">

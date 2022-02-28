@@ -10,11 +10,14 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>마이페이지</title>
+<link rel="stylesheet" href="./css/mypage.css">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+	rel="stylesheet">
 <style type="text/css">
 @font-face {
-	font-family: '3OF9_NEW';
-	src: url("./font2/3OF9_NEW.TTF");
+   font-family: '3OF9_NEW';
+   src: url("./font2/3OF9_NEW.TTF");
 }
 </style>
 </head>
@@ -80,25 +83,59 @@
 
 		for (int i = 0; i < CafeName.size(); i++) {
 	%>
-	<h4><%=CafeName2[i]%>=<%=CouponSum[i]%></h4>
 
+	<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>"  onclick="dis()">
+	<img src="./image/plus.png"></a></li>
+	<%int i2 =  CouponSum[i]%10; %>
+	<img id ="dis<%=i %>" src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" style="display: none;" >
+	
+	
 	<%
-		}
+		}%>
+<% 		
 	} else {
 	for (int i = 0; i < 3; i++) {
 	%>
-	<h4><%=CafeName2[i]%>=<%=CouponSum[i]%></h4>
-
+	
+   <li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>"  onclick="dis()">
+	<img src="./image/plus.png"></a></li>
+	<%int i2 =  CouponSum[i]%10; %>
+	<img id ="dis<%=i %>" src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" style="display: none;" >
 	<%
 		}
 	}
-	%>
-
-	<a href="UserMain.jsp">My Page</a>
+	%>	
+	
+	
+	
+	<br><a href="UserMain.jsp">My Page</a>
 	<a href="SearchMain.jsp">카페 검색</a>
 	<a href="mycoupon.do?id=<%=vo.getId()%>">내 쿠폰 관리</a>
 	<a href="Update.jsp">정보수정</a>
 
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+ 
+        
+        $(function (){
+        	$("#hide0").click
+        	(function (){
+          	$("#dis0").toggle();
+          });
+        }); 
+        
+        $(function (){
+        	$("#hide1").click(function (){
+          	$("#dis1").toggle();
+          });
+        }); 
+        
+        $(function (){
+        	$("#hide2").click(function (){
+          	$("#dis2").toggle();
+          });
+        }); 
+    </script>
 
 </body>
 </html>
