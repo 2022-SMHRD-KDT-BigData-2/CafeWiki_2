@@ -7,7 +7,6 @@ a{
     list-style: none;
 }
 
-/* 메인 div */
 .container{
     margin: 0 auto;
     position: absolute;
@@ -30,7 +29,6 @@ a{
 /* header part */
 .header{
     width: 600px;
-    height: 100%;
 }
 
 .logo{
@@ -74,8 +72,9 @@ a{
 
 /* Main part */
 
+/* cafe info */
 .Main{
-    height:100%;
+    height:600px;
     display: grid;
     grid-area: Main;
     width: 640px;
@@ -83,72 +82,103 @@ a{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-#bar{
-    margin-top: 30px;
+.Cafe{
     width: 468px;
-    padding: 20px;
-    height: 100%;
-}
-#bar li{
-    list-style: none;
+    height:170px;
+    float: left;
+    border: 2px dotted #999;
 }
 
-#welcome{
-    font-size: 20px;
-    padding: 0 0 10px 30px;
-}
-
-#barcode-input{
-    border: 2px dotted black;
-    height: 100px;
-}
-
-#num{
-    font-size: 18px;
-    padding: 10px 0 0px 30px;
-}
-
-#plus{
-    margin-top: -20px;
-    text-align: end;
-}
-
-#cafe-name{
-    text-align: left;
-    list-style: none;
-    width: 468px;
-    height:100%;
-    padding: 0;
-    
-}
-
-#cafe-name li{
-    font-size: 22px;
+#cafetitle{
+    text-align: center;
+    font-size: 25px;
     font-weight: 700;
-    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
-#name1{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+#picture{
+    float: left;
 }
 
-#name2{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+#picture img{
+    width:120px;
+    height: 120px;
+    padding-left: 20px;
 }
 
-#name3{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+#location img{
+    padding: 0 10px 0 20px;
+    text-align: end;
+    float: left;
 }
 
+#location p{
+
+}
+
+
+/* cafe board */
+
+.board{
+    width: 468px;
+    height: 160px;
+    float: left;
+    border: 2px dotted #999;
+}
+
+
+.d-none{
+    font-size: 20px;
+    margin: 2px;
+    text-align: center;
+}
+
+.table{
+    font-size :20px;
+    border-collapse: collapse;
+    width: 468px;
+    margin-top:3px;
+    border: 1px solid #999;    
+    text-align: center;
+}
+
+.thead td {
+    background: #999;
+}
+
+
+td{
+    height: 20px;
+    border-bottom:1px solid black;
+}
+
+.review{
+    width: 468px;
+    height: 160px;
+    float: left;
+    border: 2px dotted #999;
+}
+
+.r-none{
+    font-size: 20px;
+    margin: 2px;
+    text-align: center;
+}
+
+.review-btn{
+    font-size: 20px;
+    text-align: end;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+#review-btn1{
+    padding: 5px 10px 5px 10px;
+    border: 2px solid rgb(66, 64, 64);
+    border-radius: 5px;
+}
 
 
 /* footer & menu part */
@@ -203,10 +233,3 @@ a{
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
-
-
-@media ( max-width: 768px ) {
-    body {
-        
-    }
-  }

@@ -7,7 +7,6 @@ a{
     list-style: none;
 }
 
-/* 메인 div */
 .container{
     margin: 0 auto;
     position: absolute;
@@ -29,8 +28,8 @@ a{
 
 /* header part */
 .header{
-    width: 600px;
-    height: 100%;
+    width: 100%;
+    height: 100px;
 }
 
 .logo{
@@ -74,80 +73,126 @@ a{
 
 /* Main part */
 
+/* user correction */
 .Main{
     height:100%;
     display: grid;
     grid-area: Main;
     width: 640px;
-    border: 3px skyblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-#bar{
-    margin-top: 30px;
-    width: 468px;
-    padding: 20px;
-    height: 100%;
-}
-#bar li{
-    list-style: none;
+.wrapmain{
+    display: inline-block;
+    height: 500px;
 }
 
-#welcome{
-    font-size: 20px;
-    padding: 0 0 10px 30px;
+.id{
+    padding-bottom: 20px;
 }
 
-#barcode-input{
-    border: 2px dotted black;
-    height: 100px;
+input:focus {
+    outline: none;
+}
+h1{
+    text-align: center;
 }
 
-#num{
-    font-size: 18px;
-    padding: 10px 0 0px 30px;
-}
-
-#plus{
-    margin-top: -20px;
-    text-align: end;
-}
-
-#cafe-name{
-    text-align: left;
-    list-style: none;
-    width: 468px;
-    height:100%;
-    padding: 0;
-    
-}
-
-#cafe-name li{
-    font-size: 22px;
+h3 {
+    padding-left: 10px;
+    margin: 0 0 8px;
+    font-size: 14px;
     font-weight: 700;
+}
+
+.box {
+    margin-top: 10px;
+    display: block;
+    width: 440px;
+    height: 45px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border-radius: 15px;
+}
+
+
+
+.int {
+    margin-top: -5px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border: none;
+    background: #fff;
+    font-size: 15px;
+}
+
+.box.int_id {
+    padding-right: 40px;
+}
+
+.box.int_pass {
+    padding-right: 40px;
+}
+
+/* 버튼 */
+
+.btn_area {
+    align-content: center;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+#btnJoin2 {
+    width: 150px;
+    padding-right: 30px;
     padding: 10px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(151, 149, 149);
+    font-size: 20px;
+    font-weight: 400;
+    font-family:'Source Sans Pro', sans-serif;
 }
 
-#name1{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+#btnJoin {
+    width: 150px;
+    margin-left: 60px;
+    padding: 10px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(151, 149, 149);
+    font-size: 20px;
+    font-weight: 400;
+    font-family:'Source Sans Pro', sans-serif;
 }
 
-#name2{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+/* 에러메세지 */
+
+.error_next_box {
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;    
+    display: none;
 }
 
-#name3{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+#alertTxt {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
 }
+
 
 
 
@@ -203,10 +248,3 @@ a{
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
-
-
-@media ( max-width: 768px ) {
-    body {
-        
-    }
-  }

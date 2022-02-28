@@ -7,7 +7,6 @@ a{
     list-style: none;
 }
 
-/* 메인 div */
 .container{
     margin: 0 auto;
     position: absolute;
@@ -30,7 +29,6 @@ a{
 /* header part */
 .header{
     width: 600px;
-    height: 100%;
 }
 
 .logo{
@@ -73,81 +71,68 @@ a{
 }
 
 /* Main part */
-
 .Main{
-    height:100%;
+    height: 500px;
     display: grid;
     grid-area: Main;
     width: 640px;
-    border: 3px skyblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-#bar{
-    margin-top: 30px;
+.userwrap{
+    margin-top: 40px;
     width: 468px;
-    padding: 20px;
+    text-align: center;
     height: 100%;
-}
-#bar li{
-    list-style: none;
+    float: left;
 }
 
-#welcome{
-    font-size: 20px;
-    padding: 0 0 10px 30px;
-}
-
-#barcode-input{
-    border: 2px dotted black;
-    height: 100px;
-}
-
-#num{
-    font-size: 18px;
-    padding: 10px 0 0px 30px;
-}
-
-#plus{
-    margin-top: -20px;
-    text-align: end;
-}
-
-#cafe-name{
-    text-align: left;
-    list-style: none;
+.icons{
     width: 468px;
-    height:100%;
-    padding: 0;
-    
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-#cafe-name li{
-    font-size: 22px;
+b{
+    font-size: 25px;
     font-weight: 700;
-    padding: 10px;
+}
+.coupon form{
+    width: 468px;
+    font-size: 20px;
 }
 
-#name1{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+.coupon input{
+    margin: 10px;
+    height: 30px;
 }
 
-#name2{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+input#plus1{
+    width: 20px;
+    height: 20px;
+}
+input#minus1{
+    width: 20px;
+    height: 20px;
 }
 
-#name3{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
+#input1{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 0;
 }
+
+#input2{
+    width: 60px;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 0;
+}
+
+
+
 
 
 
@@ -203,10 +188,3 @@ a{
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
-
-
-@media ( max-width: 768px ) {
-    body {
-        
-    }
-  }

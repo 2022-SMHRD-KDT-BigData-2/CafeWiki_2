@@ -11,14 +11,11 @@ a{
 .container{
     margin: 0 auto;
     position: absolute;
-    display: grid;
     left: 50%;
     transform: translate(-50%);
     grid-template-columns: 100px 540px;
     grid-template-rows: 100px ifr 100px;
-    grid-template-areas: 'img title' 
-                         'Main Main'
-                         'footer footer';
+
 }
 
 .container div{
@@ -29,8 +26,7 @@ a{
 
 /* header part */
 .header{
-    width: 600px;
-    height: 100%;
+    width: 100%;
 }
 
 .logo{
@@ -72,83 +68,32 @@ a{
 
 }
 
-/* Main part */
-
-.Main{
-    height:100%;
+/* Main board */
+.writeboard{
+    height: 100%;;
     display: grid;
     grid-area: Main;
     width: 640px;
-    border: 3px skyblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-#bar{
-    margin-top: 30px;
-    width: 468px;
-    padding: 20px;
-    height: 100%;
-}
-#bar li{
-    list-style: none;
+.board{
+    width: 640px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .1);
 }
 
-#welcome{
-    font-size: 20px;
-    padding: 0 0 10px 30px;
+td{
+    width: 80px;
+    background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+    height: 40px;
 }
 
-#barcode-input{
-    border: 2px dotted black;
-    height: 100px;
+.title{
+    width: 505px;
+    height: 28px;
 }
-
-#num{
-    font-size: 18px;
-    padding: 10px 0 0px 30px;
-}
-
-#plus{
-    margin-top: -20px;
-    text-align: end;
-}
-
-#cafe-name{
-    text-align: left;
-    list-style: none;
-    width: 468px;
-    height:100%;
-    padding: 0;
-    
-}
-
-#cafe-name li{
-    font-size: 22px;
-    font-weight: 700;
-    padding: 10px;
-}
-
-#name1{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
-}
-
-#name2{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
-}
-
-#name3{
-    padding:10px;
-    margin-bottom: 10px;
-    border: 1px dashed rgb(124, 122, 122);
-    background-color: #fff;
-}
-
 
 
 /* footer & menu part */
@@ -158,21 +103,17 @@ a{
     align-items: center;
     text-align: center;
     width: 640px;
-    height: 80px;
-    display: grid;
-    grid-area: footer; 
+    height: 80px; 
     border-top: 2px dashed #999;
 }
 
 #btn_group{
     margin-top: 10px;
-    background-color: rgba(0, 0, 0, .1);
     color: #999;
     padding: 2px;
 }
 
 #btn_group:hover{
-    background-color:rgba(0, 0, 0, .1);
     color: antiquewhite;
 
 }

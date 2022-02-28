@@ -82,6 +82,33 @@ h3 {
     border-radius: 15px;
 }
 
+.box1 {
+    margin-top: 10px;
+    display: block;
+    width: 80%;
+    height: 45px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border-radius: 15px;
+    
+}
+
+.box2 {
+    margin-top: 10px;
+    display: block;
+    width: 80%;
+    height: 45px;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border-radius: 15px;
+}
+
 .int {
     margin-top: -5px;
     display: block;
@@ -93,12 +120,13 @@ h3 {
     font-size: 15px;
 }
 
+
 input {
     font-family:'Source Sans Pro', sans-serif;    
 }
 
 .box.int_id {
-    padding-right: 110px;
+    padding-right: 40px;
 }
 
 .box.int_pass {
@@ -107,18 +135,6 @@ input {
 
 .box.int_pass_check {
     padding-right: 40px;
-}
-
-
-.pswdImg {
-    width: 18px;
-    height: 20px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    margin-top: -10px;
-    cursor: pointer;
 }
 
 #bir_wrap {
