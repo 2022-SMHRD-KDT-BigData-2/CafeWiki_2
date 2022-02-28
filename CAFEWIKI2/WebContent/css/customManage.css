@@ -1,0 +1,190 @@
+body{
+    background-color: rgba(0, 0, 0, .1);
+    font-family: 'Jua';
+}
+
+a{
+    list-style: none;
+}
+
+.container{
+    margin: 0 auto;
+    position: absolute;
+    display: grid;
+    left: 50%;
+    transform: translate(-50%);
+    grid-template-columns: 100px 540px;
+    grid-template-rows: 100px ifr 100px;
+    grid-template-areas: 'img title' 
+                         'Main Main'
+                         'footer footer';
+}
+
+.container div{
+    justify-items: center;
+    align-items: center;
+}
+
+
+/* header part */
+.header{
+    width: 600px;
+}
+
+.logo{
+    display: flex;
+    margin: 0 auto;
+    height: 100px;
+    justify-content: center;
+    align-content: center;
+    width: 640px;
+    border-bottom: 2px dashed #999;
+    padding: 0;
+}
+
+#img{
+    margin-left: 30px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+#title{
+    font-size: 45px;
+    padding: 20px 40px 0px 0px;
+    margin-right: 40px;
+    color: #999;
+}
+
+#btn{
+    border: 2px solid rgb(66, 64, 64);
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 40px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+
+}
+
+/* Main part */
+.Main{
+    height: 500px;
+    display: grid;
+    grid-area: Main;
+    width: 640px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.userwrap{
+    margin-top: 40px;
+    width: 468px;
+    text-align: center;
+    height: 100%;
+    float: left;
+}
+
+.icons{
+    width: 468px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+b{
+    font-size: 25px;
+    font-weight: 700;
+}
+.coupon form{
+    width: 468px;
+    font-size: 20px;
+}
+
+.coupon input{
+    margin: 10px;
+    height: 30px;
+}
+
+input#plus1{
+    width: 20px;
+    height: 20px;
+}
+input#minus1{
+    width: 20px;
+    height: 20px;
+}
+
+#input1{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 0;
+}
+
+#input2{
+    width: 60px;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 0;
+}
+
+
+
+
+
+
+/* footer & menu part */
+
+.footer{
+    margin: 0px auto;
+    align-items: center;
+    text-align: center;
+    width: 640px;
+    height: 80px;
+    display: grid;
+    grid-area: footer; 
+    border-top: 2px dashed #999;
+}
+
+#btn_group{
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    color: #999;
+    padding: 2px;
+}
+
+#btn_group:hover{
+    background-color:rgba(0, 0, 0, .1);
+    color: antiquewhite;
+
+}
+#btn1{
+    border-right: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: -7px;
+}
+#btn2{
+    border-left: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    margin-right: -7px;
+}
+#btn3{
+    border-left: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    margin-right: -8px;
+}
+#btn4{
+    border-left: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
