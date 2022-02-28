@@ -22,56 +22,87 @@
 </head>
 <body>
 	<%
-		List<CouponVO> clist = (List<CouponVO>) request.getAttribute("cusvo");
+	List<CouponVO> clist = (List<CouponVO>) request.getAttribute("cusvo");
+
+	ArrayList<String> id = new ArrayList<String>();
+
+	for (CouponVO cusvo : clist) {
+		if (!id.contains(cusvo.getId())) {
+			id.add(cusvo.getId());
+		}
+	}
+
+	int[] CouponSum = new int[id.size()];
+	for (int i = 0; i < id.size(); i++) {
+		for (int j = 0; j < clist.size(); j++) {
+			if (id.get(i).equals(clist.get(j).getId())) {
+		CouponSum[i] += clist.get(j).getStamp();
+			}
+		}
+
+	}
 	%>
 
-	<div class="container">
-		<div class="header">
-			<div class="logo">
-				<img id="img" src="./image/login/coffee.png">
-				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='login.html'">로그아웃</button>
-			</div>
-		</div>
-		<div class="Main">
-			<table>
-				<tr>
-					<th>ID</th>
-					<th>적립/사용</th>
-					<th>개수</th>
-					<th>날짜</th>
-				</tr>
-				<%
-					for (CouponVO cusvo : clist) {
-				%>
-				<tr>
-					<td><%=cusvo.getId()%></td>
-					<td>
-						<%
-							int a = cusvo.getStamp();
-						if (a > 0) {
-						%>적립 <%
-							} else {
-						%> 사용 <%
-							}
-						%>
-					
-					<td>
-						<%
-							if (a < 0) {
-						%> <%=-cusvo.getStamp()%> <%
- 	} else {
- %> <%=cusvo.getStamp()%> <%
- 	}
- %>
-					</td>
-					<td><%=cusvo.getS_Date()%></td>
-				</tr>
+	<h1></h1>
 
+
+	<table>
+
+		<tr>
+
+			<td>
 				<%
+				for (int i = 0; i < id.size(); i++) {
+				%>ID : <%=id.get(i)%> 보유 스탬프 수 : <%=CouponSum[i]%></td>
+		</tr>
+
+		<table>
+			<tr>
+				<th>적립/사용</th>
+				<th>개수</th>
+				<th>날짜</th>
+			</tr>
+			<%
+			for (CouponVO cusvo : clist) {
+				if ((id.get(i)).equals(cusvo.getId())) {
+			%>
+			<tr>
+				<td>
+					<%
+					int a = cusvo.getStamp();
+					if (a > 0) {
+					%>적립 <%
+					} else {
+					%> 사용 <%
 					}
-				%>
-			</table>
+					%>
+				</td>
+
+				<td>
+					<%
+					if (a < 0) {
+					%> <%=-cusvo.getStamp()%> <%
+ } else {
+ %> <%=cusvo.getStamp()%> <%
+ }
+ %>
+				</td>
+				<td><%=cusvo.getS_Date()%></td>
+			</tr>
+			<tr>
+			</tr>
+
+			<%
+			}
+			}
+			%>
+		</table>
+		<tr>
+		</tr>
+		<%
+		}
+		%>
+	</table>
 		</div>
 		<div class="footer">
 			<div id="btn_group">
