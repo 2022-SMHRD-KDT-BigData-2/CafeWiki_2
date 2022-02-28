@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="Model.CouponVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -22,7 +23,7 @@
 </head>
 <body>
 	<%
-	List<CouponVO> clist = (List<CouponVO>) request.getAttribute("cusvo");
+		List<CouponVO> clist = (List<CouponVO>) request.getAttribute("cusvo");
 
 	ArrayList<String> id = new ArrayList<String>();
 
@@ -43,77 +44,66 @@
 	}
 	%>
 
-	<h1></h1>
-
-
+	<p>
+		<%
+			for (int i = 0; i < id.size(); i++) {
+		%>ID :
+		<%=id.get(i)%>
+		보유 스탬프 수 :
+		<%=CouponSum[i]%>
+	</p>
+	
 	<table>
-
 		<tr>
+			<th>적립/사용</th>
+			<th>개수</th>
+			<th>날짜</th>
+		</tr>
+		<%
+			for (CouponVO cusvo : clist) {
+			if ((id.get(i)).equals(cusvo.getId())) {
+		%>
+		<tr>
+			<td>
+				<%
+					int a = cusvo.getStamp();
+				if (a > 0) {
+				%>적립 <%
+					} else {
+				%> 사용 <%
+					}
+				%>
+			</td>
 
 			<td>
 				<%
-				for (int i = 0; i < id.size(); i++) {
-				%>ID : <%=id.get(i)%> 보유 스탬프 수 : <%=CouponSum[i]%></td>
-		</tr>
-
-		<table>
-			<tr>
-				<th>적립/사용</th>
-				<th>개수</th>
-				<th>날짜</th>
-			</tr>
-			<%
-			for (CouponVO cusvo : clist) {
-				if ((id.get(i)).equals(cusvo.getId())) {
-			%>
-			<tr>
-				<td>
-					<%
-					int a = cusvo.getStamp();
-					if (a > 0) {
-					%>적립 <%
-					} else {
-					%> 사용 <%
-					}
-					%>
-				</td>
-
-				<td>
-					<%
 					if (a < 0) {
-					%> <%=-cusvo.getStamp()%> <%
- } else {
+				%> <%=-cusvo.getStamp()%> <%
+ 	} else {
  %> <%=cusvo.getStamp()%> <%
- }
+ 	}
  %>
-				</td>
-				<td><%=cusvo.getS_Date()%></td>
-			</tr>
-			<tr>
-			</tr>
-
-			<%
-			}
-			}
-			%>
-		</table>
-		<tr>
+			</td>
+			<td><%=cusvo.getS_Date()%></td>
 		</tr>
 		<%
+			}
 		}
 		%>
 	</table>
+	<%
+		}
+	%>
+	</div>
+	<div class="footer">
+		<div id="btn_group">
+			<button id="btn1" type="button" onclick="location.href='Mypage.html'">마이페이지</button>
+			<button id="btn2" type="submit">쿠폰관리</button>
+			<button id="btn3" type="submit">회원관리</button>
+			<button id="btn4" type="submit">정보수정</button>
 		</div>
-		<div class="footer">
-			<div id="btn_group">
-				<button id="btn1" type="button"
-					onclick="location.href='Mypage.html'">마이페이지</button>
-				<button id="btn2" type="submit">쿠폰관리</button>
-				<button id="btn3" type="submit">회원관리</button>
-				<button id="btn4" type="submit">정보수정</button>
-			</div>
-		</div>
-		<!-- footer & menu part -->
+	</div>
+	<!-- footer & menu part -->
 
 	</div>
 </body>
