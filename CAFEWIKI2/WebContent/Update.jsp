@@ -107,7 +107,7 @@
          <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button id="btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
 
 				<button id="btn2" type="button"
 					onclick="location.href='SearchMain.jsp'">카페 검색</button>

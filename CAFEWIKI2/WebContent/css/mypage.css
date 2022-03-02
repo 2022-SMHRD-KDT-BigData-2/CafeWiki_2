@@ -111,10 +111,11 @@ a{
     font-size: 18px;
     padding: 10px;
     text-align : center;
+    letter-spacing:20px;
 }
 
-#plus{
-    margin-top: -20px;
+.plus{
+    margin-top: 35px;
     text-align: end;
 }
 
@@ -139,6 +140,7 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
+    width : 478px;
 }
 
 #name2{
@@ -146,6 +148,7 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
+    width : 478px;
 }
 
 #name3{
@@ -153,6 +156,7 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
+    width : 478px;
 }
 
 
@@ -184,7 +188,7 @@ a{
 }
 #btn1{
     border-right: 2px dotted rgb(46, 45, 45);
-    padding: 20px 30px 20px 30px;
+    padding: 23px 30px 20px 30px;
     font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

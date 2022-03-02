@@ -35,6 +35,90 @@ a {
 	text-decoration-line: none;
 	color : brown;
 }
+
+#num{
+    font-size: 18px;
+    padding: 10px;
+    text-align : center;
+    letter-spacing:20px;
+}
+
+#name1{
+    padding:10px;
+    margin-bottom: 10px;
+    border: 1px dashed rgb(124, 122, 122);
+    background-color: #fff;
+    width : 478px;
+}
+
+#name2{
+    padding:10px;
+    margin-bottom: 10px;
+    border: 1px dashed rgb(124, 122, 122);
+    background-color: #fff;
+    width : 478px;
+}
+
+#name3{
+    padding:10px;
+    margin-bottom: 10px;
+    border: 1px dashed rgb(124, 122, 122);
+    background-color: #fff;
+    width : 478px;
+}
+#welcome{
+    font-size: 35px;
+    padding: 0 0 10px 30px;
+}
+#btn{
+	font-family: 'Jua';
+    src: url("./font2/Jua.TTF");
+    border: 1px solid rgb(66, 64, 64);
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 40px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+
+}
+
+.btn{
+ 	font-family: 'Jua';
+    src: url("./font2/Jua.TTF");
+}
+#btn1{
+    border-right: 2px dotted rgb(46, 45, 45);
+    padding: 23px 30px 20px 30px;
+    font-size: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-right: -7px;
+}
+#btn2{
+    border-left: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    margin-right: -7px;
+}
+#btn3{
+    border-left: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    margin-right: -8px;
+}
+#btn4{
+    border-left: 2px dotted rgb(46, 45, 45);
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.plus{
+    margin-top: 5px;
+    text-align: end;
+}
 </style>
 </head>
 <body>
@@ -62,7 +146,7 @@ a {
             <ul id="bar">
                 <li id="welcome"><%=vo.getName()%>님 환영합니다.</li>
                 <li id="barcode-input" style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></li>
-                <li id="num"><%=vo.getU_num()%></li>
+                <li id="num"  ><%=vo.getU_num()%></li>
             </ul>
 <%
       List<String> CafeName = new ArrayList<String>();
@@ -108,7 +192,7 @@ a {
             <ul id="cafe-name">
            <li id="name<%=i + 1%>"><a href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a>
       보유 쿠폰수 : <%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
-         <img src="./image/plus.png"></a><br></li>
+         <img class = "plus" src="./image/plus.png" align="right" ></a><br></li>
          <%int i2 =  CouponSum[i]%10; 
              int i3= CouponSum[i]/10;%>           
          <span style="display: none;" id ="dis<%=i %>">
@@ -130,7 +214,7 @@ a {
 
       <li id="name<%=i + 1%>"><a href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a>
       보유 쿠폰수 : <%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
-      <img src="./image/plus.png"></a><br></li>
+      <img class= "plus" src="./image/plus.png"></a><br></li>
       <%int i2 =  CouponSum[i]%10; 
           int i3= CouponSum[i]/10;%>           
       <span style="display: none;" id ="dis<%=i %>">
@@ -156,15 +240,15 @@ a {
     <!-- footer & menu part -->
         <div class="footer" style="font-family: 'Jua';">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class ="btn" id = "btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
 
-				<button id="btn2" type="button"
+				<button  class ="btn" id = "btn2" type="button"
 					onclick="location.href='SearchMain.jsp'">카페 검색</button>
 
-				<button id="btn3" type="button"
+				<button class ="btn"  id = "btn3" type="button"
 					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+				<button class ="btn"  id = "btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>
