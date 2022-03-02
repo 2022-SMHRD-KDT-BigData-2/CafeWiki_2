@@ -80,7 +80,7 @@
 
 
 
-
+	<%if(vo.getO_num()!= null){ %>
         <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
@@ -98,6 +98,7 @@
 			</div>
 		</div>
         <!-- footer & menu part -->
+        <%} %>
 
     </div>
 </body>
