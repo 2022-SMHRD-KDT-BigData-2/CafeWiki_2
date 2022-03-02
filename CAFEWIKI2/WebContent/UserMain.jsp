@@ -16,8 +16,8 @@
 	rel="stylesheet">
 <style type="text/css">
 @font-face {
-   font-family: '3OF9_NEW';
-   src: url("./font2/3OF9_NEW.TTF");
+	font-family: '3OF9_NEW';
+	src: url("./font2/3OF9_NEW.TTF");
 }
 </style>
 </head>
@@ -82,84 +82,117 @@
 	if (CafeName.size() <= 3) {
 
 		for (int i = 0; i < CafeName.size(); i++) {
-			%>
+	%>
 
-			<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
-			<img src="./image/plus.png"></a><br></li>
-			<%int i2 =  CouponSum[i]%10; 
-				 int i3= CouponSum[i]/10;%>
-					 
-			<span style="display: none;" id ="dis<%=i %>">
-			<img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300"  id = "photo">		
-			<%if(i3>0){ 
-				for(int j=1;j<=i3;j++){
-					%>				
- 				<img src="./Stamp/Stamp10.png" width="500" height="300">		   		 
-		<%     }
-		    }%>
-			</span>
-			<%
-				}%>
-<% 		
-	} else {
+	<li id="name<%=i + 1%>"><a href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a>
+		보유 쿠폰수 : <%=CouponSum[i]%><a id="hide<%=i%>" onclick="dis()"> <img
+			src="./image/plus.png"></a><br> <%
+ 	int i2 = CouponSum[i] % 10;
+ int i3 = CouponSum[i] / 10;
+ %> <img id="dis<%=i%>"
+		src="./Stamp/Stamp<%=i2%>.png" width="500" height="300"
+		style="display: none;"> <%
+ 	if (i3 > 0) {
+ 	for (int j = 1; j <= i3; j++) {
+ %> <img id="dis<%=j%><%=i%>" src="./Stamp/Stamp10.png" width="500"
+		height="300" style="display: none;"> <%
+ 	}
+ }
+ %></li>
+	<%
+		}
+	%>
+	<%
+		} else {
 	for (int i = 0; i < 3; i++) {
-		%>
+	%>
 
-		<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
-		<img src="./image/plus.png"></a><br></li>
-		<%int i2 =  CouponSum[i]%10; 
-			 int i3= CouponSum[i]/10;%> 			 
-		<span style="display: none;" id ="dis<%=i %>">
-		<img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300"  >
-		
-		<%if(i3>0){ 
-			for(int j=1;j<=i3;j++){
-				%>	
-	   		 <img src="./Stamp/Stamp10.png" width="500" height="300">
-	<%     }
-	    }%>
-		</span>
-		<%
-			}
+	<li id="name<%=i + 1%>">
+	<a href="CafeMain.do?store=<%=CafeName2[i]%>"> <%=CafeName2[i]%> </a>
+		보유 쿠폰수 : <%=CouponSum[i]%>
+		<a id="hide<%=i%>" onclick="dis()">
+		<img src="./image/plus.png"></a><br> <%
+ 	int i2 = CouponSum[i] % 10;
+ int i3 = CouponSum[i] / 10;
+ %> <img id="dis<%=i%>"
+		src="./Stamp/Stamp<%=i2%>.png" width="500" height="300"
+		style="display: none;"> <%
+ 	if (i3 > 0) {
+ 	for (int j = 1; j <= i3; j++) {
+ %> <img id="dis<%=j%><%=i%>" src="./Stamp/Stamp10.png" width="500"
+		height="300" style="display: none;"> <%
+ 	}
+ }
+ %></li>
+	<%
+		}
 	}
-	%>	
-	
-	
-	
-	<br><a href="UserMain.jsp">My Page</a>
+	%>
+
+
+
+	<br>
+	<a href="UserMain.jsp">My Page</a>
 	<a href="SearchMain.jsp">카페 검색</a>
 	<a href="mycoupon.do?id=<%=vo.getId()%>">내 쿠폰 관리</a>
 	<a href="Update.jsp">정보수정</a>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript"> 
-    
-    $(function (){
-    	$("#hide0").click
-    	(function (){
-      	$("#dis0").toggle();
-      });
-    })
-    
-    $(function (){
-    	$("#hide1").click
-    	(function (){
-      	$("#dis1").toggle();
-      });
-    })
-    
-    $(function (){
-    	$("#hide2").click
-    	(function (){
-      	$("#dis2").toggle();
-      });
-    })
-     
-    
+	<script type="text/javascript">
+		$(function() {
+			$("#hide0").click(function() {
+				$("#dis0").toggle();
+			});
+		})
 
+		$(function() {
+			$("#hide1").click(function() {
+				$("#dis1").toggle();
+			});
+		})
 
+		$(function() {
+			$("#hide2").click(function() {
+				$("#dis2").toggle();
+			});
+		})
 
-   	  </script>
+		$(function() {
+			$("#hide0").click(function() {
+				$("#dis10").toggle();
+			});
+		});
+
+		$(function() {
+			$("#hide1").click(function() {
+				$("#dis11").toggle();
+			});
+		});
+
+		$(function() {
+			$("#hide2").click(function() {
+				$("#dis12").toggle();
+			});
+		});
+
+		$(function() {
+			$("#hide0").click(function() {
+				$("#dis20").toggle();
+			});
+		});
+
+		$(function() {
+			$("#hide1").click(function() {
+				$("#dis21").toggle();
+			});
+		});
+
+		$(function() {
+			$("#hide2").click(function() {
+				$("#dis22").toggle();
+			});
+		});
+	</script>
 
 </body>
 </html>

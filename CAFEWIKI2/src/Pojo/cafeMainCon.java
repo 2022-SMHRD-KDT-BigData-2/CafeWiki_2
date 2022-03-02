@@ -1,6 +1,8 @@
 package Pojo;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,24 +18,31 @@ public class cafeMainCon implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		
-		String o_num = (String) request.getParameter("o_num");
-		
-		System.out.println(o_num);
-		
 		try {
 			request.setCharacterEncoding("EUC-KR");
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
 		}
+		String o_num = (String) request.getParameter("o_num");
+		String store = (String) request.getParameter("store");
+		
+		System.out.println(o_num);
+		System.out.println(store);
 
 		CafeDAO cdao = new CafeDAO();
-
-		CafeVO cvo = (CafeVO) cdao.searchOneCafe(o_num);
+		
+		if(o_num != null) {
+			CafeVO cvo = (CafeVO) cdao.searchOneCafe(o_num);
+			request.setAttribute("cvo", cvo);
+		}else {
+			CafeVO cvo = (CafeVO) cdao.selectOneCafe(store);
+			o_num = cvo.getO_num();
+			request.setAttribute("cvo", cvo);
+		}
+		
 		List<BoardVO> bvo = (List<BoardVO>) cdao.selectBoard(o_num);
 
 		// request scope¿¡ list ´ã±â
-		request.setAttribute("cvo", cvo);
 		request.setAttribute("bvo", bvo);
 
 		

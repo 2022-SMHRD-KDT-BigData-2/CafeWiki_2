@@ -88,5 +88,17 @@ public class CafeDAO {
 		return cvo;
 
 	}
+	
+	public CafeVO selectOneCafe(String store) {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		CafeVO cvo = session.selectOne("selectOneCafe", store);
+
+		session.close();
+
+		return cvo;
+
+	}
 
 }
