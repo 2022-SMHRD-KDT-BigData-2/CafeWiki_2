@@ -39,7 +39,6 @@ div#picture {
 
 	<div id="board">
 		<h3>게시판</h3>
-		<a href="writeBoard.jsp?o_num=<%=vo.getO_num()%>">작성</a>
 
 		<table id="list">
 			<tr>
