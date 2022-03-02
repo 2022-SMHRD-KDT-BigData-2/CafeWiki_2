@@ -1,12 +1,15 @@
-body{
+body {
     background-color: rgba(0, 0, 0, .1);
+}
+div {
     font-family: 'Jua';
 }
-
 a{
     list-style: none;
 }
-
+.btn{
+	font-family: 'Jua';
+}
 .container{
     margin: 0 auto;
     position: absolute;
@@ -14,7 +17,7 @@ a{
     left: 50%;
     transform: translate(-50%);
     grid-template-columns: 100px 540px;
-    grid-template-rows: 100px 80% 100px;
+    grid-template-rows: 100px ifr 100px;
     grid-template-areas: 'img title' 
                          'Main Main'
                          'footer footer';
@@ -29,7 +32,7 @@ a{
 /* header part */
 .header{
     width: 600px;
-    height: 100%;
+    margin-bottom:15px;
 }
 
 .logo{
@@ -73,114 +76,115 @@ a{
 
 /* Main part */
 
-/* user correction */
+/* cafe info */
 .Main{
     height:100%;
     display: grid;
     grid-area: Main;
     width: 640px;
+    border: 3px skyblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-input:focus {
-    outline: none;
+.Cafe{
+    width: 468px;
+    height:170px;
+    float: left;
+    border: 2px dotted #999;
 }
 
-h1{
-    height: 50%;
-}
-h3 {
-    height:100%;
-    padding-left: 10px;
-    margin: 0 0 8px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.box {
-    margin-top: 10px;
-    display: block;
-    width: 440px;
-    height: 100%;
-    border: solid 1px #dadada;
-    padding: 10px 14px 10px 14px;
-    box-sizing: border-box;
-    background: #fff;
-    position: relative;
-    border-radius: 15px;
-}
-
-
-
-.int {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border: none;
-    background: #fff;
-    font-size: 15px;
-}
-
-.box.int_pass {
-    padding-right: 40px;
-}
-
-/* 버튼 */
-
-.btn_area {
-    align-content: center;
+#cafetitle{
     text-align: center;
-    margin: 20px 0 10px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
-#btnJoin2 {
-    width: 150px;
-    padding-right: 30px;
-    padding: 10px;
-    border: 0;
-    border-radius: 25px;
-    cursor: pointer;
-    color: #fff;
-    background-color: rgb(151, 149, 149);
+#picture{
+    float: left;
+}
+
+#picture img{
+    width:120px;
+    height: 120px;
+    padding-left: 20px;
+}
+
+#location img{
+    padding: 0 10px 0 20px;
+    text-align: end;
+    float: left;
+}
+
+#location p{
+
+}
+
+
+/* cafe board */
+
+.board{
+    width: 468px;
+    height: 100%;
+    float: left;
+    border: 2px dotted #999;
+    margin-bottom:15px;
+    margin-top:15px
+}
+
+
+.d-none{
     font-size: 20px;
-    font-weight: 400;
-    font-family:'Source Sans Pro', sans-serif;
+    margin: 2px;
+    text-align: center;
 }
 
-#btnJoin {
-    width: 150px;
-    margin-left: 60px;
-    padding: 10px;
-    border: 0;
-    border-radius: 25px;
-    cursor: pointer;
-    color: #fff;
-    background-color: rgb(151, 149, 149);
+.table{
+    font-size :20px;
+    border-collapse: collapse;
+    width: 468px;
+    margin-top:3px;
+    border: 1px solid #999;    
+    text-align: center;
+}
+
+.thead td {
+    background: #999;
+}
+
+
+td{
+    height: 20px;
+    border-bottom:1px solid black;
+}
+
+.review{
+    width: 468px;
+    height: 100%;
+    float: left;
+    border: 2px dotted #999;
+}
+
+.r-none{
     font-size: 20px;
-    font-weight: 400;
-    font-family:'Source Sans Pro', sans-serif;
+    margin: 2px;
+    text-align: center;
 }
 
-/* 에러메세지 */
-
-.error_next_box {
-    margin-top: 9px;
-    font-size: 12px;
-    color: red;    
-    display: none;
+.review-btn{
+    font-size: 20px;
+    text-align: end;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding: 5px 10px 5px 10px;
 }
 
-#alertTxt {
-    position: absolute;
-    top: 19px;
-    right: 38px;
-    font-size: 12px;
-    color: red;
-    display: none;
+#review-btn1{
+    padding: 5px 10px 5px 10px;
+    border: 2px solid rgb(66, 64, 64);
+    border-radius: 5px;
 }
-
-
 
 
 /* footer & menu part */
@@ -190,10 +194,11 @@ h3 {
     align-items: center;
     text-align: center;
     width: 640px;
-    height: 100%;
+    height: 80px;
     display: grid;
     grid-area: footer; 
     border-top: 2px dashed #999;
+    margin-top:15px;
 }
 
 #btn_group{

@@ -1,6 +1,8 @@
 body{
     background-color: rgba(0, 0, 0, .1);
-    font-family: 'Jua';
+}
+div{
+	 font-family: 'Jua';
 }
 
 a{
@@ -29,7 +31,7 @@ a{
 /* header part */
 .header{
     width: 600px;
-    margin-bottom : 10px; 
+    margin-bottom:15px;
 }
 
 .logo{
@@ -72,103 +74,20 @@ a{
 }
 
 /* Main part */
+
+/* cafe info */
 .Main{
-	overflow : hidden;
     height:100%;
     display: grid;
     grid-area: Main;
     width: 640px;
+    border: 3px skyblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.all{
-	width : 468px;
-	height : 150px;
-}
-
-.result{
-	width : 468px;
-	height : 100%;
-}
-/* cafe search */
-
-.wrap{
-    width: 468px;
-}
-.search_box{
-    width: 468px;
-    border: 2px solid rgba(0, 0, 0, 0);
-}
-
-.search_box input {
-	width: 340px;
-	height: 35px;
-	padding-left: 12px;
-	padding-right: 12px;
-    border-radius: 5px;
-	font-size: 18px;
-	
-}
-
-.search_box button {
-	width: 10%;
-	height: 35px;
-	margin: 0;
-	padding: 0;
-	border: none;
-	background: #999;
-}
-
-.search_box i {
-	color: white;
-	font-size: 22px;
-}
-
-#keyboard {
-	color: #999;
-	font-size: 20px;
-    width: 10%;
-	padding-top:12px;
-}
-
-
-.category{
-    width: 100%;
-    height: 92px;
-}
-
-.category div{
-    width:  100%;
-    height: 100%;
-    margin: 10px;
-    text-align: center;
-}
-
-.category button{
-    font-size: 16px;
-    font-weight: 700;
-    margin-right: 20px;
-    padding: 5px 10px 5px 10px;
-    border: none;
-    border-radius: 10px;
-}
-
-.category button:hover{
-    font-size: 16px;
-    font-weight: 700;
-    margin-right: 20px;
-    padding: 5px 10px 5px 10px;
-    border: none;
-    background-color: #999;
-    border-radius: 10px;
-}
-
-
-/* cafe info */
-
 .Cafe{
     width: 468px;
-    height:170px;
+    height:100%;
     float: left;
     border: 2px dotted #999;
 }
@@ -197,8 +116,78 @@ a{
     float: left;
 }
 
+#location p{
+
+}
 
 
+/* cafe board */
+
+.update{
+    margin-top: -20px;
+}
+.board{
+    width: 468px;
+    height: 100%;
+    float: left;
+    border: 2px dotted #999;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+
+.d-none{
+    font-size: 20px;
+    margin: 2px;
+    text-align: center;
+}
+
+.table{
+    font-size :20px;
+    border-collapse: collapse;
+    width: 468px;
+    margin-top:3px;
+    border: 1px solid #999;    
+    text-align: center;
+}
+
+.thead td {
+    background: #999;
+}
+
+
+td{
+    height: 20px;
+    border-bottom:1px solid black;
+}
+
+.review{
+    width: 468px;
+    height: 100%;
+    float: left;
+    border: 2px dotted #999;
+    margin-top: 10px;
+}
+
+.r-none{
+    font-size: 20px;
+    margin: 2px;
+    text-align: center;
+}
+
+.review-btn{
+    margin-top: -35px;
+    font-size: 20px;
+    text-align: end;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding: 5px 2px 5px 2px;
+    float: left;
+}
+
+.btn{
+	font-family: 'Jua';
+}
 
 /* footer & menu part */
 
@@ -211,7 +200,7 @@ a{
     display: grid;
     grid-area: footer; 
     border-top: 2px dashed #999;
-    margin-top : 10px;
+    margin-top:15px;
 }
 
 #btn_group{

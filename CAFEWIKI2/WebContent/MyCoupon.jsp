@@ -17,7 +17,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/customerManage2.css">
+<link rel="stylesheet" type="text/css" href="./css/MyCoupon3.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
 </head>
@@ -70,28 +70,37 @@
 			}
 		}
 	}
-	
-	for (int i = 0; i < CafeName.size(); i++) {
 	%>
+	
+	
+	<div class="Main">
+	<%
+	for (int i = 0; i < CafeName.size(); i++) {
+	%><div class="coupon">
 	<h3 class ="btn"><%=CafeName.get(i)%></h3>
 	<h4 class ="btn">적립된 쿠폰 수 = <%=CouponSum[i]%></h4>
+	</div>
 	<%}%>
+	</div>
 	
-	<div class="footer">
+	
+	 <!-- footer & menu part -->
+        <div class="footer">
 			<div id="btn_group">
-				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
 
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='BarcodeScan.jsp'">쿠폰 관리</button>
+					onclick="location.href='SearchMain.jsp'">카페 검색</button>
 
-				<button class="btn" id="btn3" type="button"
-					onclick="location.href='customerManage.do'">내 회원 관리</button>
+				<button class="btn"  id="btn3" type="button"
+					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
 
 				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>
-
+        <!-- footer & menu part -->
+	</div>
 
 </body>
 </html>

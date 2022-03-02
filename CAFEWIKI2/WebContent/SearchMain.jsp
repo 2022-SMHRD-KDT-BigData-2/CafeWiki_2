@@ -16,9 +16,19 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/searchMain2.css">
+<link rel="stylesheet" type="text/css" href="./css/searchMain3.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
+	<style type="text/css">
+.btn{
+ 	font-family: 'Jua';
+    src: url("./font2/Jua.TTF");
+}
+a {
+	text-decoration-line: none;
+	color : #784748;
+}	
+	</style>
 <title>Insert title here</title>
 </head>
 <body>
@@ -32,7 +42,7 @@
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+				<button class="btn" id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
 			</div>
 		</div>
 
@@ -91,7 +101,7 @@
 				%>
 				<div class="Cafe">
 					<div id="cafetitle">
-						<a href="CafeMain.do?o_num=<%=vo.getO_num()%>"><%=vo.getStore()%></a>
+						<a href="CafeMain.do?o_num=<%=vo.getO_num()%>" ><%=vo.getStore()%></a>
 					</div>
 
 					<div id="picture">
@@ -99,11 +109,11 @@
 					</div>
 					<div id="location">
 						<img src="./image/location.png">
-						<p><%=vo.getLocation()%></p>
+						<p class="btn"><%=vo.getLocation()%></p>
 						<img src="./image/tel.png">
-						<p><%=vo.getC_tel()%></p>
+						<p class="btn"><%=vo.getC_tel()%></p>
 						<img src="./image/time.png">
-						<p><%=vo.getTime()%></p>
+						<p class="btn"><%=vo.getTime()%></p>
 
 					</div>
 				</div>
@@ -117,13 +127,13 @@
 		<!-- footer & menu part -->
 		<div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button"
+				<button class="btn" id="btn1" type="button"
 					onclick="location.href='UserMain.jsp'">마이페이지</button>
-				<button id="btn2" type="button"
+				<button class="btn" id="btn2" type="button"
 					onclick="location.href='SearchMain.jsp'">카페 검색</button>
-				<button id="btn3" type="button"
+				<button class="btn" id="btn3" type="button"
 					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
-				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보수정</button>
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보 수정</button>
 			</div>
 		</div>
 		<!-- footer & menu part -->

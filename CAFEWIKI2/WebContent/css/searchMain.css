@@ -1,8 +1,9 @@
 body{
     background-color: rgba(0, 0, 0, .1);
+}
+div{
     font-family: 'Jua';
 }
-
 a{
     list-style: none;
 }
@@ -122,7 +123,6 @@ a{
 	padding-top:12px;
 }
 
-/* cafe 카테고리부분 */
 
 .category{
     width: 100%;
@@ -189,9 +189,14 @@ a{
     float: left;
 }
 
+.btn{
+	font-family: 'Jua';
+}
 
-/* 창 페이징 기능 */
-
+a {
+	text-decoration-line: none;
+	color : #784748;
+}
 
 /* footer & menu part */
 

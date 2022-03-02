@@ -13,7 +13,7 @@ a{
     display: grid;
     left: 50%;
     transform: translate(-50%);
-    grid-template-columns: 100px 540px;
+    grid-template-columns: 100px 1fr;
     grid-template-rows: 100px ifr 100px;
     grid-template-areas: 'img title' 
                          'Main Main'
@@ -28,7 +28,8 @@ a{
 
 /* header part */
 .header{
-    width: 600px;
+    width: 100%;
+    height: 100px;
 }
 
 .logo{
@@ -72,68 +73,69 @@ a{
 
 /* Main part */
 .Main{
-    height: 500px;
+    height: 100%;
     display: grid;
     grid-area: Main;
     width: 640px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.userwrap{
-    margin-top: 40px;
-    width: 468px;
+.customer{
+    width: 100%;
     text-align: center;
     height: 100%;
     float: left;
 }
+.coupon{
+	width:300px;
+	text-align:left;
+}
+.tablewrap{
+    width: 100%;
+}
 
-.icons{
-    width: 468px;
+.table1{
+    margin: 0 auto;
+    align-content: center;
     margin-top: 20px;
-    margin-bottom: 30px;
 }
 
-b{
-    font-size: 25px;
-    font-weight: 700;
+#user img{
+    margin-right: 10px;
 }
-.coupon form{
-    width: 468px;
+
+#accu{
+    width : 200px
+}
+
+#plus{
+}
+
+p{
+    font-weight: 600;
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.table2{
+	margin: 0 auto;
+    border: 2px dashed #999;
+}
+
+th{
+    height: 40px;
     font-size: 20px;
+    border: 2px solid #999
 }
 
-.coupon input{
-    margin: 10px;
-    height: 30px;
+.table2 td{
+    height: 100%;
+    border: 2px solid #999
 }
-
-input#plus1{
-    width: 20px;
-    height: 20px;
-}
-input#minus1{
-    width: 20px;
-    height: 20px;
-}
-
-#input1{
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
-    margin-right: 0;
-}
-
-#input2{
-    width: 60px;
-    height: 36px;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-left: 0;
-}
-
-
-
-
 
 
 /* footer & menu part */
@@ -161,9 +163,14 @@ input#minus1{
     color: antiquewhite;
 
 }
+.btn{
+ 	font-family: 'Jua';
+    src: url("./font2/Jua.TTF");
+}
+
 #btn1{
     border-right: 2px dotted rgb(46, 45, 45);
-    padding: 20px 30px 20px 30px;
+    padding: 23px 30px 20px 30px;
     font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

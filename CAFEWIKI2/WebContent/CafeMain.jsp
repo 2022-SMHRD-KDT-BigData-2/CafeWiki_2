@@ -15,7 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/usercafe2.css">
+    <link rel="stylesheet" type="text/css" href="./css/usercafe4.css">
     <script src="https://kit.fontawesome.com/8c9374f376.js" crossorigin="anonymous"></script>
 <title>Insert title here</title>
 <style type="text/css">
@@ -92,10 +92,6 @@
             <div class="review">
                 <h1 class="r-none">¹æ¹®ÀÚ ¸®ºä</h1>
                 <table class="table">
-                    <thead class="thead1">
-                    <tbody class="tbody1">
-                    </tbody>
-                    </thead>
                     <%for(int i=0;i<review.length;i++){ %>
                     <tbody class="tbody1">
                         <tr>

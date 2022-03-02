@@ -30,6 +30,7 @@ a{
 .header{
     width: 100%;
     height: 100px;
+    margin-bottom: 10px;
 }
 
 .logo{
@@ -85,6 +86,11 @@ a{
     text-align: center;
     height: 100%;
     float: left;
+}
+.coupon{
+	height: 100%;
+	width : 300px;
+	text-align: left;
 }
 
 .tablewrap{
@@ -146,13 +152,14 @@ th{
     display: grid;
     grid-area: footer; 
     border-top: 2px dashed #999;
+    margin-top: 10px;
 }
 
 #btn_group{
     margin-top: 10px;
     background-color: rgba(0, 0, 0, .1);
     color: #999;
-    padding: 2px;
+    padding: 0px;
 }
 
 #btn_group:hover{

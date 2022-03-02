@@ -14,7 +14,7 @@ a{
     left: 50%;
     transform: translate(-50%);
     grid-template-columns: 100px 540px;
-    grid-template-rows: 100px ifr 100px;
+    grid-template-rows: 100px 80% 100px;
     grid-template-areas: 'img title' 
                          'Main Main'
                          'footer footer';
@@ -29,6 +29,7 @@ a{
 /* header part */
 .header{
     width: 600px;
+    height: 100%;
 }
 
 .logo{
@@ -72,113 +73,116 @@ a{
 
 /* Main part */
 
-/* cafe info */
+/* user correction */
 .Main{
-    height:600px;
+    height:100%;
     display: grid;
     grid-area: Main;
     width: 640px;
-    border: 3px skyblue;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.Cafe{
-    width: 468px;
-    height:170px;
-    float: left;
-    border: 2px dotted #999;
+input:focus {
+    outline: none;
 }
 
-#cafetitle{
-    text-align: center;
-    font-size: 25px;
+h1{
+    height: 50%;
+}
+h3 {
+    height:100%;
+    padding-left: 10px;
+    margin: 0 0 8px;
+    font-size: 14px;
     font-weight: 700;
-    margin-bottom: 5px;
-    margin-top: 5px;
 }
 
-#picture{
-    float: left;
-}
-
-#picture img{
-    width:120px;
-    height: 120px;
-    padding-left: 20px;
-}
-
-#location img{
-    padding: 0 10px 0 20px;
-    text-align: end;
-    float: left;
-}
-
-#location p{
-
+.box {
+    margin-top: 10px;
+    display: block;
+    width: 440px;
+    height: 100%;
+    border: solid 1px #dadada;
+    padding: 10px 14px 10px 14px;
+    box-sizing: border-box;
+    background: #fff;
+    position: relative;
+    border-radius: 15px;
 }
 
 
-/* cafe board */
 
-.update{
-    margin-top: -20px;
+.int {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+    font-size: 15px;
 }
-.board{
-    width: 468px;
-    height: 160px;
-    float: left;
-    border: 2px dotted #999;
+
+.box.int_pass {
+    padding-right: 40px;
 }
 
 
-.d-none{
-    font-size: 20px;
-    margin: 2px;
+
+.btn_area {
+    align-content: center;
     text-align: center;
+    margin: 20px 0 10px;
 }
 
-.table{
-    font-size :20px;
-    border-collapse: collapse;
-    width: 468px;
-    margin-top:3px;
-    border: 1px solid #999;    
-    text-align: center;
-}
-
-.thead td {
-    background: #999;
-}
-
-
-td{
-    height: 20px;
-    border-bottom:1px solid black;
-}
-
-.review{
-    width: 468px;
-    height: 160px;
-    float: left;
-    border: 2px dotted #999;
-}
-
-.r-none{
+#btnJoin2 {
+    width: 150px;
+    padding-right: 30px;
+    padding: 10px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(151, 149, 149);
     font-size: 20px;
-    margin: 2px;
-    text-align: center;
+    font-weight: 400;
+    font-family:'Source Sans Pro', sans-serif;
 }
 
-.review-btn{
-    margin-top: -35px;
+#btnJoin {
+    width: 150px;
+    margin-left: 60px;
+    padding: 10px;
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(151, 149, 149);
     font-size: 20px;
-    text-align: end;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding: 5px 2px 5px 2px;
-    float: left;
+    font-weight: 400;
+    font-family:'Source Sans Pro', sans-serif;
 }
 
+
+
+.error_next_box {
+    margin-top: 9px;
+    font-size: 12px;
+    color: red;    
+    display: none;
+}
+
+#alertTxt {
+    position: absolute;
+    top: 19px;
+    right: 38px;
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+
+.btn{
+	font-family: 'Jua';
+}
 
 
 /* footer & menu part */
@@ -188,7 +192,7 @@ td{
     align-items: center;
     text-align: center;
     width: 640px;
-    height: 80px;
+    height: 100%;
     display: grid;
     grid-area: footer; 
     border-top: 2px dashed #999;
@@ -198,7 +202,7 @@ td{
     margin-top: 10px;
     background-color: rgba(0, 0, 0, .1);
     color: #999;
-    padding: 2px;
+    padding: 0px;
 }
 
 #btn_group:hover{
@@ -208,7 +212,7 @@ td{
 }
 #btn1{
     border-right: 2px dotted rgb(46, 45, 45);
-    padding: 20px 30px 20px 30px;
+    padding: 23px 30px 20px 30px;
     font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;

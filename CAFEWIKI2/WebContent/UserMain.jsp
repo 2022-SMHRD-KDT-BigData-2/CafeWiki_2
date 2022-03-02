@@ -33,7 +33,7 @@ div{
 }
 a {
 	text-decoration-line: none;
-	color : brown;
+	color : #784748;
 }
 
 #num{

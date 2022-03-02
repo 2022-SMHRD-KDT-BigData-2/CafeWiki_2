@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/couponManage.css">
+    <link rel="stylesheet" type="text/css" href="./css/couponManage2.css">
     <script src="https://kit.fontawesome.com/8c9374f376.js" crossorigin="anonymous"></script>
 <title>Insert title here</title>
 </head>
@@ -27,7 +27,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+                <button class="btn" id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
             </div>
         </div>
 
@@ -48,7 +48,7 @@
                         <label for="minus1"><span>사용</span></label><br>
 
                         <input id="input1" type="text" name="stamp">
-                        <input id="input2" type="submit" value="적용">
+                        <input class="btn" id="input2" type="submit" value="적용">
                     </form>
                 </div>
 
@@ -63,16 +63,16 @@
          <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
 
-				<button id="btn2" type="button"
+				<button class="btn" id="btn2" type="button"
 					onclick="location.href='BarcodeScan.jsp'">쿠폰
 					관리</button>
 
-				<button id="btn3" type="button"
+				<button class="btn" id="btn3" type="button"
 					onclick="location.href='customerManage.do'">내 회원 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>
