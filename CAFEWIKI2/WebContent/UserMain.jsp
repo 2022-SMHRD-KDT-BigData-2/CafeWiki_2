@@ -82,40 +82,43 @@
 	if (CafeName.size() <= 3) {
 
 		for (int i = 0; i < CafeName.size(); i++) {
-	%>
-
-	<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>"  onclick="dis()">
-	<img src="./image/plus.png"></a><br>
-	<%int i2 =  CouponSum[i]%10; 
-		 int i3= CouponSum[i]/10;%> 
-	<img id ="dis<%=i %>" src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" style="display: none;" >
-	<%if(i3>0){ 
-		for(int j=1;j<=i3;j++){
 			%>
-    <img id ="dis<%=j %><%=i%>"src="./Stamp/Stamp10.png" width="500" height="300" style="display: none;" >
-   
-<%     }
-    }%>
-	</li>
-	<%
-		}%>
+
+			<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
+			<img src="./image/plus.png"></a><br></li>
+			<%int i2 =  CouponSum[i]%10; 
+				 int i3= CouponSum[i]/10;%>
+					 
+			<span style="display: none;" id ="dis<%=i %>">
+			<img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300"  id = "photo">		
+			<%if(i3>0){ 
+				for(int j=1;j<=i3;j++){
+					%>				
+ 				<img src="./Stamp/Stamp10.png" width="500" height="300">		   		 
+		<%     }
+		    }%>
+			</span>
+			<%
+				}%>
 <% 		
 	} else {
 	for (int i = 0; i < 3; i++) {
 		%>
 
-		<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>"  onclick="dis()">
-		<img src="./image/plus.png"></a><br>
+		<li id="name<%=i+1%>"><%=CafeName2[i]%>=<%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
+		<img src="./image/plus.png"></a><br></li>
 		<%int i2 =  CouponSum[i]%10; 
 			 int i3= CouponSum[i]/10;%> 			 
-		<img id ="dis<%=i %>" src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" style="display: none;" >
+		<span style="display: none;" id ="dis<%=i %>">
+		<img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300"  >
+		
 		<%if(i3>0){ 
 			for(int j=1;j<=i3;j++){
 				%>	
-	    <img id ="dis<%=j %><%=i%>"src="./Stamp/Stamp10.png" width="500" height="300" style="display: none;" >
+	   		 <img src="./Stamp/Stamp10.png" width="500" height="300">
 	<%     }
 	    }%>
-		</li>
+		</span>
 		<%
 			}
 	}
@@ -151,45 +154,12 @@
       	$("#dis2").toggle();
       });
     })
-              
-        $(function (){
-        	$("#hide0").click
-        	(function (){
-          	$("#dis10").toggle();
-          });
-        }); 
-        
-        $(function (){
-        	$("#hide1").click(function (){
-          	$("#dis11").toggle();
-          });
-        }); 
-        
-        $(function (){
-        	$("#hide2").click(function (){
-          	$("#dis12").toggle();
-          });
-        }); 
-        
-        $(function (){
-        	$("#hide0").click
-        	(function (){
-          	$("#dis20").toggle();
-          });
-        }); 
-        
-        $(function (){
-        	$("#hide1").click(function (){
-          	$("#dis21").toggle();
-          });
-        }); 
-        
-        $(function (){
-        	$("#hide2").click(function (){
-          	$("#dis22").toggle();
-          });
-        }); 
-    </script>
+     
+    
+
+
+
+   	  </script>
 
 </body>
 </html>

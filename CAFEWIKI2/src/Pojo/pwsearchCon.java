@@ -13,12 +13,11 @@ public class pwsearchCon implements Command {
 		String id = request.getParameter("id");
 		String email = request.getParameter("email");
 		String tel = request.getParameter("tel");
-		MemberVO vo = new MemberVO(id, email,tel);
+		MemberVO vo = new MemberVO(id, tel, email);
 		
-		System.out.println(vo.getEmail()+"이메일입니다.");
 		MemberDAO dao = new MemberDAO();
 		MemberVO uservo = dao.pwsearch(vo);
-		System.out.println(uservo.getId());
+		
 		if (uservo != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("vo", uservo);
