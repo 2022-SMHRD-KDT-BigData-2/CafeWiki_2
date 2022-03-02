@@ -131,9 +131,9 @@
         <div class="footer">
             <div id="btn_group">
                 <button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
-                <button id="btn2" type="button" onclick="location.href='BarcodeScan.jsp">쿠폰관리 </button>
+                <button id="btn2" type="button" onclick="location.href='BarcodeScan.jsp'">쿠폰관리 </button>
                 <button id="btn3" type="button" onclick="location.href='customerManage.do'">회원관리 </button>
-                <button id="btn4" type="button" onclick="location.href='update.do'">정보수정 </button>
+                <button id="btn4" type="button" onclick="location.href='Update.jsp'">정보수정 </button>
             </div>
         </div>
         <!-- footer & menu part -->
