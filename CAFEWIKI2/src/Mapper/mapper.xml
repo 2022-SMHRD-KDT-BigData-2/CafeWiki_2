@@ -160,4 +160,9 @@
 		pw=#{pw}
 		where id =#{id}
 	</update>
+	
+	<select id="searchOneCafe" parameterType="Model.CafeVO">
+	 select * from cafe_info
+	 where o_num = #{o_num}
+	</select>
 </mapper>

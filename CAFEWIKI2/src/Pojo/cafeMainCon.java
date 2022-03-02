@@ -16,9 +16,10 @@ public class cafeMainCon implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		HttpSession session = request.getSession();
-		MemberVO mvo = (MemberVO) session.getAttribute("vo");
-		request.getAttribute("");
+		
+		String o_num = (String) request.getAttribute("o_num");
+		
+		System.out.println(o_num);
 		
 		try {
 			request.setCharacterEncoding("EUC-KR");
@@ -28,13 +29,11 @@ public class cafeMainCon implements Command {
 
 		CafeDAO cdao = new CafeDAO();
 
-		List<CafeVO> namevo = (List<CafeVO>) cdao.searchCafeName(store);
-		List<CafeVO> typevo = (List<CafeVO>) cdao.searchCafeType(store);
+		CafeVO cvo = (CafeVO) cdao.searchOneCafe(o_num);
 		List<BoardVO> bvo = (List<BoardVO>) cdao.selectBoard(o_num);
 
 		// request scope¿¡ list ´ã±â
-		request.setAttribute("namevo", namevo);
-		request.setAttribute("typevo", typevo);
+		request.setAttribute("cvo", cvo);
 		request.setAttribute("bvo", bvo);
 
 		
