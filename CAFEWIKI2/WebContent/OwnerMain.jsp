@@ -18,7 +18,11 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;family=Lobster&amp;family=Noto+Sans:ital,wght@1,700&amp;family=Source+Sans+Pro:wght@700&amp;display=swap"
 	rel="stylesheet">
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="./css/ceocafe4.css">
+=======
+<link rel="stylesheet" type="text/css" href="./css/ceocafe2.css">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-2/CafeWiki_2.git
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
 </head>
@@ -47,7 +51,7 @@
 <%
 		for (CafeVO cvo : clist) {
 	%>
-        <div class="Main">
+        <div class="Main" class="btn">
             <div class="Cafe">
                 <div id="cafetitle"><%=cvo.getStore()%></div>
                 <div id="picture">
@@ -72,7 +76,7 @@
                     <button class="btn" id="review-btn1" type="button" onclick="location.href='writeBoard.jsp?o_num=<%=vo.getO_num()%>'">작성</button>
                 </div>
                 <div class="cafeboard">
-                    <table class="table">
+                    <table class="table" class="btn">
                         <thead class="thead">
                             <tr>
                                 <td>제목</td>
