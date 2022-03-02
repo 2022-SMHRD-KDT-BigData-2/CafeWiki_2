@@ -81,14 +81,15 @@
 									<%=CouponSum[i]%></p>
 
 							</td>
-							<td id="plus" rowspan="2"><img src="./image/plus.png">
+							<td id="plus" rowspan="2">
+							<a id="hide<%=i %>" onclick="dis()">
+							<img src="./image/plus.png"></a>
 							</td>
 						</tr>
 					</table>
 				</div>
-
-
-				<table class="table2">
+				<span style="display: none;" id="dis<%=i%>">
+				<table class="table2"  >
 
 					<h1>최근 내역</h1>
 
@@ -100,7 +101,7 @@
 					<%
 						for (CouponVO cusvo : clist) {
 						if ((id.get(i)).equals(cusvo.getId())) {
-					%>
+							%>
 					<tr>
 						<td>
 							<%
@@ -128,7 +129,7 @@
 					}
 					%>
 				</table>
-
+			</span>
 			</form>
 			<%
 				}
@@ -152,5 +153,45 @@
 		<!-- footer & menu part -->
 
 	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"> 
+    
+    $(function (){
+        $("#hide0").click
+        (function (){
+          $("#dis0").toggle();
+       });
+     })
+     
+    
+    $(function (){
+       $("#hide1").click
+       (function (){
+         $("#dis1").toggle();
+      });
+    })
+    
+     $(function (){
+       $("#hide2").click
+       (function (){
+         $("#dis2").toggle();
+      });
+    })
+    
+     $(function (){
+       $("#hide3").click
+       (function (){
+         $("#dis3").toggle();
+      });
+    })
+    
+     $(function (){
+       $("#hide4").click
+       (function (){
+         $("#dis4").toggle();
+      });
+    })
+    </script>
 </body>
 </html>
