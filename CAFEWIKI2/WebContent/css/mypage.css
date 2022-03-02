@@ -100,10 +100,11 @@ a{
 
 #barcode-input{
     border: 2px dotted black;
-    height: 70px;
+    height: 90px;
     padding: 5px;
     text-align: center;
-    font-size: 95px;
+    font-size: 105px;
+    width: 487px;
 }
 
 #num{
@@ -130,6 +131,7 @@ a{
     font-size: 22px;
     font-weight: 700;
     padding: 10px;
+    width : 478px;
 }
 
 #name1{
@@ -137,7 +139,6 @@ a{
     margin-bottom: 10px;
     border: 1px dashed rgb(124, 122, 122);
     background-color: #fff;
-    radius : 30%;
 }
 
 #name2{

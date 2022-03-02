@@ -15,11 +15,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
    rel="stylesheet">
 <style type="text/css">
+div{
+
+    font-family: 'Jua';
+    src: url("./font2/Jua.TTF");
+}
 @font-face {
    font-family: '3OF9_NEW';
    src: url("./font2/3OF9_NEW.TTF");
 }
-
+#barcode-input{
+    border: 2px dotted black;
+    height: 70px;
+    padding: 5px;
+    text-align: center;
+    font-size: 95px;
+}
 a {
 	text-decoration-line: none;
 	color : brown;
@@ -47,7 +58,7 @@ a {
 
     <!-- main part -->
 
-        <div class="Main"> 
+        <div class="Main" style="font-family: 'Jua';"> 
             <ul id="bar">
                 <li id="welcome"><%=vo.getName()%>님 환영합니다.</li>
                 <li id="barcode-input" style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></li>
@@ -143,7 +154,7 @@ a {
 
 
     <!-- footer & menu part -->
-        <div class="footer">
+        <div class="footer" style="font-family: 'Jua';">
 			<div id="btn_group">
 				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
 
