@@ -17,7 +17,7 @@ public class cafeMainCon implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		
-		String o_num = (String) request.getAttribute("o_num");
+		String o_num = (String) request.getParameter("o_num");
 		
 		System.out.println(o_num);
 		

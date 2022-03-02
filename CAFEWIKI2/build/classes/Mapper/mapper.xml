@@ -161,7 +161,7 @@
 		where id =#{id}
 	</update>
 	
-	<select id="searchOneCafe" parameterType="Model.CafeVO">
+	<select id="searchOneCafe" resultType="Model.CafeVO">
 	 select * from cafe_info
 	 where o_num = #{o_num}
 	</select>
