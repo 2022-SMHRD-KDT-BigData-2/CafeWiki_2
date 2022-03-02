@@ -147,7 +147,6 @@ td{
     background-color: rgb(151, 149, 149);
     font-size: 20px;
     font-weight: 400;
-    font-family:'Source Sans Pro', sans-serif;
 }
 
 
@@ -178,9 +177,15 @@ td{
     color: antiquewhite;
 
 }
+
+.btn{
+ 	font-family: 'Jua';
+    src: url("./font2/Jua.TTF");
+}
+
 #btn1{
     border-right: 2px dotted rgb(46, 45, 45);
-    padding: 20px 30px 20px 30px;
+    padding: 23px 30px 20px 30px;
     font-size: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -205,3 +210,4 @@ td{
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
+

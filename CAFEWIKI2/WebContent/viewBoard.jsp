@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./css/viewBoard.css">
+    <link rel="stylesheet" type="text/css" href="./css/viewBoard2.css">
     <script src="https://kit.fontawesome.com/8c9374f376.js" crossorigin="anonymous"></script>
 <title>Insert title here</title>
 </head>
@@ -33,7 +33,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+                <button class="btn" id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
             </div>
         </div>
 
@@ -42,21 +42,19 @@
         <!-- main part -->
 
         <div class="Main">
-            <div id="board">
-                <h1>
-                    <%=cvo.getStore() %>
-                </h1>
+            <div id="board" >
+               <p class="btn"  align="center"> <font size="50px"> <%=cvo.getStore() %></font></p>
                 <table id="list" >
                     <tr>
-                        <td id="veiwtitle">
+                        <td class="btn"  id="veiwtitle">
                             <%=bvo.getB_title() %>
                         </td>
-                        <td id="date">
+                        <td class="btn"  id="date">
                             <%=bvo.getB_date() %>
                     </tr>
 
                     <tr height="200px">
-                        <td id="cont" colspan="2">
+                        <td class="btn"  id="cont" colspan="2">
                             <%=bvo.getB_cont() %>
                         </td>
                     </tr>
@@ -70,7 +68,12 @@
                     </tr>
                     <tr>
                         <td id="veiwbtn" colspan="2">
-                            <button id="btnJoin" type="button" onclick="location.href='cafe.do'">뒤로가기</button>
+                         <%if(vo.getO_num()!= null){ %>
+                            <button class="btn" id="btnJoin" type="button" onclick="location.href='cafe.do'">뒤로가기</button>
+                            
+                              <%}else{ %>
+                              <button class="btn"  id="btnJoin" type="button" onclick="location.href="CafeMain.jsp'">뒤로가기</button> 
+                                  <%} %>
                         </td>
                     </tr>
 
@@ -84,16 +87,16 @@
         <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
 
-				<button id="btn2" type="button"
+				<button class="btn" id="btn2" type="button"
 					onclick="location.href='BarcodeScan.jsp'">쿠폰
 					관리</button>
 
-				<button id="btn3" type="button"
+				<button class="btn" id="btn3" type="button"
 					onclick="location.href='customerManage.do'">내 회원 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='update.do'">정보
+				<button class="btn" id="btn4" type="button" onclick="location.href='update.do'">정보
 					수정</button>
 			</div>
 		</div>
@@ -102,15 +105,15 @@
          <!-- footer & menu part -->
         <div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
 
-				<button id="btn2" type="button"
+				<button class="btn" id="btn2" type="button"
 					onclick="location.href='SearchMain.jsp'">카페 검색</button>
 
-				<button id="btn3" type="button"
+				<button class="btn"  id="btn3" type="button"
 					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>
