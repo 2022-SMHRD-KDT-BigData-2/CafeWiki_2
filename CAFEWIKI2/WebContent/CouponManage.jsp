@@ -41,7 +41,7 @@
                 </div>
                     
                 <div class="coupon">
-                    <form action="couponUpdate.do?id=<%=svo.getId()%>" method="post">
+                    <form action="couponUpdate.do?id=<%=svo.getId()%>" method="post" onsubmit="return confirm('<%=svo.getId()%>님에게 적립/사용하는 것이 맞습니까?');">>
                         <input id="plus1" type="radio"  name="update" value="plus">
                         <label for="plus1"><span>적립</span></label> 
                         <input id="minus1" type="radio" name="update" value="minus">
