@@ -26,7 +26,7 @@
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+				<button id="btn" type="button" onclick="location.href='login.jsp'" class= "btn" >로그아웃</button>
 			</div>
 		</div>
 		<%
@@ -39,24 +39,24 @@
 			name="writeboard" method="post" enctype="multipart/form-data">
 			<table class="table" id="list">
 				<tr>
-					<td>제목</td>
+					<td class= "btn" >제목</td>
 					<td><input class="title" type="text" value="" name="b_title"
 						id="" /></td>
 				</tr>
 				<tr>
-					<td>내용</td>
+					<td class= "btn" >내용</td>
 					<td colspan="2"><textarea name="b_cont" rows="30" cols="70"
 							style="resize: none;"></textarea></td>
 				</tr>
 				<tr>
-					<td rowspan="2">첨부파일</td>
+					<td rowspan="2" class= "btn" >첨부파일</td>
 				</tr>
 				<tr>
-					<td id="3"><input type="file" name="b_file " id="" /></td>
+					<td id="3"><input type="file" class= "btn" name="b_file " id="" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="reset" value="다시작성" >
-						<input type="submit" value="작성" ></td>
+					<td colspan="2"><input type="reset" class= "btn"  value="다시작성" >
+						<input type="submit" class= "btn"  value="작성" ></td>
 				</tr>
 			</table>
 		</form>
@@ -64,16 +64,16 @@
 		<!-- footer & menu part -->
 		<div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class= "btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
 
-				<button id="btn2" type="button"
+				<button class= "btn" id="btn2" type="button"
 					onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">쿠폰
 					관리</button>
 
-				<button id="btn3" type="button"
+				<button class= "btn"  id="btn3" type="button"
 					onclick="location.href='customerManage.do'">내 회원 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+				<button class= "btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>
