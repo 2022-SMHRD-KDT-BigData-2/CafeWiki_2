@@ -15,14 +15,9 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap"
 	rel="stylesheet">
-<link
-	href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;family=Lobster&amp;family=Noto+Sans:ital,wght@1,700&amp;family=Source+Sans+Pro:wght@700&amp;display=swap"
-	rel="stylesheet">
-<<<<<<< HEAD
+
 <link rel="stylesheet" type="text/css" href="./css/ceocafe4.css">
-=======
-<link rel="stylesheet" type="text/css" href="./css/ceocafe2.css">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-2/CafeWiki_2.git
+
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
 </head>
