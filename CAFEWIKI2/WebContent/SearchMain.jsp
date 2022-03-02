@@ -37,7 +37,6 @@
 	<% if(clist != null){for(CafeVO vo : clist){ %>
 	
 	<h3><a href="CafeMain.do?o_num=<%=vo.getO_num()%>"><%=vo.getStore()%></a></h3>
-	<h3><%=vo.getO_num()%></h3>
 
 	<div id="picture">
 		<img src="<%=vo.getPicture()%>">
