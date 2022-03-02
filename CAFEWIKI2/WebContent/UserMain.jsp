@@ -191,7 +191,7 @@ a {
          %>
             <ul id="cafe-name">
            <li id="name<%=i + 1%>"><a href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a>
-      보유 쿠폰수 : <%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
+      보유 스탬프 수 : <%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
          <img class = "plus" src="./image/plus.png" align="right" ></a><br></li>
          <%int i2 =  CouponSum[i]%10; 
              int i3= CouponSum[i]/10;%>           

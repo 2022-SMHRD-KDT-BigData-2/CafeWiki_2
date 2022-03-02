@@ -23,16 +23,17 @@
 	crossorigin="anonymous"></script>
 </head>
 <div class="container">
-		<div class="header">
-			<div class="logo">
-				<img id="img" src="./image/login/coffee.png">
-				<p id="title">Cafe Wiki</p>
-				<button class="btn" id="btn" type="button" onclick="location.href='logout.do">로그아웃</button>
-			</div>
+	<div class="header">
+		<div class="logo">
+			<img id="img" src="./image/login/coffee.png">
+			<p id="title">Cafe Wiki</p>
+			<button class="btn" id="btn" type="button"
+				onclick="location.href='logout.do'">로그아웃</button>
 		</div>
+	</div>
 
 	<%
-	List<CafeVO> clist = (List<CafeVO>) session.getAttribute("clist");
+		List<CafeVO> clist = (List<CafeVO>) session.getAttribute("clist");
 	List<CouponVO> slist = (List<CouponVO>) session.getAttribute("slist");
 	List<String> CafeName = new ArrayList<String>();
 	for (CafeVO cvo : clist) {
@@ -45,7 +46,7 @@
 	for (int i = 0; i < CafeName.size(); i++) {
 		CafeName2[i] = CafeName.get(i);
 	}
-	
+
 	int[] CouponSum = new int[CafeName.size()];
 	for (int i = 0; i < CafeName.size(); i++) {
 		for (int j = 0; j < clist.size(); j++) {
@@ -55,7 +56,7 @@
 		}
 
 	}
-	
+
 	int temp;
 	String stemp;
 	for (int i = 0; i < CafeName.size(); i++) {
@@ -71,36 +72,47 @@
 		}
 	}
 	%>
-	
-	
+
+
 	<div class="Main">
-	<%
-	for (int i = 0; i < CafeName.size(); i++) {
-	%><div class="coupon">
-	<h3 class ="btn"><%=CafeName.get(i)%></h3>
-	<h4 class ="btn">적립된 쿠폰 수 = <%=CouponSum[i]%></h4>
-	</div>
-	<%}%>
-	</div>
-	
-	
-	 <!-- footer & menu part -->
-        <div class="footer">
-			<div id="btn_group">
-				<button class="btn" id="btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
+		<%
+			for (int i = 0; i < CafeName.size(); i++) {
+		%><div class="coupon">
+			<table>
+				<tr class="btn">
+					<td rowspan="2"><img id="img" src="./image/mug.png"></td>
+					<td align="center"><%=CafeName.get(i)%></td>
+				</tr>
+				<tr class="btn">
+					<td align="center">보유 스탬프 수 = <%=CouponSum[i]%></td>
+				</tr>
+			</table>
 
-				<button class="btn" id="btn2" type="button"
-					onclick="location.href='SearchMain.jsp'">카페 검색</button>
-
-				<button class="btn"  id="btn3" type="button"
-					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
-
-				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
-					수정</button>
-			</div>
 		</div>
-        <!-- footer & menu part -->
+		<%
+			}
+		%>
 	</div>
+
+
+	<!-- footer & menu part -->
+	<div class="footer">
+		<div id="btn_group">
+			<button class="btn" id="btn1" type="button"
+				onclick="location.href='UserMain.jsp'">마이페이지</button>
+
+			<button class="btn" id="btn2" type="button"
+				onclick="location.href='SearchMain.jsp'">카페 검색</button>
+
+			<button class="btn" id="btn3" type="button"
+				onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
+
+			<button class="btn" id="btn4" type="button"
+				onclick="location.href='Update.jsp'">정보 수정</button>
+		</div>
+	</div>
+	<!-- footer & menu part -->
+</div>
 
 </body>
 </html>
