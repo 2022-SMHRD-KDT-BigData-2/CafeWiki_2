@@ -20,7 +20,7 @@
 <body>
 <% CouponVO svo = (CouponVO)request.getAttribute("svo"); %>
 
-<body>
+
     <!-- header part -->
     <div class="container">
         <div class="header">
@@ -41,14 +41,14 @@
                 </div>
                     
                 <div class="coupon">
-                    <form action="couponUpdate.do?id=<%=svo.getId()%>" method="post" onsubmit="return confirm('<%=svo.getId()%>님에게 적립/사용하는 것이 맞습니까?');">>
+                    <form id = "text" action="couponUpdate.do?id=<%=svo.getId()%>" method="post">
                         <input id="plus1" type="radio"  name="update" value="plus">
                         <label for="plus1"><span>적립</span></label> 
                         <input id="minus1" type="radio" name="update" value="minus">
-                        <label for="minus1"><span>사용</span></label><br>
+                        <label for="minus1" ><span>사용</span></label><br>
 
                         <input id="input1" type="text" name="stamp">
-                        <input class="btn" id="input2" type="submit" value="적용">
+                        <input class="btn" id="input2" type="submit" value="적용" onclick="say()">
                     </form>
                 </div>
 
@@ -79,6 +79,14 @@
         <!-- footer & menu part -->
 
     </div>
+
 </body>
-</body>
+<script type="text/javascript">
+function say(){
+	var textBox = document.getElementById("input1");	
+	if(textBox != null ){
+		alert(<%=svo.getId()%>+"님에게"+textBox.value+"개를 적립/사용하시겠습니까?");
+		}		
+	}
+</script >
 </html>
