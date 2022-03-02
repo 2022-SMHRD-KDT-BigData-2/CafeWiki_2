@@ -49,6 +49,7 @@ a{
     padding: 0;
 }
 
+
 #img{
     margin-left: 30px;
     display: flex;
@@ -98,7 +99,7 @@ h1{
 h3 {
     height:100%;
     padding-left: 10px;
-    margin: 0 0 8px;
+    margin: 9px 5px -4px;
     font-size: 14px;
     font-weight: 700;
 }
@@ -131,7 +132,7 @@ h3 {
     padding-right: 40px;
 }
 
-/* ë²„íŠ¼ */
+
 
 .btn_area {
     align-content: center;
@@ -167,7 +168,6 @@ h3 {
     font-family:'Source Sans Pro', sans-serif;
 }
 
-/* ÁÖ¼®ÀÌ ±úÁ®¿ä ¤Ð¤Ð */
 
 .error_next_box {
     margin-top: 9px;

@@ -18,7 +18,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/MyCoupon3.css">
+<link rel="stylesheet" type="text/css" href="./css/MyCoupon4.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
 </head>
@@ -70,26 +70,27 @@
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
 				<button class="btn" id="btn" type="button"
-					onclick="location.href='logout.do">로그아웃</button>
+					onclick="location.href='logout.do'">로그아웃</button>
 		</div>
         <!-- footer & menu part -->
 	</div>
 
 		<div class="Main">
 		<table class="table">
-
+			
 			<%
 				for (int i = 0; i < CafeName.size(); i++) {
 			%>
+			
 			<tr class="btn">
 				<td><%=CafeName.get(i)%></td>
 			</tr>
 			<tr class="btn">
 				<td>적립된 쿠폰 수 = <%=CouponSum[i]%></td>
 			</tr>
-			<%
-				}
-			%>
+
+			<%}%>
+			
 		</table>
 		</div>
 		<div class="footer">

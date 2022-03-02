@@ -53,7 +53,7 @@
 					</h3>
 					<span class="box int_pass"> <input type="password"
 						class="btn" name="pw" id="pswd1" class="int" maxlength="20"
-						placeholder="비밀번호 입력"> <span id="alertTxt">사용불가</span>
+						placeholder="비밀번호 입력" style="border: none;"> <span id="alertTxt">사용불가</span>
 					</span> <span class="error_next_box"></span>
 				</div>
 
@@ -62,9 +62,9 @@
 					<h3 class="join_title">
 						<label for="phoneNo">전화번호</label>
 					</h3>
-					<span class="box int_mobile"> <input type="tel" class="btn"
+					<span class="box int_mobile"> <input type="text" class="btn"
 						name="tel" id="mobile" class="int" maxlength="16"
-						placeholder="전화번호 입력">
+						placeholder="전화번호 입력" style="border: none;">
 					</span> <span class="error_next_box"></span>
 				</div>
 
@@ -75,7 +75,7 @@
 					</h3>
 					<span class="box int_email"> <input type="text" class="btn"
 						name="email" id="email" class="int" maxlength="100"
-						placeholder="이메일 입력">
+						placeholder="이메일 입력" style="border: none;">
 					</span>
 				</div>
 
