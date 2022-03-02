@@ -16,14 +16,9 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&family=Noto+Sans:ital,wght@1,700&family=Source+Sans+Pro:wght@700&display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/customerManage.css">
+<link rel="stylesheet" type="text/css" href="./css/customerManage2.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
-<style type="text/css">
-@font-face {
-	font-family: 'Jua';
-}
-</style>
 <title></title>
 </head>
 <body>
@@ -54,7 +49,7 @@
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+				<button class="btn" id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
 			</div>
 		</div>
 
@@ -75,7 +70,7 @@
 						<tr>
 							<td id="accu">
 
-								<p>
+								<p class="btn">
 									ID :
 									<%=id.get(i)%><br> 보유 스탬프 수 :
 									<%=CouponSum[i]%></p>
@@ -91,9 +86,9 @@
 				<span style="display: none;" id="dis<%=i%>">
 				<table class="table2"  >
 
-					<h1>최근 내역</h1>
+					<h3 class="btn">최근 내역</h3>
 
-					<tr>
+					<tr class="btn">
 						<th>적립/사용</th>
 						<th>개수</th>
 						<th>날짜</th>
@@ -102,7 +97,7 @@
 						for (CouponVO cusvo : clist) {
 						if ((id.get(i)).equals(cusvo.getId())) {
 							%>
-					<tr>
+					<tr class="btn">
 						<td>
 							<%
 								int a = cusvo.getStamp();
@@ -113,7 +108,7 @@
 								}
 							%>
 						</td>
-						<td>
+						<td >
 							<%
 								if (a < 0) {
 							%> <%=-cusvo.getStamp()%> <%
@@ -138,15 +133,15 @@
 		<!-- footer & menu part -->
 		<div class="footer">
 			<div id="btn_group">
-				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+				<button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
 
-				<button id="btn2" type="button"
+				<button class="btn" id="btn2" type="button"
 					onclick="location.href='BarcodeScan.jsp'">쿠폰 관리</button>
 
-				<button id="btn3" type="button"
+				<button class="btn" id="btn3" type="button"
 					onclick="location.href='customerManage.do'">내 회원 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+				<button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>
