@@ -72,7 +72,7 @@
 				<button id="btn3" type="button"
 					onclick="location.href='customerManage.do'">내 회원 관리</button>
 
-				<button id="btn4" type="button" onclick="location.href='update.do'">정보
+				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
 					수정</button>
 			</div>
 		</div>

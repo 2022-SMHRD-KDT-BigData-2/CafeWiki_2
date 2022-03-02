@@ -19,30 +19,41 @@
    font-family: '3OF9_NEW';
    src: url("./font2/3OF9_NEW.TTF");
 }
+
+a {
+	text-decoration-line: none;
+	color : brown;
+}
 </style>
 </head>
 <body>
-
-   <%
+<%
       MemberVO vo = (MemberVO) session.getAttribute("vo");
    List<CafeVO> clist = (List<CafeVO>) session.getAttribute("clist");
    List<CouponVO> slist = (List<CouponVO>) session.getAttribute("slist");
    %>
-   <a onclick="location.href='logout.do'">로그아웃</a>
-   <h1>회원main입니다.</h1>
-   <%
-      if (vo != null) {
-   %>
-   <h1><%=vo.getName()%>님 환영합니다.
-   </h1>
-   <%
-      }
-   %>
 
-   <h1 style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></h1>
-   <h3><%=vo.getU_num()%></h3>
+    <!-- header part -->
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img id="img" src="./image/login/coffee.png">
+                <p id="title">Cafe Wiki</p>
+                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
+            </div>
+        </div>
 
-   <%
+
+
+    <!-- main part -->
+
+        <div class="Main"> 
+            <ul id="bar">
+                <li id="welcome"><%=vo.getName()%>님 환영합니다.</li>
+                <li id="barcode-input" style="font-family: '3OF9_NEW';"><%="*" + vo.getU_num() + "*"%></li>
+                <li id="num"><%=vo.getU_num()%></li>
+            </ul>
+<%
       List<String> CafeName = new ArrayList<String>();
    for (CafeVO cvo : clist) {
       if (!CafeName.contains(cvo.getStore())) {
@@ -83,8 +94,8 @@
 
       for (int i = 0; i < CafeName.size(); i++) {
          %>
-
-         <li id="name<%=i + 1%>"><a href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a>
+            <ul id="cafe-name">
+           <li id="name<%=i + 1%>"><a href="CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a>
       보유 쿠폰수 : <%=CouponSum[i]%><a id="hide<%=i %>" onclick="dis()">
          <img src="./image/plus.png"></a><br></li>
          <%int i2 =  CouponSum[i]%10; 
@@ -124,16 +135,32 @@
       <%
          }
    }
-   %>   
-   
-   
-   
-   <br><a href="UserMain.jsp">My Page</a>
-   <a href="SearchMain.jsp">카페 검색</a>
-   <a href="mycoupon.do?id=<%=vo.getId()%>">내 쿠폰 관리</a>
-   <a href="Update.jsp">정보수정</a>
+   %> 
+            </ul>
+        </div>
 
-   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+
+    <!-- footer & menu part -->
+        <div class="footer">
+			<div id="btn_group">
+				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+
+				<button id="btn2" type="button"
+					onclick="location.href='SearchMain.jsp'">카페 검색</button>
+
+				<button id="btn3" type="button"
+					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
+
+				<button id="btn4" type="button" onclick="location.href='Update.jsp'">정보
+					수정</button>
+			</div>
+		</div>
+        <!-- footer & menu part -->
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript"> 
     
     $(function (){
@@ -159,6 +186,5 @@
      
 
         </script>
-
 </body>
 </html>
