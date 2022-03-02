@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.executor.ReuseExecutor"%>
 <%@page import="Model.CafeVO"%>
 <%@page import="Model.MemberVO"%>
 <%@page import="Model.BoardVO"%>
@@ -20,7 +21,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+<%		HttpSession session1 = request.getSession();
+		MemberVO vo = (MemberVO)session1.getAttribute("vo");
 		BoardVO bvo = (BoardVO)request.getAttribute("bvo");
 		CafeVO cvo = (CafeVO)request.getAttribute("cvo");
 	
