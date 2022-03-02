@@ -129,6 +129,7 @@ th{
 }
 
 .table2 td{
+	margin: 0 auto;
     height: 100%;
     border: 2px solid #999
 }

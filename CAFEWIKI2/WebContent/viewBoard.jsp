@@ -98,6 +98,23 @@
 			</div>
 		</div>
         <!-- footer & menu part -->
+        <%}else{ %>
+         <!-- footer & menu part -->
+        <div class="footer">
+			<div id="btn_group">
+				<button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+
+				<button id="btn2" type="button"
+					onclick="location.href='SearchMain.jsp'">카페 검색</button>
+
+				<button id="btn3" type="button"
+					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
+
+				<button id="btn4" type="button" onclick="location.href='update.do'">정보
+					수정</button>
+			</div>
+		</div>
+        <!-- footer & menu part -->
         <%} %>
 
     </div>
