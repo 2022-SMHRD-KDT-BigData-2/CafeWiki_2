@@ -155,7 +155,7 @@ th{
     margin-top: 10px;
     background-color: rgba(0, 0, 0, .1);
     color: #999;
-    padding: 2px;
+    padding: 0px;
 }
 
 #btn_group:hover{
