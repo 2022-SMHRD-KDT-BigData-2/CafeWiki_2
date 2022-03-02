@@ -156,42 +156,15 @@
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript"> 
-    
+    <%for(int i = 0; i < id.size(); i++){%>
     $(function (){
-        $("#hide0").click
+        $("#hide<%=i%>").click
         (function (){
-          $("#dis0").toggle();
+          $("#dis<%=i%>").toggle();
        });
      })
      
-    
-    $(function (){
-       $("#hide1").click
-       (function (){
-         $("#dis1").toggle();
-      });
-    })
-    
-     $(function (){
-       $("#hide2").click
-       (function (){
-         $("#dis2").toggle();
-      });
-    })
-    
-     $(function (){
-       $("#hide3").click
-       (function (){
-         $("#dis3").toggle();
-      });
-    })
-    
-     $(function (){
-       $("#hide4").click
-       (function (){
-         $("#dis4").toggle();
-      });
-    })
+    <%}%>
     </script>
 </body>
 </html>
