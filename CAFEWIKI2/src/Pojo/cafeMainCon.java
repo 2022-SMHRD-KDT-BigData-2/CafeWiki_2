@@ -25,9 +25,6 @@ public class cafeMainCon implements Command {
 		}
 		String o_num = (String) request.getParameter("o_num");
 		String store = (String) request.getParameter("store");
-		
-		System.out.println(o_num);
-		System.out.println(store);
 
 		CafeDAO cdao = new CafeDAO();
 		
