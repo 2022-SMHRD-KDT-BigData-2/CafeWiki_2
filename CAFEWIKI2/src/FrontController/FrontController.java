@@ -16,6 +16,7 @@ import Pojo.CouponManageCon;
 import Pojo.CouponUpdateCon;
 import Pojo.CustomerManageCon;
 import Pojo.SearchCon;
+import Pojo.cafeMainCon;
 import Pojo.deletCon;
 import Pojo.joinCon;
 import Pojo.loginCon;
@@ -48,8 +49,8 @@ public class FrontController extends HttpServlet {
 			com = new joinCon();
 		} else if (command.equals("/cafe.do")) {
 			com = new OwnerCon();
-		//} else if (command.equals("/CafeMain.do")) {
-			//com = new cafeCon();
+		} else if (command.equals("/CafeMain.do")) {
+			com = new cafeMainCon();
 		} else if(command.equals("/write.do")) {
 			com = new writeCon();
 

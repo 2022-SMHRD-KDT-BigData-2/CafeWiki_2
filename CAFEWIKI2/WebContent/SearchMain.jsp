@@ -35,7 +35,7 @@
 	</form>
 
 	<% if(clist != null){for(CafeVO vo : clist){ %>
-		<h1>가게 이름:<%=vo.getStore()%></h1>
+		<h1>가게 이름:<%=vo.getStore()%><a href=""></a></h1>
 
 	<div id="picture">
 		<img src="<%=vo.getPicture()%>">

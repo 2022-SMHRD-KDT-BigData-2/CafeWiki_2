@@ -7,8 +7,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link
+	href="https://fonts.googleapis.com/css2?family=Jua&amp;display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;family=Lobster&amp;family=Noto+Sans:ital,wght@1,700&amp;family=Source+Sans+Pro:wght@700&amp;display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./css/ceocafe.css">
+<script src="https://kit.fontawesome.com/8c9374f376.js"
+	crossorigin="anonymous"></script>
 </head>
 <body>
 	<%
@@ -17,8 +29,8 @@
 	List<BoardVO> blist = (List<BoardVO>) request.getAttribute("bvo");
 	// blist : 사업자번호가 ~인 리스트
 	%>
-<h1>Cafe Wiki</h1>
-<button type="button" onclick="location.href='logoutCon'">로그아웃</button>
+	<h1>Cafe Wiki</h1>
+	<button type="button" onclick="location.href='logoutCon'">로그아웃</button>
 
 
 	<%
@@ -59,17 +71,17 @@
 				<td>날짜</td>
 			</tr>
 
-				<%
-					for (BoardVO bvo : blist) {
-				%>
-				<tr>
-				<td><a href="viewBoard.do?b_num=<%=bvo.getB_num() %>"><%=bvo.getB_title()%></a></td>
-				<td><%=bvo.getB_date().split(" ")[0]%></td>	
-				</tr>
-				<%
-					}
-				%>
-		
+			<%
+				for (BoardVO bvo : blist) {
+			%>
+			<tr>
+				<td><a href="viewBoard.do?b_num=<%=bvo.getB_num()%>"><%=bvo.getB_title()%></a></td>
+				<td><%=bvo.getB_date().split(" ")[0]%></td>
+			</tr>
+			<%
+				}
+			%>
+
 
 		</table>
 
@@ -82,7 +94,7 @@
 			</tr>
 			<tr>
 				<td></td>
-				<td><%=cvo.getReview().split(",")[0] %></td>
+				<td><%=cvo.getReview().split(",")[0]%></td>
 			</tr>
 			<tr>
 				<td rowspan="2">img</td>
@@ -97,12 +109,17 @@
 		<%
 			}
 		%>
-		<button type="button" onclick="location.href='cafe.do'">My Page</button>
+		<button type="button" onclick="location.href='cafe.do'">My
+			Page</button>
 
-		<button type="button" onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">쿠폰 관리</button>
+		<button type="button"
+			onclick="location.href='BarcodeScan.jsp?o_num=<%=vo.getO_num()%>'">쿠폰
+			관리</button>
 
-		<button type="button" onclick="location.href='customerManage.do'">내 회원 관리</button>
+		<button type="button" onclick="location.href='customerManage.do'">내
+			회원 관리</button>
 
-		<button type="button" onclick="location.href='update.do'">정보 수정</button>
+		<button type="button" onclick="location.href='update.do'">정보
+			수정</button>
 </body>
 </html>
