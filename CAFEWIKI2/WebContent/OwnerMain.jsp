@@ -18,7 +18,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Indie+Flower&amp;family=Lobster&amp;family=Noto+Sans:ital,wght@1,700&amp;family=Source+Sans+Pro:wght@700&amp;display=swap"
 	rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./css/ceocafe.css">
+<link rel="stylesheet" type="text/css" href="./css/ceocafe2.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
 </head>
@@ -36,7 +36,7 @@
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='login.html'">로그아웃</button>
+                <button class="btn" id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
 <%
 		for (CafeVO cvo : clist) {
 	%>
-        <div class="Main">
+        <div class="Main" class="btn">
             <div class="Cafe">
                 <div id="cafetitle"><%=cvo.getStore()%></div>
                 <div id="picture">
@@ -69,10 +69,10 @@
             <div class="board">
                 <h1 class="d-none">공지사항</h1>
                 <div class="review-btn">
-                    <button id="review-btn1" type="button" onclick="location.href='writeBoard.jsp?o_num=<%=vo.getO_num()%>'">작성</button>
+                    <button class="btn" id="review-btn1" type="button" onclick="location.href='writeBoard.jsp?o_num=<%=vo.getO_num()%>'">작성</button>
                 </div>
                 <div class="cafeboard">
-                    <table class="table">
+                    <table class="table" class="btn">
                         <thead class="thead">
                             <tr>
                                 <td>제목</td>
@@ -130,10 +130,10 @@
         <!-- footer & menu part -->
         <div class="footer">
             <div id="btn_group">
-                <button id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
-                <button id="btn2" type="button" onclick="location.href='BarcodeScan.jsp'">쿠폰관리 </button>
-                <button id="btn3" type="button" onclick="location.href='customerManage.do'">회원관리 </button>
-                <button id="btn4" type="button" onclick="location.href='Update.jsp'">정보수정 </button>
+                <button class="btn" id="btn1" type="button" onclick="location.href='cafe.do'">마이페이지</button>
+                <button class="btn" id="btn2" type="button" onclick="location.href='BarcodeScan.jsp'">쿠폰관리 </button>
+                <button class="btn" id="btn3" type="button" onclick="location.href='customerManage.do'">회원관리 </button>
+                <button class="btn" id="btn4" type="button" onclick="location.href='Update.jsp'">정보수정 </button>
             </div>
         </div>
         <!-- footer & menu part -->
