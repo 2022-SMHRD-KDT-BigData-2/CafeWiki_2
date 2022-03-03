@@ -81,17 +81,9 @@
 			<table>
 				<tr class="btn">
 					<td rowspan="2"><img id="img" src="./image/mug.png"></td>
-					<td align="center">
-					<%
-					if (clist != null) {
-					for (CafeVO vo : clist) {
-				%>
-					<a href="CafeMain.do?o_num=<%=vo.getO_num()%>" ><%=vo.getStore()%></a>
+					<td align="center"><a href = "CafeMain.do?store=<%=CafeName.get(i)%>"><%=CafeName.get(i)%></a></td>
 				</tr>
-				<%
-					}
-				}
-				%>
+
 				</td>
 				<tr class="btn">
 					<td align="center">보유 스탬프 수 = <%=CouponSum[i]%></td>
