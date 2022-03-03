@@ -157,8 +157,7 @@
     $(function (){
         $("#hide<%=i%>").click
         (function (){
-          $("#dis<%=i%>
-		").toggle();
+          $("#dis<%=i%>").toggle();
 			});
 		})
 	<%}%>
