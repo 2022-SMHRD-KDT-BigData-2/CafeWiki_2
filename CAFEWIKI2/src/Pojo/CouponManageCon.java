@@ -36,9 +36,9 @@ public class CouponManageCon implements Command {
 				svo = sdao.scan(vo3);
 
 			}
-			request.setAttribute("svo", svo);
 
 		}
+		request.setAttribute("svo", svo);
 		return "CouponManage.jsp";
 
 	}
