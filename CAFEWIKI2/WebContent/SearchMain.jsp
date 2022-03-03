@@ -55,7 +55,7 @@ a {
 				<div class="wrap" height="100">
 					<form action="searchname.do" method="post">
 						<div class="search_box">
-							<input type="text" name="store" maxlength="225"
+							<input class="btn" type="text" name="store" maxlength="225"
 								placeholder="카페이름을 입력해주세요">
 							<button type="submit">
 								<i class="fa fa-search"></i>
@@ -68,21 +68,21 @@ a {
 				<div class="category">
 					<form action="searchtype.do" method="post">
 						<div class="group1">
-							<button type="button"
+							<button class="btn" type="button"
 								onclick="location.href='searchtype.do?type=<%=1%>'">공부하기
 								좋은</button>
-							<button type="button"
+							<button class="btn" type="button"
 								onclick="location.href='searchtype.do?type=<%=2%>'">커피가
 								특별한</button>
-							<button type="button"
+							<button class="btn" type="button"
 								onclick="location.href='searchtype.do?type=<%=3%>'">풍경이
 								좋은</button>
 						</div>
 						<div class="group2">
-							<button type="button"
+							<button class="btn" type="button"
 								onclick="location.href='searchtype.do?type=<%=4%>'">수다떨기
 								좋은</button>
-							<button type="button"
+							<button class="btn" type="button"
 								onclick="location.href='searchtype.do?type=<%=5%>'">디저트가
 								다양한</button>
 						</div>
@@ -100,7 +100,7 @@ a {
 					for (CafeVO vo : clist) {
 				%>
 				<div class="Cafe">
-					<div id="cafetitle">
+					<div class="btn" id="cafetitle">
 						<a href="CafeMain.do?o_num=<%=vo.getO_num()%>" ><%=vo.getStore()%></a>
 					</div>
 
