@@ -94,8 +94,10 @@
 			</table>
 			<%int i2 =  CouponSum[i]%10; 
               	int i3= CouponSum[i]/10;%>           
-           <span style="display: none;" id ="dis<%=i %>">          
+           <span style="display: none;" id ="dis<%=i %>">
+           <%if(i2!=0){ %>           
          <img src="./Stamp/Stamp<%=i2 %>.png" width="300" height="200" id= "img<%=i%>" >
+         <%} %>          
           <%if(i3>0){ 
          for(int j=1;j<=i3;j++){
         	 %>   

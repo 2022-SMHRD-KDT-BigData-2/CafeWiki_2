@@ -195,15 +195,18 @@ a {
          <img class = "plus" src="./image/plus.png" align="right" ></a><br></li>
          <%int i2 =  CouponSum[i]%10; 
               int i3= CouponSum[i]/10;%>           
-           <span style="display: none;" id ="dis<%=i %>">          
+           <span style="display: none;" id ="dis<%=i %>">
+          <%if(i2!=0){ %>           
          <img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" id= "img<%=i%>" >
+         <%} %>
           <%if(i3>0){ 
          for(int j=1;j<=i3;j++){
         	 %>   
              <img src="./Stamp/Stamp10.png" width="500" height="300">
    <%        }
-             } 
-         }
+             } %>
+          </span>
+     <%   }
         %>
          
 <%       
@@ -217,8 +220,9 @@ a {
       <%int i2 =  CouponSum[i]%10; 
           int i3= CouponSum[i]/10;%>           
       <span style="display: none;" id ="dis<%=i %>">
-      <img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300"  >
-      
+      <%if(i2!=0){ %>           
+         <img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" id= "img<%=i%>" >
+         <%} %>
       <%if(i3>0){ 
          for(int j=1;j<=i3;j++){
             %>   
