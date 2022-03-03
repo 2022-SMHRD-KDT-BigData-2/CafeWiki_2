@@ -120,7 +120,7 @@ a{
 }
 
 
-.cafe-name{
+#cafe-name{
     text-align: left;
     list-style: none;
     width: 468px;
@@ -129,7 +129,7 @@ a{
     
 }
 
-.cafe-name li{
+#cafe-name li{
     font-size: 22px;
     font-weight: 700;
     padding: 10px;
