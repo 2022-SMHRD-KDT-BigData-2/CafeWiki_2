@@ -77,4 +77,11 @@ public class CouponDAO {
 		return list;
 		
 	}
+
+	public int add(CouponVO vo3) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt = session.insert("addCoupon", vo3);
+		session.close();
+		return cnt;
+	}
 }

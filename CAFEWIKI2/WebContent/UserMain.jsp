@@ -32,8 +32,8 @@ div{
     font-size: 95px;
 }
 a {
-	text-decoration-line: none;
-	color : #784748;
+   text-decoration-line: none;
+   color : #784748;
 }
 
 #num{
@@ -71,7 +71,7 @@ a {
     padding: 0 0 10px 30px;
 }
 #btn{
-	font-family: 'Jua';
+   font-family: 'Jua';
     src: url("./font2/Jua.TTF");
     border: 1px solid rgb(66, 64, 64);
     font-size: 15px;
@@ -85,7 +85,7 @@ a {
 }
 
 .btn{
- 	font-family: 'Jua';
+    font-family: 'Jua';
     src: url("./font2/Jua.TTF");
 }
 #btn1{
@@ -134,7 +134,7 @@ a {
             <div class="logo">
                 <img id="img" src="./image/login/coffee.png">
                 <p id="title">Cafe Wiki</p>
-                <button id="btn" type="button" onclick="location.href='logout.do'">로그아웃</button>
+                <button id="btn" type="button" onclick="location.href='login.jsp'">로그아웃</button>
             </div>
         </div>
 
@@ -195,13 +195,17 @@ a {
          <img class = "plus" src="./image/plus.png" align="right" ></a><br></li>
          <%int i2 =  CouponSum[i]%10; 
               int i3= CouponSum[i]/10;%>           
-         <span style="display: none;" id ="dis<%=i %>">  
-         <img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" id= "img<%=i3%>" >
-         <button onclick="change0<%=i3%>()"><</button>
-         <button onclick="change<%=i3%>()">></button>
-         </span>
-         <%
-            }%>
+           <span style="display: none;" id ="dis<%=i %>">          
+         <img src="./Stamp/Stamp<%=i2 %>.png" width="500" height="300" id= "img<%=i%>" >
+          <%if(i3>0){ 
+         for(int j=1;j<=i3;j++){
+        	 %>   
+             <img src="./Stamp/Stamp10.png" width="500" height="300">
+   <%        }
+             } 
+         }
+        %>
+         
 <%       
    } else {
    for (int i = 0; i < 3; i++) {
@@ -234,19 +238,19 @@ a {
 
     <!-- footer & menu part -->
         <div class="footer" style="font-family: 'Jua';">
-			<div id="btn_group">
-				<button class ="btn" id = "btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
+         <div id="btn_group">
+            <button class ="btn" id = "btn1" type="button" onclick="location.href='UserMain.jsp'">마이페이지</button>
 
-				<button  class ="btn" id = "btn2" type="button"
-					onclick="location.href='SearchMain.jsp'">카페 검색</button>
+            <button  class ="btn" id = "btn2" type="button"
+               onclick="location.href='SearchMain.jsp'">카페 검색</button>
 
-				<button class ="btn"  id = "btn3" type="button"
-					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
+            <button class ="btn"  id = "btn3" type="button"
+               onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
 
-				<button class ="btn"  id = "btn4" type="button" onclick="location.href='Update.jsp'">정보
-					수정</button>
-			</div>
-		</div>
+            <button class ="btn"  id = "btn4" type="button" onclick="location.href='Update.jsp'">정보
+               수정</button>
+         </div>
+      </div>
         <!-- footer & menu part -->
         
     </div>
@@ -273,19 +277,6 @@ a {
          $("#dis2").toggle();
       });
     })
-    
-    <% for (int i = 0; i < CafeName.size(); i++) {
-    		int i3= CouponSum[i]/10;
-    		int i2 =  CouponSum[i]%10; 
-    		if(i3>0){ 
-    	         for(int j=1;j<=i3;j++){
-    %>
-    function change<%=i3%>(){
-    	document.getElementById("img<%=i3 %>").src="./Stamp/Stamp10.png"
-    }
-     <%}
-     }
-     }%>
 
         </script>
 </body>
