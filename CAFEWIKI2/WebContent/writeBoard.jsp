@@ -26,7 +26,7 @@
 			<div class="logo">
 				<img id="img" src="./image/login/coffee.png">
 				<p id="title">Cafe Wiki</p>
-				<button id="btn" type="button" onclick="location.href='login.jsp'" class= "btn" >·Î±×¾Æ¿ô</button>
+				<button id="btn" type="button" onclick="location.href='logout.do'" class= "btn" >·Î±×¾Æ¿ô</button>
 			</div>
 		</div>
 		<%

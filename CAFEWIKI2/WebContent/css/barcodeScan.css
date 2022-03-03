@@ -114,65 +114,6 @@ a {
 	float: left;
 }
 
-#location p {
-	
-}
-
-/* cafe board */
-.board {
-	width: 468px;
-	height: 100%;
-	float: left;
-	border: 2px dotted #999;
-}
-
-.d-none {
-	font-size: 20px;
-	margin: 2px;
-	text-align: center;
-}
-
-.table {
-	font-size: 20px;
-	border-collapse: collapse;
-	width: 468px;
-	margin-top: 3px;
-	border: 1px solid #999;
-	text-align: center;
-}
-
-.thead td {
-	background: #999;
-}
-
-td {
-	height: 20px;
-	border-bottom: 1px solid black;
-}
-
-.review {
-	width: 468px;
-	height: 100%;
-	float: left;
-	border: 2px dotted #999;
-}
-
-.r-none {
-	font-size: 20px;
-	margin: 2px;
-	text-align: center;
-}
-
-.review-btn {
-	margin-top: -35px;
-	font-size: 20px;
-	text-align: end;
-	padding-top: 5px;
-	padding-right: 5px;
-	padding: 5px 2px 5px 2px;
-	float: left;
-}
-
 /* footer & menu part */
 .footer {
 	margin: 0px auto;
