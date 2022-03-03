@@ -36,6 +36,7 @@
 				<input class="btn" type="text" name="u_num">
 				<input class="btn" type="submit" value="È®ÀÎ">
 			</form>
+			<p></p>
 		</div>
 
 		<!-- footer & menu part -->
