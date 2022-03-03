@@ -46,14 +46,14 @@
 					<%=vo.getId()%>
 				</h2>
 			</div>
-			<form action="update.do" method="post">
+			<form action="delet.do" method="post" id=delete>
 				<div class="btn">
 					<h3 class="join_title">
 						<label for="pswd1">비밀번호</label>
 					</h3>
 					<span class="box int_pass"> <input type="password"
 						class="btn" name="pw" id="pswd1" class="int" maxlength="20"
-						placeholder="비밀번호 입력" style="border: none;"> <span id="alertTxt">사용불가</span>
+						placeholder="변경할 비밀번호 입력" style="border: none;"> <span id="alertTxt">사용불가</span>
 					</span> <span class="error_next_box"></span>
 				</div>
 
@@ -64,7 +64,7 @@
 					</h3>
 					<span class="box int_mobile"> <input type="text" class="btn"
 						name="tel" id="mobile" class="int" maxlength="16"
-						placeholder="전화번호 입력" style="border: none;">
+						placeholder="변경할 전화번호 입력" style="border: none;">
 					</span> <span class="error_next_box"></span>
 				</div>
 
@@ -75,21 +75,21 @@
 					</h3>
 					<span class="box int_email"> <input type="text" class="btn"
 						name="email" id="email" class="int" maxlength="100"
-						placeholder="이메일 입력" style="border: none;">
+						placeholder="변경할이메일 입력" style="border: none;">
 					</span>
 				</div>
 
 				<div class="btn_area" class="btn">
-					<button type="submit" id="btnJoin2">
+					<button type="submit" id="btnJoin2" onclick="location.href='update.do'">
 						<span class="btn">수정</span>
 					</button>
-
-					<button onclick="location.href='delet.do'" type="button"
+	
+					<button onclick="fnSubmit(); return false;" type="button"
 						id="btnJoin">
 						<span class="btn">회원탈퇴</span>
 					</button>
 				</div>
-			</form>
+		</form>
 		</div>
 
 
@@ -130,5 +130,16 @@
 		%>
 
 	</div>
+	<script src="js/jquery-3.6.0.js"></script>
+	<script type="text/javascript">		
+	function fnSubmit(){
+		if (confirm("탈퇴하시겠습니까?")) {
+			 
+			$("#delete").submit();
+			 
+			return false;
+			}
+	}
+	</script>
 </body>
 </html>
