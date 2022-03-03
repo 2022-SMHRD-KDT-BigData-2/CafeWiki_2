@@ -75,7 +75,7 @@
 					</h3>
 					<span class="box int_email"> <input type="text" class="btn"
 						name="email" id="email" class="int" maxlength="100"
-						placeholder="변경할이메일 입력" style="border: none;">
+						placeholder="변경할 이메일 입력" style="border: none;">
 					</span>
 				</div>
 
