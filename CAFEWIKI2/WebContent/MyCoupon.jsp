@@ -33,7 +33,7 @@
 	</div>
 
 	<%
-		List<CafeVO> clist = (List<CafeVO>) session.getAttribute("clist");
+	List<CafeVO> clist = (List<CafeVO>) session.getAttribute("clist");
 	List<CouponVO> slist = (List<CouponVO>) session.getAttribute("slist");
 	List<String> CafeName = new ArrayList<String>();
 	for (CafeVO cvo : clist) {
@@ -81,12 +81,35 @@
 			<table>
 				<tr class="btn">
 					<td rowspan="2"><img id="img" src="./image/mug.png"></td>
-					<td align="center"><%=CafeName.get(i)%></td>
+					<td align="center">
+					<%
+					if (clist != null) {
+					for (CafeVO vo : clist) {
+				%>
+					<a href="CafeMain.do?o_num=<%=vo.getO_num()%>" ><%=vo.getStore()%></a>
 				</tr>
+				<%
+					}
+				}
+				%>
+				</td>
 				<tr class="btn">
 					<td align="center">보유 스탬프 수 = <%=CouponSum[i]%></td>
-				</tr>
+					<td id="plus" rowspan="2">
+					<a id="hide<%=i %>" onclick="dis()">
+					<img src="./image/plus.png"></a>
+					</td>
 			</table>
+			<%int i2 =  CouponSum[i]%10; 
+              	int i3= CouponSum[i]/10;%>           
+           <span style="display: none;" id ="dis<%=i %>">          
+         <img src="./Stamp/Stamp<%=i2 %>.png" width="300" height="200" id= "img<%=i%>" >
+          <%if(i3>0){ 
+         for(int j=1;j<=i3;j++){
+        	 %>   
+             <img src="./Stamp/Stamp10.png" width="300" height="200">
+         <%}  
+         }%>
 
 		</div>
 		<%
@@ -113,6 +136,16 @@
 	</div>
 	<!-- footer & menu part -->
 </div>
-
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript"> 
+<%for(int i = 0; i < CafeName.size(); i++){%>
+$(function (){
+    $("#hide<%=i%>").click
+    (function (){
+      $("#dis<%=i%>").toggle();
+   });
+ })
+<%}%>
+</script>
 </body>
 </html>
