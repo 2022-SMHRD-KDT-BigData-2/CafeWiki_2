@@ -21,6 +21,12 @@
 <link rel="stylesheet" type="text/css" href="./css/MyCoupon4.css">
 <script src="https://kit.fontawesome.com/8c9374f376.js"
 	crossorigin="anonymous"></script>
+<style>
+a {
+   text-decoration-line: none;
+   color : #784748;
+}
+</style>
 </head>
 <div class="container">
 	<div class="header">
@@ -104,7 +110,7 @@
              <img src="./Stamp/Stamp10.png" width="300" height="200">
          <%}  
          }%>
-
+		</span>
 		</div>
 		<%
 			}
