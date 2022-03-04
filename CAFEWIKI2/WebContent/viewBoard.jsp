@@ -72,7 +72,7 @@
                             <button class="btn" id="btnJoin" type="button" onclick="location.href='cafe.do'">뒤로가기</button>
                             
                               <%}else{ %>
-                              <button class="btn"  id="btnJoin" type="button" onclick="location.href="CafeMain.jsp'">뒤로가기</button> 
+                              <button class="btn"  id="btnJoin" type="button" onclick="location.href='CafeMain.do?o_num=<%=cvo.getO_num()%>'">뒤로가기</button> 
                                   <%} %>
                         </td>
                     </tr>
