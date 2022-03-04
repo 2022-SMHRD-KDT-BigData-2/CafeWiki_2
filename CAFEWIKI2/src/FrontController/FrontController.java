@@ -79,6 +79,8 @@ public class FrontController extends HttpServlet {
 			com = new pwsearchCon();
 		}else if(command.equals("/mycoupon.do")) {
 			com = new CouponCon();
+		}else if(command.equals("/rank.do")) {
+			com = new SearchCon();
 		}
 
 		if (com != null)

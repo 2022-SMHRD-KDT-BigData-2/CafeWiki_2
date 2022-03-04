@@ -30,7 +30,11 @@ public CafeVO() {
 	
 }
 
-
+public CafeVO(String o_num, String store) {
+	super();
+	this.o_num = o_num;
+	this.store = store;
+}
 
 public CafeVO(String store) {
 	super();

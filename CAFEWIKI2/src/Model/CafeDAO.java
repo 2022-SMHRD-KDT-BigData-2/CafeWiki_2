@@ -100,5 +100,17 @@ public class CafeDAO {
 		return cvo;
 
 	}
+	
+	public List<CafeVO> CafeRank() {
+
+		SqlSession session = sqlSessionFactory.openSession();
+
+		List<CafeVO> list = session.selectList("CafeRank");
+
+		session.close();
+
+		return list;
+
+	}
 
 }

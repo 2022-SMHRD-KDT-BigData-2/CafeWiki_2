@@ -175,4 +175,13 @@
 		select * from cafe_info
 		where store = #{store}
 	</select>
+	
+	<select id="CafeRank" resultType="Model.CafeVO">
+		select s.store
+		from coupon c, cafe_info s
+		where c.o_num = s.o_num
+		group by s.store
+		order by sum(c.stamp) desc
+	</select>
+	
 </mapper>

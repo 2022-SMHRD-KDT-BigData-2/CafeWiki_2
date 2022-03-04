@@ -27,6 +27,14 @@
 a {
 	text-decoration-line: none;
 	color : #784748;
+}
+.rankbox{
+	height : 100%;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+.rank{
+	height : 100%;
 }	
 	</style>
 <title>Insert title here</title>
@@ -35,6 +43,7 @@ a {
 
 	<%
 		List<CafeVO> clist = (List<CafeVO>) request.getAttribute("clist");
+		List<CafeVO> crank = (List<CafeVO>)request.getAttribute("crank");
 	%>
 	<!-- header part -->
 	<div class="container">
@@ -90,8 +99,22 @@ a {
 				</div>
 			</div>
 
-
-
+			<!-- 카페 순위 -->
+			<div class="rankbox">
+				<form action="rank.do" method="post">
+				<p>인기 순위!</p>
+					<%  int i=1;
+						if(crank != null){for(CafeVO cvo : crank){%>
+						<div class="rank">
+							<p><%=i %>.<%=cvo.getStore()%></p>
+						</div>
+					<%  i++;
+						if(i==4){
+						break;
+						}
+					}} %>
+				</form>
+			</div>
 
 			<!-- 추천 카페 검색결과 표시 -->
 			<div class="result">

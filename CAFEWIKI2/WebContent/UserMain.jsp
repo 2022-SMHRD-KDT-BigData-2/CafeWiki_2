@@ -272,7 +272,7 @@ a {
 					onclick="location.href='UserMain.jsp'">마이페이지</button>
 
 				<button class="btn" id="btn2" type="button"
-					onclick="location.href='SearchMain.jsp'">카페 검색</button>
+					onclick="location.href='rank.do'">카페 검색</button>
 
 				<button class="btn" id="btn3" type="button"
 					onclick="location.href='MyCoupon.jsp'">내 쿠폰 관리</button>
