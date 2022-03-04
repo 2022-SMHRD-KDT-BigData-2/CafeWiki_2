@@ -87,7 +87,7 @@ a {
 			<table>
 				<tr class="btn">
 					<td rowspan="2"><img id="img" src="./image/mug.png"></td>
-					<td align="center"><a href = "CafeMain.do?store=<%=CafeName.get(i)%>"><%=CafeName.get(i)%></a></td>
+					<td align="center"><a href = "CafeMain.do?store=<%=CafeName2[i]%>"><%=CafeName2[i]%></a></td>
 				</tr>
 
 				</td>
