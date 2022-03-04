@@ -24,8 +24,8 @@ public class writeCon implements Command {
 		MultipartRequest multi;
 
 		try {
-			multi = new MultipartRequest(request, savePath, maxSize, encoding);
-			new DefaultFileRenamePolicy();
+			multi = new MultipartRequest(request, savePath, maxSize, encoding, new DefaultFileRenamePolicy());
+			
 			String b_title = multi.getParameter("b_title");
 			
 			System.out.println(b_title);
