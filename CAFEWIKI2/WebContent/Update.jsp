@@ -46,12 +46,12 @@
 					<%=vo.getId()%>
 				</h2>
 			</div>
-			<form action="delet.do" method="post" id=delete>
+			<form action="update.do" method="post" id="update" >
 				<div class="btn">
 					<h3 class="join_title">
 						<label for="pswd1">비밀번호</label>
 					</h3>
-					<span class="box int_pass"> <input type="password"
+					<span class="box int_pass"> <input type="password" 
 						class="btn" name="pw" id="pswd1" class="int" maxlength="20"
 						placeholder="변경할 비밀번호 입력" style="border: none;"> <span id="alertTxt">사용불가</span>
 					</span> <span class="error_next_box"></span>
@@ -73,25 +73,24 @@
 					<h3 class="join_title">
 						<label for="email">이메일<span class="optional"></span></label>
 					</h3>
-					<span class="box int_email"> <input type="text" class="btn"
+					<span class="box int_email"> <input type="text" class="btn" 
 						name="email" id="email" class="int" maxlength="100"
 						placeholder="변경할 이메일 입력" style="border: none;">
 					</span>
 				</div>
 
 				<div class="btn_area" class="btn">
-					<button type="submit" id="btnJoin2" onclick="location.href='update.do'">
+					<button  type="submit" id="btnJoin2" onclick="fnSubmit2(); return false;">
 						<span class="btn">수정</span>
 					</button>
 	
-					<button onclick="fnSubmit(); return false;" type="button"
+					<button href= '#' onclick="de()" type="button"
 						id="btnJoin">
 						<span class="btn">회원탈퇴</span>
 					</button>
 				</div>
-		</form>
 		</div>
-
+	</form>
 
 		<%
 			if (vo.getO_num() != null) {
@@ -132,14 +131,43 @@
 	</div>
 	<script src="js/jquery-3.6.0.js"></script>
 	<script type="text/javascript">		
-	function fnSubmit(){
-		if (confirm("탈퇴하시겠습니까?")) {
+
+	function fnSubmit2(){
+		if ($("#pswd1").val() == null || $("#pswd1").val() == "") {
+			alert("변경할 비밀번호를 입력해주세요.");
+			$("#pswd1").focus();
 			 
-			$("#delete").submit();
+			return false;
+			}
+		if ($("#mobile").val() == null || $("#mobile").val() == "") {
+			alert("변경할 이메일을 입력해주세요.");
+			$("#mobile").focus();
+			 
+			return false;
+			}
+		if ($("#email").val() == null || $("#email").val() == "") {
+			alert("변경할 이메일을 입력해주세요.");
+			$("#email").focus();
+			 
+			return false;
+			}
+		if (confirm("정보를 수정하시겠습니까?")) {
+			 
+			$("#update").submit();
 			 
 			return false;
 			}
 	}
+	function de(){
+		if(confirm("탈퇴하시겠습니까?")){
+	        location.href = "delete.do";
+	        return true;
+	    } else {
+	        return false;
+
+	    }
+	}
+	
 	</script>
 </body>
 </html>

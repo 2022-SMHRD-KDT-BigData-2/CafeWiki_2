@@ -1,5 +1,7 @@
 package Pojo;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,22 +30,23 @@ public class loginCon implements Command {
 		CouponDAO dao2 = new CouponDAO();
 		List<CouponVO> slist = dao2.selectCoupon(id);	
 		List<CafeVO> clist = new ArrayList<CafeVO>();
+		HttpSession session = request.getSession();
 
 		if (uservo != null) {
-			HttpSession session = request.getSession();
 			session.setAttribute("vo", uservo);
 			session.setAttribute("slist", slist);
 
-		} else {
-			System.out.println("로그인실패");
+		} else {			
+			session.setAttribute("login", "F");
+			return "redirect:login.jsp";
 		}
+		
 
 		if (uservo.getO_num()==null) {
 			for(int i=0;i<slist.size();i++) {
 				String o_num = slist.get(i).getO_num();
 				clist.add(dao2.selectcouponname(o_num));
 			}
-			HttpSession session = request.getSession();
 			session.setAttribute("clist", clist);
 			
 			return "redirect:UserMain.jsp";

@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import Model.MemberDAO;
 import Model.MemberVO;
 
-public class deletCon implements Command {
+public class deleteCon implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 
 		HttpSession session = request.getSession();
@@ -16,8 +16,10 @@ public class deletCon implements Command {
 		int cnt = dao.delete(vo.getId());
 	
 		if (cnt > 0) {
+			
 			return "redirect:login.jsp";
 		} else {
+			
 			return "redirect:update.jsp";
 		}
 	

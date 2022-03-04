@@ -126,7 +126,7 @@
 					<button onclick="location.href='login.jsp'" type="button" id="btnJoin2">
 						<span>돌아가기</span>
 					</button>
-					<button type="	submit" id="btnJoin" onclick="fnSubmit(); return false;">
+					<button type="submit" id="btnJoin" onclick="fnSubmit(); return false;">
 						<span>가입하기</span>
 					</button>
 				</div>

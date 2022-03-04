@@ -40,7 +40,7 @@
 			<table class="table" id="list">
 				<tr>
 					<td class= "btn" >제목</td>
-					<td><input class="title" type="text" value="" name="b_title"
+					<td><input class="title" type="text" name="b_title"
 						id="" /></td>
 				</tr>
 				<tr>
@@ -52,11 +52,11 @@
 					<td rowspan="2" class= "btn" >첨부파일</td>
 				</tr>
 				<tr>
-					<td id="3"><input type="file" class= "btn" name="b_file " id="" /></td>
+					<td id="3"><input type="file" class= "btn" name="b_file"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="reset" class= "btn"  value="다시작성" >
-						<input type="submit" class= "btn"  value="작성" ></td>
+					<td colspan="2"><input type="reset" class= "btn"  value="다시작성">
+						<input type="submit" class= "btn"  value="작성"></td>
 				</tr>
 			</table>
 		</form>
