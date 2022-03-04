@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<% String login = (String)session.getAttribute("login");
+	session.removeAttribute("login");
+%>
 	<section class="login-form">
 		<form method="post" action="login.do" id="login">
 			<h1>Cafe Wiki</h1>
@@ -30,7 +33,7 @@
 				</div>
 
 				<div class="btn-area">
-					<button type="submit" onclick="fnSubmit(); return false;">LOGIN</button>
+					<button type="submit" >LOGIN</button>
 				</div>
 			</ul>
 		</form>
@@ -41,8 +44,10 @@
 	</section>
 	<script src="js/jquery-3.6.0.js"></script>
 	<script type="text/javascript">
-	
-	
+	let login_status = "<%= login%>"
+	if(login_status == 'F'){
+		alert('아이디/비밀번호를 확인해 주세요')
+	}
 	
 	</script>
 </body>
